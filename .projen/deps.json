@@ -1,6 +1,18 @@
 {
   "dependencies": [
     {
+      "name": "@cdktf/provider-null",
+      "type": "build"
+    },
+    {
+      "name": "@cdktf/provider-random",
+      "type": "build"
+    },
+    {
+      "name": "@dschmidt/cdktf-construct-base",
+      "type": "build"
+    },
+    {
       "name": "@types/jest",
       "type": "build"
     },
@@ -21,12 +33,16 @@
     },
     {
       "name": "cdktf",
-      "version": "0.4.0",
+      "version": "0.9.0",
       "type": "build"
     },
     {
       "name": "constructs",
-      "version": "10.0.0",
+      "version": "10.0.25",
+      "type": "build"
+    },
+    {
+      "name": "eslint-config-prettier",
       "type": "build"
     },
     {
@@ -39,6 +55,10 @@
     },
     {
       "name": "eslint-plugin-import",
+      "type": "build"
+    },
+    {
+      "name": "eslint-plugin-prettier",
       "type": "build"
     },
     {
@@ -77,6 +97,10 @@
       "type": "build"
     },
     {
+      "name": "prettier",
+      "type": "build"
+    },
+    {
       "name": "projen",
       "type": "build"
     },
@@ -95,12 +119,12 @@
     },
     {
       "name": "cdktf",
-      "version": "^0.4.0",
+      "version": "^0.9.0",
       "type": "peer"
     },
     {
       "name": "constructs",
-      "version": "^10",
+      "version": "^10.0.25",
       "type": "peer"
     }
   ],
