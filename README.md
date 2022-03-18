@@ -2,6 +2,16 @@
 
 A drop-in replacement for cdktf.TerraformStack that let's you define Terraform modules as construct.
 
+## Setup
+
+### Node.js
+
+Run `yarn add cdktf-tf-module-stack` (or `npm install --save cdktf-tf-module-stack`) to install the package.
+
+### Python
+
+Run `pip install cdktf-tf-module-stack` to install the package.
+
 ## Usage
 
 ```ts
