@@ -303,10 +303,10 @@
   resolved "https://registry.yarnpkg.com/@cdktf/provider-random/-/provider-random-0.1.54.tgz#67dda7ff03d5ace5f70844b2884c434e5e96937c"
   integrity sha512-yWbb7aCJzywUTOgtaipgY+CSGAG0w53heC0KOkLch/cFZ50nIuDFqFtptoSGGKxjIYfliedvtmLdlxPAw7FKrA==
 
-"@dschmidt/cdktf-construct-base@^0.0.73":
-  version "0.0.73"
-  resolved "https://registry.yarnpkg.com/@dschmidt/cdktf-construct-base/-/cdktf-construct-base-0.0.73.tgz#8ccacd187f80db4d5d9fcfaa317acca552d38407"
-  integrity sha512-qX551ZQSvZnbdPbKHQ9oRRs5rpeAH7jJcexsryOjIFU3E/47xtogYEGc389noNjvB5O2a/qCRxvM6aJz215LUw==
+"@dschmidt/cdktf-construct-base@^0.0.74":
+  version "0.0.74"
+  resolved "https://registry.yarnpkg.com/@dschmidt/cdktf-construct-base/-/cdktf-construct-base-0.0.74.tgz#8fd0821140a070410abba1e22c7c68284666e28f"
+  integrity sha512-6HMErbgsE368v8ma2QXLYJQ4dDPdwrtIK4n3CqdBF2tKeGlTYCg3Taz5pQlL3ciy8AYis7LRJhzMVWexlwkuFQ==
   dependencies:
     projen "^0.50.9"
 
@@ -720,9 +720,9 @@
   integrity sha512-XCuKFP5PS55gnMVu3dty8KPatLqUoy/ZYzDzAGCQ8JNFCkLXzmI7vNHCR+XpbZaMWQK/vQubr7PkYq8g470J/A==
 
 "@types/babel__core@^7.0.0", "@types/babel__core@^7.1.14":
-  version "7.1.18"
-  resolved "https://registry.yarnpkg.com/@types/babel__core/-/babel__core-7.1.18.tgz#1a29abcc411a9c05e2094c98f9a1b7da6cdf49f8"
-  integrity sha512-S7unDjm/C7z2A2R9NzfKCK1I+BAALDtxEmsJBwlB3EzNfb929ykjL++1CK9LO++EIp2fQrC8O+BwjKvz6UeDyQ==
+  version "7.1.19"
+  resolved "https://registry.yarnpkg.com/@types/babel__core/-/babel__core-7.1.19.tgz#7b497495b7d1b4812bdb9d02804d0576f43ee460"
+  integrity sha512-WEOTgRsbYkvA/KCsDwVEGkd7WAr1e3g31VHQ8zy5gul/V1qKullU/BU5I68X5v7V3GnB9eotmom4v5a5gjxorw==
   dependencies:
     "@babel/parser" "^7.1.0"
     "@babel/types" "^7.0.0"
