@@ -16,7 +16,7 @@ Run `pip install cdktf-tf-module-stack` to install the package.
 
 ```ts
 import { App } from "cdktf";
-import { TFModuleStack } from "cdktf-tf-module-stack";
+import { TFModuleStack, TFModuleVariable } from "cdktf-tf-module-stack";
 import { NullProvider, Resource } from "@cdktf/provider-null";
 
 class MyAwesomeModule extends TFModuleStack {
@@ -25,6 +25,12 @@ class MyAwesomeModule extends TFModuleStack {
 
     new NullProvider(this, "null");
     new Resource(this, "resource");
+
+    new TFModuleVariable(this, "my_var", {
+      type: "string",
+      description: "A variable",
+      default: "default",
+    });
   }
 }
 
@@ -47,6 +53,13 @@ This will synthesize a Terraform JSON file that looks like this:
       "null": {
         "source": "null",
         "version": "~> 2.0"
+      }
+    },
+    "variable": {
+      "my_var": {
+        "default": "default",
+        "description": "A variable",
+        "type": "string"
       }
     }
   }

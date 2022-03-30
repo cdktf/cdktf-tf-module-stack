@@ -1,4 +1,9 @@
-import { TerraformStack } from "cdktf";
+import {
+  TerraformStack,
+  TerraformVariable,
+  TerraformVariableConfig,
+} from "cdktf";
+import { Construct } from "constructs";
 
 export class TFModuleStack extends TerraformStack {
   public toTerraform(): any {
@@ -6,5 +11,13 @@ export class TFModuleStack extends TerraformStack {
     delete tf.provider;
     delete tf.terraform.backend;
     return tf;
+  }
+}
+
+export type TFModuleVariableConfig = TerraformVariableConfig;
+export class TFModuleVariable extends TerraformVariable {
+  constructor(scope: Construct, name: string, config: TFModuleVariableConfig) {
+    super(scope, name, config);
+    this.overrideLogicalId(name);
   }
 }
