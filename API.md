@@ -258,6 +258,314 @@ public readonly synthesizer: IStackSynthesizer;
 ---
 
 
+### TFModuleVariable <a name="TFModuleVariable" id="cdktf-tf-module-stack.TFModuleVariable"></a>
+
+#### Initializers <a name="Initializers" id="cdktf-tf-module-stack.TFModuleVariable.Initializer"></a>
+
+```typescript
+import { TFModuleVariable } from 'cdktf-tf-module-stack'
+
+new TFModuleVariable(scope: Construct, name: string, config: TerraformVariableConfig)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktf-tf-module-stack.TFModuleVariable.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | *No description.* |
+| <code><a href="#cdktf-tf-module-stack.TFModuleVariable.Initializer.parameter.name">name</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#cdktf-tf-module-stack.TFModuleVariable.Initializer.parameter.config">config</a></code> | <code>cdktf.TerraformVariableConfig</code> | *No description.* |
+
+---
+
+##### `scope`<sup>Required</sup> <a name="scope" id="cdktf-tf-module-stack.TFModuleVariable.Initializer.parameter.scope"></a>
+
+- *Type:* constructs.Construct
+
+---
+
+##### `name`<sup>Required</sup> <a name="name" id="cdktf-tf-module-stack.TFModuleVariable.Initializer.parameter.name"></a>
+
+- *Type:* string
+
+---
+
+##### `config`<sup>Required</sup> <a name="config" id="cdktf-tf-module-stack.TFModuleVariable.Initializer.parameter.config"></a>
+
+- *Type:* cdktf.TerraformVariableConfig
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktf-tf-module-stack.TFModuleVariable.toString">toString</a></code> | Returns a string representation of this construct. |
+| <code><a href="#cdktf-tf-module-stack.TFModuleVariable.addOverride">addOverride</a></code> | *No description.* |
+| <code><a href="#cdktf-tf-module-stack.TFModuleVariable.overrideLogicalId">overrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
+| <code><a href="#cdktf-tf-module-stack.TFModuleVariable.resetOverrideLogicalId">resetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#cdktf-tf-module-stack.TFModuleVariable.toMetadata">toMetadata</a></code> | *No description.* |
+| <code><a href="#cdktf-tf-module-stack.TFModuleVariable.toTerraform">toTerraform</a></code> | *No description.* |
+| <code><a href="#cdktf-tf-module-stack.TFModuleVariable.synthesizeAttributes">synthesizeAttributes</a></code> | *No description.* |
+
+---
+
+##### `toString` <a name="toString" id="cdktf-tf-module-stack.TFModuleVariable.toString"></a>
+
+```typescript
+public toString(): string
+```
+
+Returns a string representation of this construct.
+
+##### `addOverride` <a name="addOverride" id="cdktf-tf-module-stack.TFModuleVariable.addOverride"></a>
+
+```typescript
+public addOverride(path: string, value: any): void
+```
+
+###### `path`<sup>Required</sup> <a name="path" id="cdktf-tf-module-stack.TFModuleVariable.addOverride.parameter.path"></a>
+
+- *Type:* string
+
+---
+
+###### `value`<sup>Required</sup> <a name="value" id="cdktf-tf-module-stack.TFModuleVariable.addOverride.parameter.value"></a>
+
+- *Type:* any
+
+---
+
+##### `overrideLogicalId` <a name="overrideLogicalId" id="cdktf-tf-module-stack.TFModuleVariable.overrideLogicalId"></a>
+
+```typescript
+public overrideLogicalId(newLogicalId: string): void
+```
+
+Overrides the auto-generated logical ID with a specific ID.
+
+###### `newLogicalId`<sup>Required</sup> <a name="newLogicalId" id="cdktf-tf-module-stack.TFModuleVariable.overrideLogicalId.parameter.newLogicalId"></a>
+
+- *Type:* string
+
+The new logical ID to use for this stack element.
+
+---
+
+##### `resetOverrideLogicalId` <a name="resetOverrideLogicalId" id="cdktf-tf-module-stack.TFModuleVariable.resetOverrideLogicalId"></a>
+
+```typescript
+public resetOverrideLogicalId(): void
+```
+
+Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `toMetadata` <a name="toMetadata" id="cdktf-tf-module-stack.TFModuleVariable.toMetadata"></a>
+
+```typescript
+public toMetadata(): any
+```
+
+##### `toTerraform` <a name="toTerraform" id="cdktf-tf-module-stack.TFModuleVariable.toTerraform"></a>
+
+```typescript
+public toTerraform(): any
+```
+
+##### `synthesizeAttributes` <a name="synthesizeAttributes" id="cdktf-tf-module-stack.TFModuleVariable.synthesizeAttributes"></a>
+
+```typescript
+public synthesizeAttributes(): {[ key: string ]: any}
+```
+
+#### Static Functions <a name="Static Functions" id="Static Functions"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktf-tf-module-stack.TFModuleVariable.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
+
+---
+
+##### ~~`isConstruct`~~ <a name="isConstruct" id="cdktf-tf-module-stack.TFModuleVariable.isConstruct"></a>
+
+```typescript
+import { TFModuleVariable } from 'cdktf-tf-module-stack'
+
+TFModuleVariable.isConstruct(x: any)
+```
+
+Checks if `x` is a construct.
+
+###### `x`<sup>Required</sup> <a name="x" id="cdktf-tf-module-stack.TFModuleVariable.isConstruct.parameter.x"></a>
+
+- *Type:* any
+
+Any object.
+
+---
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktf-tf-module-stack.TFModuleVariable.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
+| <code><a href="#cdktf-tf-module-stack.TFModuleVariable.property.cdktfStack">cdktfStack</a></code> | <code>cdktf.TerraformStack</code> | *No description.* |
+| <code><a href="#cdktf-tf-module-stack.TFModuleVariable.property.friendlyUniqueId">friendlyUniqueId</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#cdktf-tf-module-stack.TFModuleVariable.property.booleanValue">booleanValue</a></code> | <code>cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#cdktf-tf-module-stack.TFModuleVariable.property.fqn">fqn</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#cdktf-tf-module-stack.TFModuleVariable.property.listValue">listValue</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#cdktf-tf-module-stack.TFModuleVariable.property.numberValue">numberValue</a></code> | <code>number</code> | *No description.* |
+| <code><a href="#cdktf-tf-module-stack.TFModuleVariable.property.stringValue">stringValue</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#cdktf-tf-module-stack.TFModuleVariable.property.value">value</a></code> | <code>any</code> | *No description.* |
+| <code><a href="#cdktf-tf-module-stack.TFModuleVariable.property.default">default</a></code> | <code>any</code> | *No description.* |
+| <code><a href="#cdktf-tf-module-stack.TFModuleVariable.property.description">description</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#cdktf-tf-module-stack.TFModuleVariable.property.nullable">nullable</a></code> | <code>boolean</code> | *No description.* |
+| <code><a href="#cdktf-tf-module-stack.TFModuleVariable.property.sensitive">sensitive</a></code> | <code>boolean</code> | *No description.* |
+| <code><a href="#cdktf-tf-module-stack.TFModuleVariable.property.type">type</a></code> | <code>string</code> | *No description.* |
+
+---
+
+##### `node`<sup>Required</sup> <a name="node" id="cdktf-tf-module-stack.TFModuleVariable.property.node"></a>
+
+```typescript
+public readonly node: Node;
+```
+
+- *Type:* constructs.Node
+
+The tree node.
+
+---
+
+##### `cdktfStack`<sup>Required</sup> <a name="cdktfStack" id="cdktf-tf-module-stack.TFModuleVariable.property.cdktfStack"></a>
+
+```typescript
+public readonly cdktfStack: TerraformStack;
+```
+
+- *Type:* cdktf.TerraformStack
+
+---
+
+##### `friendlyUniqueId`<sup>Required</sup> <a name="friendlyUniqueId" id="cdktf-tf-module-stack.TFModuleVariable.property.friendlyUniqueId"></a>
+
+```typescript
+public readonly friendlyUniqueId: string;
+```
+
+- *Type:* string
+
+---
+
+##### `booleanValue`<sup>Required</sup> <a name="booleanValue" id="cdktf-tf-module-stack.TFModuleVariable.property.booleanValue"></a>
+
+```typescript
+public readonly booleanValue: IResolvable;
+```
+
+- *Type:* cdktf.IResolvable
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="cdktf-tf-module-stack.TFModuleVariable.property.fqn"></a>
+
+```typescript
+public readonly fqn: string;
+```
+
+- *Type:* string
+
+---
+
+##### `listValue`<sup>Required</sup> <a name="listValue" id="cdktf-tf-module-stack.TFModuleVariable.property.listValue"></a>
+
+```typescript
+public readonly listValue: string[];
+```
+
+- *Type:* string[]
+
+---
+
+##### `numberValue`<sup>Required</sup> <a name="numberValue" id="cdktf-tf-module-stack.TFModuleVariable.property.numberValue"></a>
+
+```typescript
+public readonly numberValue: number;
+```
+
+- *Type:* number
+
+---
+
+##### `stringValue`<sup>Required</sup> <a name="stringValue" id="cdktf-tf-module-stack.TFModuleVariable.property.stringValue"></a>
+
+```typescript
+public readonly stringValue: string;
+```
+
+- *Type:* string
+
+---
+
+##### `value`<sup>Required</sup> <a name="value" id="cdktf-tf-module-stack.TFModuleVariable.property.value"></a>
+
+```typescript
+public readonly value: any;
+```
+
+- *Type:* any
+
+---
+
+##### `default`<sup>Optional</sup> <a name="default" id="cdktf-tf-module-stack.TFModuleVariable.property.default"></a>
+
+```typescript
+public readonly default: any;
+```
+
+- *Type:* any
+
+---
+
+##### `description`<sup>Optional</sup> <a name="description" id="cdktf-tf-module-stack.TFModuleVariable.property.description"></a>
+
+```typescript
+public readonly description: string;
+```
+
+- *Type:* string
+
+---
+
+##### `nullable`<sup>Optional</sup> <a name="nullable" id="cdktf-tf-module-stack.TFModuleVariable.property.nullable"></a>
+
+```typescript
+public readonly nullable: boolean;
+```
+
+- *Type:* boolean
+
+---
+
+##### `sensitive`<sup>Optional</sup> <a name="sensitive" id="cdktf-tf-module-stack.TFModuleVariable.property.sensitive"></a>
+
+```typescript
+public readonly sensitive: boolean;
+```
+
+- *Type:* boolean
+
+---
+
+##### `type`<sup>Optional</sup> <a name="type" id="cdktf-tf-module-stack.TFModuleVariable.property.type"></a>
+
+```typescript
+public readonly type: string;
+```
+
+- *Type:* string
+
+---
+
+
 
 
 
