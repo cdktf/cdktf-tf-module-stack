@@ -39,7 +39,7 @@
   "devDependencies": {
     "@cdktf/provider-null": "^0.6.0",
     "@cdktf/provider-random": "^0.2.1",
-    "@dschmidt/cdktf-construct-base": "^0.0.84",
+    "@dschmidt/cdktf-construct-base": "^0.0.86",
     "@types/jest": "^27.4.1",
     "@types/node": "^12",
     "@typescript-eslint/eslint-plugin": "^5",
@@ -63,6 +63,7 @@
     "projen": "^0.53.2",
     "standard-version": "^9",
     "ts-jest": "^27.1.4",
+    "ts-node": "^9",
     "typescript": "^4.6.3"
   },
   "peerDependencies": {
