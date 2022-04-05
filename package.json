@@ -37,9 +37,9 @@
     "organization": false
   },
   "devDependencies": {
-    "@cdktf/provider-null": "^0.6.4",
-    "@cdktf/provider-random": "^0.2.5",
-    "@dschmidt/cdktf-construct-base": "^0.0.90",
+    "@cdktf/provider-null": "^0.6.5",
+    "@cdktf/provider-random": "^0.2.6",
+    "@dschmidt/cdktf-construct-base": "^0.0.91",
     "@types/jest": "^27.4.1",
     "@types/node": "^12",
     "@typescript-eslint/eslint-plugin": "^5",
