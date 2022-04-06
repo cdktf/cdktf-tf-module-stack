@@ -37,9 +37,9 @@
     "organization": false
   },
   "devDependencies": {
-    "@cdktf/provider-null": "^0.6.5",
-    "@cdktf/provider-random": "^0.2.6",
-    "@dschmidt/cdktf-construct-base": "^0.0.91",
+    "@cdktf/provider-null": "^0.6.6",
+    "@cdktf/provider-random": "^0.2.7",
+    "@dschmidt/cdktf-construct-base": "^0.0.92",
     "@types/jest": "^27.4.1",
     "@types/node": "^12",
     "@typescript-eslint/eslint-plugin": "^5",
@@ -50,7 +50,7 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-import-resolver-node": "^0.3.6",
     "eslint-import-resolver-typescript": "^2.7.1",
-    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-prettier": "^4.0.0",
     "jest": "^27.5.1",
     "jest-junit": "^13",
