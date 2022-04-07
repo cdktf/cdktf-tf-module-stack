@@ -27,7 +27,7 @@ test("synthesizes a provider", () => {
         \\"required_providers\\": {
           \\"null\\": {
             \\"source\\": \\"null\\",
-            \\"version\\": \\"~> 2.0\\"
+            \\"version\\": \\"2.1.2\\"
           }
         }
       }
@@ -62,7 +62,7 @@ test("synthesizes no backend", () => {
         \\"required_providers\\": {
           \\"null\\": {
             \\"source\\": \\"null\\",
-            \\"version\\": \\"~> 2.0\\"
+            \\"version\\": \\"2.1.2\\"
           }
         }
       }
@@ -96,7 +96,7 @@ test("synthesizes variables", () => {
         \\"required_providers\\": {
           \\"null\\": {
             \\"source\\": \\"null\\",
-            \\"version\\": \\"~> 2.0\\"
+            \\"version\\": \\"2.1.2\\"
           }
         }
       },
