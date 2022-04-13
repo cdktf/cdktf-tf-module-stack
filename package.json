@@ -37,9 +37,9 @@
     "organization": false
   },
   "devDependencies": {
-    "@cdktf/provider-null": "^0.6.12",
-    "@cdktf/provider-random": "^0.2.13",
-    "@dschmidt/cdktf-construct-base": "^0.0.99",
+    "@cdktf/provider-null": "^0.6.14",
+    "@cdktf/provider-random": "^0.2.15",
+    "@dschmidt/cdktf-construct-base": "^0.0.100",
     "@types/jest": "^27.4.1",
     "@types/node": "^12",
     "@typescript-eslint/eslint-plugin": "^5",
@@ -56,7 +56,7 @@
     "jest-junit": "^13",
     "jsii": "^1.56.0",
     "jsii-diff": "^1.56.0",
-    "jsii-docgen": "^6.3.6",
+    "jsii-docgen": "^6.3.7",
     "json-schema": "^0.4.0",
     "npm-check-updates": "^12",
     "prettier": "^2.6.2",
