@@ -2,6 +2,492 @@
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
 
+### ProviderRequirement <a name="ProviderRequirement" id="cdktf-tf-module-stack.ProviderRequirement"></a>
+
+#### Initializers <a name="Initializers" id="cdktf-tf-module-stack.ProviderRequirement.Initializer"></a>
+
+```typescript
+import { ProviderRequirement } from 'cdktf-tf-module-stack'
+
+new ProviderRequirement(scope: Construct, providerName: string, providerVersionConstraint?: string, terraformProviderSource?: string)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktf-tf-module-stack.ProviderRequirement.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | *No description.* |
+| <code><a href="#cdktf-tf-module-stack.ProviderRequirement.Initializer.parameter.providerName">providerName</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#cdktf-tf-module-stack.ProviderRequirement.Initializer.parameter.providerVersionConstraint">providerVersionConstraint</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#cdktf-tf-module-stack.ProviderRequirement.Initializer.parameter.terraformProviderSource">terraformProviderSource</a></code> | <code>string</code> | *No description.* |
+
+---
+
+##### `scope`<sup>Required</sup> <a name="scope" id="cdktf-tf-module-stack.ProviderRequirement.Initializer.parameter.scope"></a>
+
+- *Type:* constructs.Construct
+
+---
+
+##### `providerName`<sup>Required</sup> <a name="providerName" id="cdktf-tf-module-stack.ProviderRequirement.Initializer.parameter.providerName"></a>
+
+- *Type:* string
+
+---
+
+##### `providerVersionConstraint`<sup>Optional</sup> <a name="providerVersionConstraint" id="cdktf-tf-module-stack.ProviderRequirement.Initializer.parameter.providerVersionConstraint"></a>
+
+- *Type:* string
+
+---
+
+##### `terraformProviderSource`<sup>Optional</sup> <a name="terraformProviderSource" id="cdktf-tf-module-stack.ProviderRequirement.Initializer.parameter.terraformProviderSource"></a>
+
+- *Type:* string
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktf-tf-module-stack.ProviderRequirement.toString">toString</a></code> | Returns a string representation of this construct. |
+| <code><a href="#cdktf-tf-module-stack.ProviderRequirement.addOverride">addOverride</a></code> | *No description.* |
+| <code><a href="#cdktf-tf-module-stack.ProviderRequirement.overrideLogicalId">overrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
+| <code><a href="#cdktf-tf-module-stack.ProviderRequirement.resetOverrideLogicalId">resetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#cdktf-tf-module-stack.ProviderRequirement.toMetadata">toMetadata</a></code> | *No description.* |
+| <code><a href="#cdktf-tf-module-stack.ProviderRequirement.toTerraform">toTerraform</a></code> | Adds this resource to the terraform JSON output. |
+
+---
+
+##### `toString` <a name="toString" id="cdktf-tf-module-stack.ProviderRequirement.toString"></a>
+
+```typescript
+public toString(): string
+```
+
+Returns a string representation of this construct.
+
+##### `addOverride` <a name="addOverride" id="cdktf-tf-module-stack.ProviderRequirement.addOverride"></a>
+
+```typescript
+public addOverride(path: string, value: any): void
+```
+
+###### `path`<sup>Required</sup> <a name="path" id="cdktf-tf-module-stack.ProviderRequirement.addOverride.parameter.path"></a>
+
+- *Type:* string
+
+---
+
+###### `value`<sup>Required</sup> <a name="value" id="cdktf-tf-module-stack.ProviderRequirement.addOverride.parameter.value"></a>
+
+- *Type:* any
+
+---
+
+##### `overrideLogicalId` <a name="overrideLogicalId" id="cdktf-tf-module-stack.ProviderRequirement.overrideLogicalId"></a>
+
+```typescript
+public overrideLogicalId(newLogicalId: string): void
+```
+
+Overrides the auto-generated logical ID with a specific ID.
+
+###### `newLogicalId`<sup>Required</sup> <a name="newLogicalId" id="cdktf-tf-module-stack.ProviderRequirement.overrideLogicalId.parameter.newLogicalId"></a>
+
+- *Type:* string
+
+The new logical ID to use for this stack element.
+
+---
+
+##### `resetOverrideLogicalId` <a name="resetOverrideLogicalId" id="cdktf-tf-module-stack.ProviderRequirement.resetOverrideLogicalId"></a>
+
+```typescript
+public resetOverrideLogicalId(): void
+```
+
+Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `toMetadata` <a name="toMetadata" id="cdktf-tf-module-stack.ProviderRequirement.toMetadata"></a>
+
+```typescript
+public toMetadata(): any
+```
+
+##### `toTerraform` <a name="toTerraform" id="cdktf-tf-module-stack.ProviderRequirement.toTerraform"></a>
+
+```typescript
+public toTerraform(): any
+```
+
+Adds this resource to the terraform JSON output.
+
+#### Static Functions <a name="Static Functions" id="Static Functions"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktf-tf-module-stack.ProviderRequirement.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
+
+---
+
+##### `isConstruct` <a name="isConstruct" id="cdktf-tf-module-stack.ProviderRequirement.isConstruct"></a>
+
+```typescript
+import { ProviderRequirement } from 'cdktf-tf-module-stack'
+
+ProviderRequirement.isConstruct(x: any)
+```
+
+Checks if `x` is a construct.
+
+Use this method instead of `instanceof` to properly detect `Construct`
+instances, even when the construct library is symlinked.
+
+Explanation: in JavaScript, multiple copies of the `constructs` library on
+disk are seen as independent, completely different libraries. As a
+consequence, the class `Construct` in each copy of the `constructs` library
+is seen as a different class, and an instance of one class will not test as
+`instanceof` the other class. `npm install` will not create installations
+like this, but users may manually symlink construct libraries together or
+use a monorepo tool: in those cases, multiple copies of the `constructs`
+library can be accidentally installed, and `instanceof` will behave
+unpredictably. It is safest to avoid using `instanceof`, and using
+this type-testing method instead.
+
+###### `x`<sup>Required</sup> <a name="x" id="cdktf-tf-module-stack.ProviderRequirement.isConstruct.parameter.x"></a>
+
+- *Type:* any
+
+Any object.
+
+---
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktf-tf-module-stack.ProviderRequirement.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
+| <code><a href="#cdktf-tf-module-stack.ProviderRequirement.property.cdktfStack">cdktfStack</a></code> | <code>cdktf.TerraformStack</code> | *No description.* |
+| <code><a href="#cdktf-tf-module-stack.ProviderRequirement.property.friendlyUniqueId">friendlyUniqueId</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#cdktf-tf-module-stack.ProviderRequirement.property.fqn">fqn</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#cdktf-tf-module-stack.ProviderRequirement.property.metaAttributes">metaAttributes</a></code> | <code>{[ key: string ]: any}</code> | *No description.* |
+| <code><a href="#cdktf-tf-module-stack.ProviderRequirement.property.terraformResourceType">terraformResourceType</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#cdktf-tf-module-stack.ProviderRequirement.property.terraformGeneratorMetadata">terraformGeneratorMetadata</a></code> | <code>cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
+| <code><a href="#cdktf-tf-module-stack.ProviderRequirement.property.terraformProviderSource">terraformProviderSource</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#cdktf-tf-module-stack.ProviderRequirement.property.alias">alias</a></code> | <code>string</code> | *No description.* |
+
+---
+
+##### `node`<sup>Required</sup> <a name="node" id="cdktf-tf-module-stack.ProviderRequirement.property.node"></a>
+
+```typescript
+public readonly node: Node;
+```
+
+- *Type:* constructs.Node
+
+The tree node.
+
+---
+
+##### `cdktfStack`<sup>Required</sup> <a name="cdktfStack" id="cdktf-tf-module-stack.ProviderRequirement.property.cdktfStack"></a>
+
+```typescript
+public readonly cdktfStack: TerraformStack;
+```
+
+- *Type:* cdktf.TerraformStack
+
+---
+
+##### `friendlyUniqueId`<sup>Required</sup> <a name="friendlyUniqueId" id="cdktf-tf-module-stack.ProviderRequirement.property.friendlyUniqueId"></a>
+
+```typescript
+public readonly friendlyUniqueId: string;
+```
+
+- *Type:* string
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="cdktf-tf-module-stack.ProviderRequirement.property.fqn"></a>
+
+```typescript
+public readonly fqn: string;
+```
+
+- *Type:* string
+
+---
+
+##### `metaAttributes`<sup>Required</sup> <a name="metaAttributes" id="cdktf-tf-module-stack.ProviderRequirement.property.metaAttributes"></a>
+
+```typescript
+public readonly metaAttributes: {[ key: string ]: any};
+```
+
+- *Type:* {[ key: string ]: any}
+
+---
+
+##### `terraformResourceType`<sup>Required</sup> <a name="terraformResourceType" id="cdktf-tf-module-stack.ProviderRequirement.property.terraformResourceType"></a>
+
+```typescript
+public readonly terraformResourceType: string;
+```
+
+- *Type:* string
+
+---
+
+##### `terraformGeneratorMetadata`<sup>Optional</sup> <a name="terraformGeneratorMetadata" id="cdktf-tf-module-stack.ProviderRequirement.property.terraformGeneratorMetadata"></a>
+
+```typescript
+public readonly terraformGeneratorMetadata: TerraformProviderGeneratorMetadata;
+```
+
+- *Type:* cdktf.TerraformProviderGeneratorMetadata
+
+---
+
+##### `terraformProviderSource`<sup>Optional</sup> <a name="terraformProviderSource" id="cdktf-tf-module-stack.ProviderRequirement.property.terraformProviderSource"></a>
+
+```typescript
+public readonly terraformProviderSource: string;
+```
+
+- *Type:* string
+
+---
+
+##### `alias`<sup>Optional</sup> <a name="alias" id="cdktf-tf-module-stack.ProviderRequirement.property.alias"></a>
+
+```typescript
+public readonly alias: string;
+```
+
+- *Type:* string
+
+---
+
+
+### TFModuleApp <a name="TFModuleApp" id="cdktf-tf-module-stack.TFModuleApp"></a>
+
+#### Initializers <a name="Initializers" id="cdktf-tf-module-stack.TFModuleApp.Initializer"></a>
+
+```typescript
+import { TFModuleApp } from 'cdktf-tf-module-stack'
+
+new TFModuleApp(options?: AppOptions)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktf-tf-module-stack.TFModuleApp.Initializer.parameter.options">options</a></code> | <code>cdktf.AppOptions</code> | *No description.* |
+
+---
+
+##### `options`<sup>Optional</sup> <a name="options" id="cdktf-tf-module-stack.TFModuleApp.Initializer.parameter.options"></a>
+
+- *Type:* cdktf.AppOptions
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktf-tf-module-stack.TFModuleApp.toString">toString</a></code> | Returns a string representation of this construct. |
+| <code><a href="#cdktf-tf-module-stack.TFModuleApp.crossStackReference">crossStackReference</a></code> | Creates a reference from one stack to another, invoked on prepareStack since it creates extra resources. |
+| <code><a href="#cdktf-tf-module-stack.TFModuleApp.synth">synth</a></code> | Synthesizes all resources to the output directory. |
+
+---
+
+##### `toString` <a name="toString" id="cdktf-tf-module-stack.TFModuleApp.toString"></a>
+
+```typescript
+public toString(): string
+```
+
+Returns a string representation of this construct.
+
+##### `crossStackReference` <a name="crossStackReference" id="cdktf-tf-module-stack.TFModuleApp.crossStackReference"></a>
+
+```typescript
+public crossStackReference(fromStack: TerraformStack, toStack: TerraformStack, identifier: string): string
+```
+
+Creates a reference from one stack to another, invoked on prepareStack since it creates extra resources.
+
+###### `fromStack`<sup>Required</sup> <a name="fromStack" id="cdktf-tf-module-stack.TFModuleApp.crossStackReference.parameter.fromStack"></a>
+
+- *Type:* cdktf.TerraformStack
+
+---
+
+###### `toStack`<sup>Required</sup> <a name="toStack" id="cdktf-tf-module-stack.TFModuleApp.crossStackReference.parameter.toStack"></a>
+
+- *Type:* cdktf.TerraformStack
+
+---
+
+###### `identifier`<sup>Required</sup> <a name="identifier" id="cdktf-tf-module-stack.TFModuleApp.crossStackReference.parameter.identifier"></a>
+
+- *Type:* string
+
+---
+
+##### `synth` <a name="synth" id="cdktf-tf-module-stack.TFModuleApp.synth"></a>
+
+```typescript
+public synth(): void
+```
+
+Synthesizes all resources to the output directory.
+
+#### Static Functions <a name="Static Functions" id="Static Functions"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktf-tf-module-stack.TFModuleApp.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#cdktf-tf-module-stack.TFModuleApp.isApp">isApp</a></code> | *No description.* |
+| <code><a href="#cdktf-tf-module-stack.TFModuleApp.of">of</a></code> | *No description.* |
+
+---
+
+##### `isConstruct` <a name="isConstruct" id="cdktf-tf-module-stack.TFModuleApp.isConstruct"></a>
+
+```typescript
+import { TFModuleApp } from 'cdktf-tf-module-stack'
+
+TFModuleApp.isConstruct(x: any)
+```
+
+Checks if `x` is a construct.
+
+Use this method instead of `instanceof` to properly detect `Construct`
+instances, even when the construct library is symlinked.
+
+Explanation: in JavaScript, multiple copies of the `constructs` library on
+disk are seen as independent, completely different libraries. As a
+consequence, the class `Construct` in each copy of the `constructs` library
+is seen as a different class, and an instance of one class will not test as
+`instanceof` the other class. `npm install` will not create installations
+like this, but users may manually symlink construct libraries together or
+use a monorepo tool: in those cases, multiple copies of the `constructs`
+library can be accidentally installed, and `instanceof` will behave
+unpredictably. It is safest to avoid using `instanceof`, and using
+this type-testing method instead.
+
+###### `x`<sup>Required</sup> <a name="x" id="cdktf-tf-module-stack.TFModuleApp.isConstruct.parameter.x"></a>
+
+- *Type:* any
+
+Any object.
+
+---
+
+##### `isApp` <a name="isApp" id="cdktf-tf-module-stack.TFModuleApp.isApp"></a>
+
+```typescript
+import { TFModuleApp } from 'cdktf-tf-module-stack'
+
+TFModuleApp.isApp(x: any)
+```
+
+###### `x`<sup>Required</sup> <a name="x" id="cdktf-tf-module-stack.TFModuleApp.isApp.parameter.x"></a>
+
+- *Type:* any
+
+---
+
+##### `of` <a name="of" id="cdktf-tf-module-stack.TFModuleApp.of"></a>
+
+```typescript
+import { TFModuleApp } from 'cdktf-tf-module-stack'
+
+TFModuleApp.of(construct: IConstruct)
+```
+
+###### `construct`<sup>Required</sup> <a name="construct" id="cdktf-tf-module-stack.TFModuleApp.of.parameter.construct"></a>
+
+- *Type:* constructs.IConstruct
+
+---
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktf-tf-module-stack.TFModuleApp.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
+| <code><a href="#cdktf-tf-module-stack.TFModuleApp.property.manifest">manifest</a></code> | <code>cdktf.Manifest</code> | *No description.* |
+| <code><a href="#cdktf-tf-module-stack.TFModuleApp.property.outdir">outdir</a></code> | <code>string</code> | The output directory into which resources will be synthesized. |
+| <code><a href="#cdktf-tf-module-stack.TFModuleApp.property.skipValidation">skipValidation</a></code> | <code>boolean</code> | Whether to skip the validation during synthesis of the app. |
+| <code><a href="#cdktf-tf-module-stack.TFModuleApp.property.targetStackId">targetStackId</a></code> | <code>string</code> | The stack which will be synthesized. |
+
+---
+
+##### `node`<sup>Required</sup> <a name="node" id="cdktf-tf-module-stack.TFModuleApp.property.node"></a>
+
+```typescript
+public readonly node: Node;
+```
+
+- *Type:* constructs.Node
+
+The tree node.
+
+---
+
+##### `manifest`<sup>Required</sup> <a name="manifest" id="cdktf-tf-module-stack.TFModuleApp.property.manifest"></a>
+
+```typescript
+public readonly manifest: Manifest;
+```
+
+- *Type:* cdktf.Manifest
+
+---
+
+##### `outdir`<sup>Required</sup> <a name="outdir" id="cdktf-tf-module-stack.TFModuleApp.property.outdir"></a>
+
+```typescript
+public readonly outdir: string;
+```
+
+- *Type:* string
+
+The output directory into which resources will be synthesized.
+
+---
+
+##### `skipValidation`<sup>Optional</sup> <a name="skipValidation" id="cdktf-tf-module-stack.TFModuleApp.property.skipValidation"></a>
+
+```typescript
+public readonly skipValidation: boolean;
+```
+
+- *Type:* boolean
+
+Whether to skip the validation during synthesis of the app.
+
+---
+
+##### `targetStackId`<sup>Optional</sup> <a name="targetStackId" id="cdktf-tf-module-stack.TFModuleApp.property.targetStackId"></a>
+
+```typescript
+public readonly targetStackId: string;
+```
+
+- *Type:* string
+
+The stack which will be synthesized.
+
+If not set, all stacks will be synthesized.
+
+---
+
+
 ### TFModuleStack <a name="TFModuleStack" id="cdktf-tf-module-stack.TFModuleStack"></a>
 
 #### Initializers <a name="Initializers" id="cdktf-tf-module-stack.TFModuleStack.Initializer"></a>

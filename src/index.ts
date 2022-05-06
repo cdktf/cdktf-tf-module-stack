@@ -1,9 +1,37 @@
 import {
+  App,
+  AppOptions,
+  TerraformProvider,
   TerraformStack,
   TerraformVariable,
   TerraformVariableConfig,
 } from "cdktf";
 import { Construct } from "constructs";
+
+export class TFModuleApp extends App {
+  constructor(options?: AppOptions) {
+    // We don't want the provider validation to kick in
+    super({ ...(options || {}), skipValidation: true });
+  }
+}
+
+export class ProviderRequirement extends TerraformProvider {
+  constructor(
+    scope: Construct,
+    providerName: string,
+    providerVersionConstraint?: string,
+    terraformProviderSource?: string
+  ) {
+    super(scope, providerName, {
+      terraformResourceType: "not_needed_in_this_case",
+      terraformGeneratorMetadata: {
+        providerName,
+        providerVersionConstraint,
+      },
+      terraformProviderSource,
+    });
+  }
+}
 
 export class TFModuleStack extends TerraformStack {
   public toTerraform(): any {

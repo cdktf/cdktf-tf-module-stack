@@ -16,14 +16,18 @@ Run `pip install cdktf-tf-module-stack` to install the package.
 
 ```ts
 import { App } from "cdktf";
-import { TFModuleStack, TFModuleVariable } from "cdktf-tf-module-stack";
-import { NullProvider, Resource } from "@cdktf/provider-null";
+import {
+  TFModuleStack,
+  TFModuleVariable,
+  ProviderRequirement,
+} from "cdktf-tf-module-stack";
+import { Resource } from "@cdktf/provider-null";
 
 class MyAwesomeModule extends TFModuleStack {
   constructor(scope: Construct, id: string) {
     super(scope, id);
 
-    new NullProvider(this, "null");
+    new ProviderRequirement(this, "null", "~> 2.0");
     new Resource(this, "resource");
 
     new TFModuleVariable(this, "my_var", {
