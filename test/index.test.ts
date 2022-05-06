@@ -56,9 +56,8 @@ test("synthesizes an abstract provider", () => {
       },
       \\"terraform\\": {
         \\"required_providers\\": {
-          \\"null\\": {
-            \\"source\\": \\"null\\",
-            \\"version\\": \\"2.1.2\\"
+          \\"not_needed_in_this_case\\": {
+            \\"version\\": \\">= 2.0.0\\"
           }
         }
       }
@@ -87,9 +86,9 @@ test("synthesizes a provider with a specific source", () => {
       },
       \\"terraform\\": {
         \\"required_providers\\": {
-          \\"null\\": {
-            \\"source\\": \\"null\\",
-            \\"version\\": \\"2.1.2\\"
+          \\"not_needed_in_this_case\\": {
+            \\"source\\": \\"hashicorp/null\\",
+            \\"version\\": \\">= 2.0.0\\"
           }
         }
       }
