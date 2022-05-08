@@ -286,20 +286,20 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@cdktf/provider-null@^0.6.41":
-  version "0.6.41"
-  resolved "https://registry.yarnpkg.com/@cdktf/provider-null/-/provider-null-0.6.41.tgz#9b02830cf6b84bec07cc40b4103e8191363209cf"
-  integrity sha512-rbuZrX3UhWc/DueIbAFvVtnXVy/d250YfIf8TXIquACyRHDA2WLPH6c5LoqLFu3Sk3+8bU711Gu//sSbgjVNkw==
+"@cdktf/provider-null@^0.6.42":
+  version "0.6.42"
+  resolved "https://registry.yarnpkg.com/@cdktf/provider-null/-/provider-null-0.6.42.tgz#846b8e8d6d2dfc262fbada9ea78ef90f75620035"
+  integrity sha512-FeiiJZNtIjHM9PVu2vFvC+qxos2FQgSJUVW8CZJeqi5A+YzU3JTpV1H9z1j2IxBh6EKYFAh1FiIdj6JsAWn8ZQ==
 
-"@cdktf/provider-random@^0.2.43":
-  version "0.2.43"
-  resolved "https://registry.yarnpkg.com/@cdktf/provider-random/-/provider-random-0.2.43.tgz#843522d3acd2dcc299d7e05080cb1dde89288c51"
-  integrity sha512-sMIDYzbcE4dePBWFKyvB04SQdYPn0HwtmajSBh+hEhDVgQ0y0TKOsrLWoNYdVlTM4xY0eXEOOXSZ++RgUxtS/g==
+"@cdktf/provider-random@^0.2.44":
+  version "0.2.44"
+  resolved "https://registry.yarnpkg.com/@cdktf/provider-random/-/provider-random-0.2.44.tgz#acd40dc10dce31c118a086e69792fc2198460d5c"
+  integrity sha512-3HS59G1aqKRs2/X7X4EsRvKfSFVjPd3aiFNux81DrLfOIHEKvdaGTVKol+0N8ASBmFAjs8OD4ZTq8dwAnTgYzQ==
 
-"@dschmidt/cdktf-construct-base@^0.0.124":
-  version "0.0.124"
-  resolved "https://registry.yarnpkg.com/@dschmidt/cdktf-construct-base/-/cdktf-construct-base-0.0.124.tgz#a534cfe562d7ccf8b708137c57388dfbbf33bfd0"
-  integrity sha512-gbtHq2KlN9jLr7rxhjeOPm/WCi5KGM1N7LODjltDM2k+52XEuqc2TSfzRmi3rOGAUn7Dj6cs8Vr/Ek9hVkGTvg==
+"@dschmidt/cdktf-construct-base@^0.0.125":
+  version "0.0.125"
+  resolved "https://registry.yarnpkg.com/@dschmidt/cdktf-construct-base/-/cdktf-construct-base-0.0.125.tgz#19520a6d95d35cefa225c456fe5440d9ec60dc06"
+  integrity sha512-CCy0pga8umR2j2r6u2ApfoMSeIdcK0JPVb94XnKtLzDB06/sozTxopMpZ+2cQFhseSs/v83a7+c/JaRfqhR41w==
   dependencies:
     projen "^0.50.9"
 
@@ -2098,9 +2098,9 @@ duplexer3@^0.1.4:
   integrity sha1-7gHdHKwO08vH/b6jfcCo8c4ALOI=
 
 electron-to-chromium@^1.4.118:
-  version "1.4.136"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.136.tgz#b6a3595a9c29d6d8f60e092d40ac24f997e4e7ef"
-  integrity sha512-GnITX8rHnUrIVnTxU9UlsTnSemHUA2iF+6QrRqxFbp/mf0vfuSc/goEyyQhUX3TUUCE3mv/4BNuXOtaJ4ur0eA==
+  version "1.4.137"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.137.tgz#186180a45617283f1c012284458510cd99d6787f"
+  integrity sha512-0Rcpald12O11BUogJagX3HsCN3FE83DSqWjgXoHo5a72KUKMSfI39XBgJpgNNxS9fuGzytaFjE06kZkiVFy2qA==
 
 emittery@^0.8.1:
   version "0.8.1"
