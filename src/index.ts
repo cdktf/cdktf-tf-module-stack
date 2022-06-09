@@ -23,7 +23,7 @@ export class ProviderRequirement extends TerraformProvider {
     terraformProviderSource?: string
   ) {
     super(scope, providerName, {
-      terraformResourceType: "not_needed_in_this_case",
+      terraformResourceType: providerName,
       terraformGeneratorMetadata: {
         providerName,
         providerVersionConstraint,
