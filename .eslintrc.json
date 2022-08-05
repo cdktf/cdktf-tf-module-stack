@@ -37,7 +37,7 @@
   },
   "ignorePatterns": [
     "*.js",
-    "!.projenrc.js",
+    "!.projenrc.ts",
     "*.d.ts",
     "node_modules/",
     "*.generated.ts",
@@ -58,6 +58,7 @@
         "devDependencies": [
           "**/test/**",
           "**/build-tools/**",
+          "**/projenrc/**",
           ".projenrc.ts",
           "projenrc/**/*.ts"
         ],
@@ -134,7 +135,7 @@
   "overrides": [
     {
       "files": [
-        ".projenrc.js"
+        ".projenrc.ts"
       ],
       "rules": {
         "@typescript-eslint/no-require-imports": "off",

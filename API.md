@@ -168,8 +168,8 @@ Any object.
 | --- | --- | --- |
 | <code><a href="#cdktf-tf-module-stack.ProviderRequirement.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
 | <code><a href="#cdktf-tf-module-stack.ProviderRequirement.property.cdktfStack">cdktfStack</a></code> | <code>cdktf.TerraformStack</code> | *No description.* |
-| <code><a href="#cdktf-tf-module-stack.ProviderRequirement.property.friendlyUniqueId">friendlyUniqueId</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#cdktf-tf-module-stack.ProviderRequirement.property.fqn">fqn</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#cdktf-tf-module-stack.ProviderRequirement.property.friendlyUniqueId">friendlyUniqueId</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#cdktf-tf-module-stack.ProviderRequirement.property.metaAttributes">metaAttributes</a></code> | <code>{[ key: string ]: any}</code> | *No description.* |
 | <code><a href="#cdktf-tf-module-stack.ProviderRequirement.property.terraformResourceType">terraformResourceType</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#cdktf-tf-module-stack.ProviderRequirement.property.terraformGeneratorMetadata">terraformGeneratorMetadata</a></code> | <code>cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
@@ -200,20 +200,20 @@ public readonly cdktfStack: TerraformStack;
 
 ---
 
-##### `friendlyUniqueId`<sup>Required</sup> <a name="friendlyUniqueId" id="cdktf-tf-module-stack.ProviderRequirement.property.friendlyUniqueId"></a>
+##### `fqn`<sup>Required</sup> <a name="fqn" id="cdktf-tf-module-stack.ProviderRequirement.property.fqn"></a>
 
 ```typescript
-public readonly friendlyUniqueId: string;
+public readonly fqn: string;
 ```
 
 - *Type:* string
 
 ---
 
-##### `fqn`<sup>Required</sup> <a name="fqn" id="cdktf-tf-module-stack.ProviderRequirement.property.fqn"></a>
+##### `friendlyUniqueId`<sup>Required</sup> <a name="friendlyUniqueId" id="cdktf-tf-module-stack.ProviderRequirement.property.friendlyUniqueId"></a>
 
 ```typescript
-public readonly fqn: string;
+public readonly friendlyUniqueId: string;
 ```
 
 - *Type:* string
@@ -804,6 +804,7 @@ new TFModuleVariable(scope: Construct, name: string, config: TerraformVariableCo
 | <code><a href="#cdktf-tf-module-stack.TFModuleVariable.resetOverrideLogicalId">resetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
 | <code><a href="#cdktf-tf-module-stack.TFModuleVariable.toMetadata">toMetadata</a></code> | *No description.* |
 | <code><a href="#cdktf-tf-module-stack.TFModuleVariable.toTerraform">toTerraform</a></code> | *No description.* |
+| <code><a href="#cdktf-tf-module-stack.TFModuleVariable.addValidation">addValidation</a></code> | *No description.* |
 | <code><a href="#cdktf-tf-module-stack.TFModuleVariable.synthesizeAttributes">synthesizeAttributes</a></code> | *No description.* |
 
 ---
@@ -870,6 +871,18 @@ public toMetadata(): any
 public toTerraform(): any
 ```
 
+##### `addValidation` <a name="addValidation" id="cdktf-tf-module-stack.TFModuleVariable.addValidation"></a>
+
+```typescript
+public addValidation(validation: TerraformVariableValidationConfig): void
+```
+
+###### `validation`<sup>Required</sup> <a name="validation" id="cdktf-tf-module-stack.TFModuleVariable.addValidation.parameter.validation"></a>
+
+- *Type:* cdktf.TerraformVariableValidationConfig
+
+---
+
 ##### `synthesizeAttributes` <a name="synthesizeAttributes" id="cdktf-tf-module-stack.TFModuleVariable.synthesizeAttributes"></a>
 
 ```typescript
@@ -922,9 +935,9 @@ Any object.
 | --- | --- | --- |
 | <code><a href="#cdktf-tf-module-stack.TFModuleVariable.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
 | <code><a href="#cdktf-tf-module-stack.TFModuleVariable.property.cdktfStack">cdktfStack</a></code> | <code>cdktf.TerraformStack</code> | *No description.* |
+| <code><a href="#cdktf-tf-module-stack.TFModuleVariable.property.fqn">fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#cdktf-tf-module-stack.TFModuleVariable.property.friendlyUniqueId">friendlyUniqueId</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#cdktf-tf-module-stack.TFModuleVariable.property.booleanValue">booleanValue</a></code> | <code>cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#cdktf-tf-module-stack.TFModuleVariable.property.fqn">fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#cdktf-tf-module-stack.TFModuleVariable.property.listValue">listValue</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#cdktf-tf-module-stack.TFModuleVariable.property.numberValue">numberValue</a></code> | <code>number</code> | *No description.* |
 | <code><a href="#cdktf-tf-module-stack.TFModuleVariable.property.stringValue">stringValue</a></code> | <code>string</code> | *No description.* |
@@ -934,6 +947,7 @@ Any object.
 | <code><a href="#cdktf-tf-module-stack.TFModuleVariable.property.nullable">nullable</a></code> | <code>boolean</code> | *No description.* |
 | <code><a href="#cdktf-tf-module-stack.TFModuleVariable.property.sensitive">sensitive</a></code> | <code>boolean</code> | *No description.* |
 | <code><a href="#cdktf-tf-module-stack.TFModuleVariable.property.type">type</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#cdktf-tf-module-stack.TFModuleVariable.property.validation">validation</a></code> | <code>cdktf.TerraformVariableValidationConfig[]</code> | *No description.* |
 
 ---
 
@@ -959,6 +973,16 @@ public readonly cdktfStack: TerraformStack;
 
 ---
 
+##### `fqn`<sup>Required</sup> <a name="fqn" id="cdktf-tf-module-stack.TFModuleVariable.property.fqn"></a>
+
+```typescript
+public readonly fqn: string;
+```
+
+- *Type:* string
+
+---
+
 ##### `friendlyUniqueId`<sup>Required</sup> <a name="friendlyUniqueId" id="cdktf-tf-module-stack.TFModuleVariable.property.friendlyUniqueId"></a>
 
 ```typescript
@@ -976,16 +1000,6 @@ public readonly booleanValue: IResolvable;
 ```
 
 - *Type:* cdktf.IResolvable
-
----
-
-##### `fqn`<sup>Required</sup> <a name="fqn" id="cdktf-tf-module-stack.TFModuleVariable.property.fqn"></a>
-
-```typescript
-public readonly fqn: string;
-```
-
-- *Type:* string
 
 ---
 
@@ -1076,6 +1090,16 @@ public readonly type: string;
 ```
 
 - *Type:* string
+
+---
+
+##### `validation`<sup>Optional</sup> <a name="validation" id="cdktf-tf-module-stack.TFModuleVariable.property.validation"></a>
+
+```typescript
+public readonly validation: TerraformVariableValidationConfig[];
+```
+
+- *Type:* cdktf.TerraformVariableValidationConfig[]
 
 ---
 
