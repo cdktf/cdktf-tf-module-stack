@@ -44,9 +44,9 @@
     semver "^6.3.0"
 
 "@babel/generator@^7.18.10", "@babel/generator@^7.7.2":
-  version "7.18.10"
-  resolved "https://registry.yarnpkg.com/@babel/generator/-/generator-7.18.10.tgz#794f328bfabdcbaf0ebf9bf91b5b57b61fa77a2a"
-  integrity sha512-0+sW7e3HjQbiHbj1NeU/vN8ornohYlacAfZIaXhdoGweQqgcNy69COVciYYqEXJ/v+9OBA7Frxm4CVAuNqKeNA==
+  version "7.18.12"
+  resolved "https://registry.yarnpkg.com/@babel/generator/-/generator-7.18.12.tgz#fa58daa303757bd6f5e4bbca91b342040463d9f4"
+  integrity sha512-dfQ8ebCN98SvyL7IxNMCUtZQSq5R7kxgN+r8qYTGDmmSion1hX2C0zq2yo1bsCDhXixokv1SAWTZUMYbO/V5zg==
   dependencies:
     "@babel/types" "^7.18.10"
     "@jridgewell/gen-mapping" "^0.3.2"
@@ -307,10 +307,10 @@
   dependencies:
     "@jridgewell/trace-mapping" "0.3.9"
 
-"@dschmidt/cdktf-construct-base@^0.1.1":
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/@dschmidt/cdktf-construct-base/-/cdktf-construct-base-0.1.1.tgz#6898df877129132928ca2e605578504201f1ae2c"
-  integrity sha512-3+iJ5w5rBSiR2/7o38yOqte8Q01KKlXPix6dqo6ERlBvYwHOSf58oqn3SgL3ferbcK9UCWu7jVRxo36Whbgw1Q==
+"@dschmidt/cdktf-construct-base@^0.1.2":
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/@dschmidt/cdktf-construct-base/-/cdktf-construct-base-0.1.2.tgz#650f391787931f0379f01cbb4bbe9c7ecfff5bd2"
+  integrity sha512-OdnfH/uX8g4dk4ocoyiSgQGKaxMNpzmMB+uq473JlfaxYcgdWV/GHR+SOAt/F2PEmKwRdeQNpU3OF5a1XmiIDQ==
   dependencies:
     projen "^0.61.0"
 
@@ -1506,9 +1506,9 @@ cacache@^16.0.0, cacache@^16.1.0:
     unique-filename "^1.1.1"
 
 cacheable-lookup@^6.0.4:
-  version "6.0.4"
-  resolved "https://registry.yarnpkg.com/cacheable-lookup/-/cacheable-lookup-6.0.4.tgz#65c0e51721bb7f9f2cb513aed6da4a1b93ad7dc8"
-  integrity sha512-mbcDEZCkv2CZF4G01kr8eBd/5agkt9oCqz75tJMSIsquvRZ2sL6Hi5zGVKi/0OSC9oO1GHfJ2AV0ZIOY9vye0A==
+  version "6.1.0"
+  resolved "https://registry.yarnpkg.com/cacheable-lookup/-/cacheable-lookup-6.1.0.tgz#0330a543471c61faa4e9035db583aad753b36385"
+  integrity sha512-KJ/Dmo1lDDhmW2XDPMo+9oiy/CeqosPguPCrgcVzKyZrL6pM1gU2GmPY/xo6OQPTUaA/c0kwHuywB4E6nmT9ww==
 
 cacheable-request@^7.0.2:
   version "7.0.2"
@@ -5128,24 +5128,6 @@ progress@^2.0.3:
   resolved "https://registry.yarnpkg.com/progress/-/progress-2.0.3.tgz#7e8cf8d8f5b8f239c1bc68beb4eb78567d572ef8"
   integrity sha512-7PiHtLll5LdnKIMw100I+8xJXR5gW2QwWYkT6iJva0bXitZKa/XMrSbdmg3r2Xnaidz9Qumd0VPaMrZlF9V9sA==
 
-projen@^0.53.2:
-  version "0.53.2"
-  resolved "https://registry.npmjs.org/projen/-/projen-0.53.2.tgz"
-  integrity sha512-wrvawGjXx3OG7g0yndlSxQN1O9TOOX8x4Vilgp/9fN2so+vLlK7OOGSJEgDAds73zkn7X9/b5NjK4ZSPRcTyPA==
-  dependencies:
-    "@iarna/toml" "^2.2.5"
-    case "^1.6.3"
-    chalk "^4.1.2"
-    conventional-changelog-config-spec "^2.1.0"
-    fs-extra "^9.1.0"
-    glob "^7"
-    ini "^2.0.0"
-    semver "^7.3.5"
-    shx "^0.3.4"
-    xmlbuilder2 "^2.4.1"
-    yaml next
-    yargs "^16.2.0"
-
 projen@^0.61.0:
   version "0.61.0"
   resolved "https://registry.yarnpkg.com/projen/-/projen-0.61.0.tgz#1969550a2d092d9e7ee715ec7e4c1aa7649f414a"
@@ -6463,11 +6445,6 @@ yaml@^2.1.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/yaml/-/yaml-2.1.1.tgz#1e06fb4ca46e60d9da07e4f786ea370ed3c3cfec"
   integrity sha512-o96x3OPo8GjWeSLF+wOAbrPfhFOGY0W00GNaxCDv+9hkcDJEnev1yh8S7pgHF0ik6zc8sQLuL8hjHjJULZp8bw==
-
-yaml@next:
-  version "2.0.0-10"
-  resolved "https://registry.yarnpkg.com/yaml/-/yaml-2.0.0-10.tgz#d5b59e2d14b8683313a534f2bbc648e211a2753e"
-  integrity sha512-FHV8s5ODFFQXX/enJEU2EkanNl1UDBUz8oa4k5Qo/sR+Iq7VmhCDkRMb0/mjJCNeAWQ31W8WV6PYStDE4d9EIw==
 
 yargs-parser@20.x, yargs-parser@^20.2.2, yargs-parser@^20.2.3:
   version "20.2.9"
