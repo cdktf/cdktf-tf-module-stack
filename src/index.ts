@@ -5,6 +5,8 @@ import {
   TerraformStack,
   TerraformVariable,
   TerraformVariableConfig,
+  TerraformOutput,
+  TerraformOutputConfig,
 } from "cdktf";
 import { Construct } from "constructs";
 
@@ -47,5 +49,35 @@ export class TFModuleVariable extends TerraformVariable {
   constructor(scope: Construct, name: string, config: TFModuleVariableConfig) {
     super(scope, name, config);
     this.overrideLogicalId(name);
+  }
+
+  public toTerraform(): any {
+    const toTerraform = super.toTerraform();
+    const value = toTerraform.variable[this.friendlyUniqueId];
+    return {
+      variable: {
+        // We need to put this into an extra array so that cdktf get works with the output properly
+        [this.friendlyUniqueId]: [value],
+      },
+    };
+  }
+}
+
+export type TFModuleOutputConfig = TerraformOutputConfig;
+export class TFModuleOutput extends TerraformOutput {
+  constructor(scope: Construct, name: string, config: TFModuleOutputConfig) {
+    super(scope, name, config);
+    this.overrideLogicalId(name);
+  }
+
+  public toTerraform(): any {
+    const toTerraform = super.toTerraform();
+    const value = toTerraform.output[this.friendlyUniqueId];
+    return {
+      output: {
+        // We need to put this into an extra array so that cdktf get works with the output properly
+        [this.friendlyUniqueId]: [value],
+      },
+    };
   }
 }
