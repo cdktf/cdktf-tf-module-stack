@@ -222,15 +222,6 @@
         }
       ]
     },
-    "test:update": {
-      "name": "test:update",
-      "description": "Update jest snapshots",
-      "steps": [
-        {
-          "exec": "jest --updateSnapshot"
-        }
-      ]
-    },
     "test:watch": {
       "name": "test:watch",
       "description": "Run jest in watch mode",
@@ -267,19 +258,19 @@
           "exec": "yarn upgrade npm-check-updates"
         },
         {
-          "exec": "npm-check-updates --dep dev --upgrade --target=minor --reject='cdktf,constructs,ts-node'"
+          "exec": "npm-check-updates --dep dev --upgrade --target=minor --reject='@cdktf/provider-null,@cdktf/provider-random,cdktf,constructs,ts-node'"
         },
         {
-          "exec": "npm-check-updates --dep optional --upgrade --target=minor --reject='cdktf,constructs,ts-node'"
+          "exec": "npm-check-updates --dep optional --upgrade --target=minor --reject='@cdktf/provider-null,@cdktf/provider-random,cdktf,constructs,ts-node'"
         },
         {
-          "exec": "npm-check-updates --dep peer --upgrade --target=minor --reject='cdktf,constructs,ts-node'"
+          "exec": "npm-check-updates --dep peer --upgrade --target=minor --reject='@cdktf/provider-null,@cdktf/provider-random,cdktf,constructs,ts-node'"
         },
         {
-          "exec": "npm-check-updates --dep prod --upgrade --target=minor --reject='cdktf,constructs,ts-node'"
+          "exec": "npm-check-updates --dep prod --upgrade --target=minor --reject='@cdktf/provider-null,@cdktf/provider-random,cdktf,constructs,ts-node'"
         },
         {
-          "exec": "npm-check-updates --dep bundle --upgrade --target=minor --reject='cdktf,constructs,ts-node'"
+          "exec": "npm-check-updates --dep bundle --upgrade --target=minor --reject='@cdktf/provider-null,@cdktf/provider-random,cdktf,constructs,ts-node'"
         },
         {
           "exec": "yarn install --check-files"

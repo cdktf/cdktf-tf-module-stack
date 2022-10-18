@@ -7,10 +7,10 @@ const project = new CDKTFConstruct({
   repositoryUrl: "https://github.com/DanielMSchmidt/cdktf-tf-module-stack.git",
 
   deps: [],
-  peerDeps: ["cdktf"],
+  peerDeps: ["cdktf@>=0.13.0"],
   devDeps: [
-    "@cdktf/provider-null",
-    "@cdktf/provider-random",
+    "@cdktf/provider-null@>=3.0.11",
+    "@cdktf/provider-random@>=3.0.11",
     "@dschmidt/cdktf-construct-base",
   ],
   description:

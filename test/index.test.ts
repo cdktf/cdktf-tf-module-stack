@@ -1,4 +1,5 @@
-import { NullProvider, Resource } from "@cdktf/provider-null";
+import { NullProvider } from "@cdktf/provider-null/lib/provider";
+import { Resource } from "@cdktf/provider-null/lib/resource";
 import { RemoteBackend, Testing } from "cdktf";
 import { Construct } from "constructs";
 import { TFModuleStack } from "../src";
@@ -31,7 +32,7 @@ test("synthesizes a specific provider", () => {
         \\"required_providers\\": {
           \\"null\\": {
             \\"source\\": \\"null\\",
-            \\"version\\": \\"2.1.2\\"
+            \\"version\\": \\"3.1.1\\"
           }
         }
       }
@@ -127,7 +128,7 @@ test("synthesizes no backend", () => {
         \\"required_providers\\": {
           \\"null\\": {
             \\"source\\": \\"null\\",
-            \\"version\\": \\"2.1.2\\"
+            \\"version\\": \\"3.1.1\\"
           }
         }
       }
@@ -172,7 +173,7 @@ test("synthesizes variables and outputs", () => {
         \\"required_providers\\": {
           \\"null\\": {
             \\"source\\": \\"null\\",
-            \\"version\\": \\"2.1.2\\"
+            \\"version\\": \\"3.1.1\\"
           }
         }
       },
