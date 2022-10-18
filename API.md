@@ -488,6 +488,281 @@ If not set, all stacks will be synthesized.
 ---
 
 
+### TFModuleOutput <a name="TFModuleOutput" id="cdktf-tf-module-stack.TFModuleOutput"></a>
+
+#### Initializers <a name="Initializers" id="cdktf-tf-module-stack.TFModuleOutput.Initializer"></a>
+
+```typescript
+import { TFModuleOutput } from 'cdktf-tf-module-stack'
+
+new TFModuleOutput(scope: Construct, name: string, config: TerraformOutputConfig)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktf-tf-module-stack.TFModuleOutput.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | *No description.* |
+| <code><a href="#cdktf-tf-module-stack.TFModuleOutput.Initializer.parameter.name">name</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#cdktf-tf-module-stack.TFModuleOutput.Initializer.parameter.config">config</a></code> | <code>cdktf.TerraformOutputConfig</code> | *No description.* |
+
+---
+
+##### `scope`<sup>Required</sup> <a name="scope" id="cdktf-tf-module-stack.TFModuleOutput.Initializer.parameter.scope"></a>
+
+- *Type:* constructs.Construct
+
+---
+
+##### `name`<sup>Required</sup> <a name="name" id="cdktf-tf-module-stack.TFModuleOutput.Initializer.parameter.name"></a>
+
+- *Type:* string
+
+---
+
+##### `config`<sup>Required</sup> <a name="config" id="cdktf-tf-module-stack.TFModuleOutput.Initializer.parameter.config"></a>
+
+- *Type:* cdktf.TerraformOutputConfig
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktf-tf-module-stack.TFModuleOutput.toString">toString</a></code> | Returns a string representation of this construct. |
+| <code><a href="#cdktf-tf-module-stack.TFModuleOutput.addOverride">addOverride</a></code> | *No description.* |
+| <code><a href="#cdktf-tf-module-stack.TFModuleOutput.overrideLogicalId">overrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
+| <code><a href="#cdktf-tf-module-stack.TFModuleOutput.resetOverrideLogicalId">resetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#cdktf-tf-module-stack.TFModuleOutput.toMetadata">toMetadata</a></code> | *No description.* |
+| <code><a href="#cdktf-tf-module-stack.TFModuleOutput.toTerraform">toTerraform</a></code> | *No description.* |
+
+---
+
+##### `toString` <a name="toString" id="cdktf-tf-module-stack.TFModuleOutput.toString"></a>
+
+```typescript
+public toString(): string
+```
+
+Returns a string representation of this construct.
+
+##### `addOverride` <a name="addOverride" id="cdktf-tf-module-stack.TFModuleOutput.addOverride"></a>
+
+```typescript
+public addOverride(path: string, value: any): void
+```
+
+###### `path`<sup>Required</sup> <a name="path" id="cdktf-tf-module-stack.TFModuleOutput.addOverride.parameter.path"></a>
+
+- *Type:* string
+
+---
+
+###### `value`<sup>Required</sup> <a name="value" id="cdktf-tf-module-stack.TFModuleOutput.addOverride.parameter.value"></a>
+
+- *Type:* any
+
+---
+
+##### `overrideLogicalId` <a name="overrideLogicalId" id="cdktf-tf-module-stack.TFModuleOutput.overrideLogicalId"></a>
+
+```typescript
+public overrideLogicalId(newLogicalId: string): void
+```
+
+Overrides the auto-generated logical ID with a specific ID.
+
+###### `newLogicalId`<sup>Required</sup> <a name="newLogicalId" id="cdktf-tf-module-stack.TFModuleOutput.overrideLogicalId.parameter.newLogicalId"></a>
+
+- *Type:* string
+
+The new logical ID to use for this stack element.
+
+---
+
+##### `resetOverrideLogicalId` <a name="resetOverrideLogicalId" id="cdktf-tf-module-stack.TFModuleOutput.resetOverrideLogicalId"></a>
+
+```typescript
+public resetOverrideLogicalId(): void
+```
+
+Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `toMetadata` <a name="toMetadata" id="cdktf-tf-module-stack.TFModuleOutput.toMetadata"></a>
+
+```typescript
+public toMetadata(): any
+```
+
+##### `toTerraform` <a name="toTerraform" id="cdktf-tf-module-stack.TFModuleOutput.toTerraform"></a>
+
+```typescript
+public toTerraform(): any
+```
+
+#### Static Functions <a name="Static Functions" id="Static Functions"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdktf-tf-module-stack.TFModuleOutput.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#cdktf-tf-module-stack.TFModuleOutput.isTerrafromOutput">isTerrafromOutput</a></code> | *No description.* |
+
+---
+
+##### `isConstruct` <a name="isConstruct" id="cdktf-tf-module-stack.TFModuleOutput.isConstruct"></a>
+
+```typescript
+import { TFModuleOutput } from 'cdktf-tf-module-stack'
+
+TFModuleOutput.isConstruct(x: any)
+```
+
+Checks if `x` is a construct.
+
+Use this method instead of `instanceof` to properly detect `Construct`
+instances, even when the construct library is symlinked.
+
+Explanation: in JavaScript, multiple copies of the `constructs` library on
+disk are seen as independent, completely different libraries. As a
+consequence, the class `Construct` in each copy of the `constructs` library
+is seen as a different class, and an instance of one class will not test as
+`instanceof` the other class. `npm install` will not create installations
+like this, but users may manually symlink construct libraries together or
+use a monorepo tool: in those cases, multiple copies of the `constructs`
+library can be accidentally installed, and `instanceof` will behave
+unpredictably. It is safest to avoid using `instanceof`, and using
+this type-testing method instead.
+
+###### `x`<sup>Required</sup> <a name="x" id="cdktf-tf-module-stack.TFModuleOutput.isConstruct.parameter.x"></a>
+
+- *Type:* any
+
+Any object.
+
+---
+
+##### `isTerrafromOutput` <a name="isTerrafromOutput" id="cdktf-tf-module-stack.TFModuleOutput.isTerrafromOutput"></a>
+
+```typescript
+import { TFModuleOutput } from 'cdktf-tf-module-stack'
+
+TFModuleOutput.isTerrafromOutput(x: any)
+```
+
+###### `x`<sup>Required</sup> <a name="x" id="cdktf-tf-module-stack.TFModuleOutput.isTerrafromOutput.parameter.x"></a>
+
+- *Type:* any
+
+---
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdktf-tf-module-stack.TFModuleOutput.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
+| <code><a href="#cdktf-tf-module-stack.TFModuleOutput.property.cdktfStack">cdktfStack</a></code> | <code>cdktf.TerraformStack</code> | *No description.* |
+| <code><a href="#cdktf-tf-module-stack.TFModuleOutput.property.fqn">fqn</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#cdktf-tf-module-stack.TFModuleOutput.property.friendlyUniqueId">friendlyUniqueId</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#cdktf-tf-module-stack.TFModuleOutput.property.staticId">staticId</a></code> | <code>boolean</code> | *No description.* |
+| <code><a href="#cdktf-tf-module-stack.TFModuleOutput.property.value">value</a></code> | <code>any</code> | *No description.* |
+| <code><a href="#cdktf-tf-module-stack.TFModuleOutput.property.dependsOn">dependsOn</a></code> | <code>cdktf.ITerraformDependable[]</code> | *No description.* |
+| <code><a href="#cdktf-tf-module-stack.TFModuleOutput.property.description">description</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#cdktf-tf-module-stack.TFModuleOutput.property.sensitive">sensitive</a></code> | <code>boolean</code> | *No description.* |
+
+---
+
+##### `node`<sup>Required</sup> <a name="node" id="cdktf-tf-module-stack.TFModuleOutput.property.node"></a>
+
+```typescript
+public readonly node: Node;
+```
+
+- *Type:* constructs.Node
+
+The tree node.
+
+---
+
+##### `cdktfStack`<sup>Required</sup> <a name="cdktfStack" id="cdktf-tf-module-stack.TFModuleOutput.property.cdktfStack"></a>
+
+```typescript
+public readonly cdktfStack: TerraformStack;
+```
+
+- *Type:* cdktf.TerraformStack
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="cdktf-tf-module-stack.TFModuleOutput.property.fqn"></a>
+
+```typescript
+public readonly fqn: string;
+```
+
+- *Type:* string
+
+---
+
+##### `friendlyUniqueId`<sup>Required</sup> <a name="friendlyUniqueId" id="cdktf-tf-module-stack.TFModuleOutput.property.friendlyUniqueId"></a>
+
+```typescript
+public readonly friendlyUniqueId: string;
+```
+
+- *Type:* string
+
+---
+
+##### `staticId`<sup>Required</sup> <a name="staticId" id="cdktf-tf-module-stack.TFModuleOutput.property.staticId"></a>
+
+```typescript
+public readonly staticId: boolean;
+```
+
+- *Type:* boolean
+
+---
+
+##### `value`<sup>Required</sup> <a name="value" id="cdktf-tf-module-stack.TFModuleOutput.property.value"></a>
+
+```typescript
+public readonly value: any;
+```
+
+- *Type:* any
+
+---
+
+##### `dependsOn`<sup>Optional</sup> <a name="dependsOn" id="cdktf-tf-module-stack.TFModuleOutput.property.dependsOn"></a>
+
+```typescript
+public readonly dependsOn: ITerraformDependable[];
+```
+
+- *Type:* cdktf.ITerraformDependable[]
+
+---
+
+##### `description`<sup>Optional</sup> <a name="description" id="cdktf-tf-module-stack.TFModuleOutput.property.description"></a>
+
+```typescript
+public readonly description: string;
+```
+
+- *Type:* string
+
+---
+
+##### `sensitive`<sup>Optional</sup> <a name="sensitive" id="cdktf-tf-module-stack.TFModuleOutput.property.sensitive"></a>
+
+```typescript
+public readonly sensitive: boolean;
+```
+
+- *Type:* boolean
+
+---
+
+
 ### TFModuleStack <a name="TFModuleStack" id="cdktf-tf-module-stack.TFModuleStack"></a>
 
 #### Initializers <a name="Initializers" id="cdktf-tf-module-stack.TFModuleStack.Initializer"></a>

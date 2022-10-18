@@ -2,7 +2,11 @@ import { NullProvider, Resource } from "@cdktf/provider-null";
 import { RemoteBackend, Testing } from "cdktf";
 import { Construct } from "constructs";
 import { TFModuleStack } from "../src";
-import { TFModuleVariable, ProviderRequirement } from "../src/index";
+import {
+  TFModuleVariable,
+  ProviderRequirement,
+  TFModuleOutput,
+} from "../src/index";
 
 test("synthesizes a specific provider", () => {
   const app = Testing.app();
@@ -131,7 +135,7 @@ test("synthesizes no backend", () => {
   `);
 });
 
-test("synthesizes variables", () => {
+test("synthesizes variables and outputs", () => {
   const app = Testing.app();
   class MyStack extends TFModuleStack {
     constructor(scope: Construct, id: string) {
@@ -141,12 +145,23 @@ test("synthesizes variables", () => {
         type: "string",
       });
       new NullProvider(this, "null");
-      new Resource(this, "resource");
+      const res = new Resource(this, "resource");
+
+      new TFModuleOutput(this, "my_output", {
+        value: res.id,
+      });
     }
   }
   const stack = new MyStack(app, "MyStack");
   expect(Testing.synth(stack)).toMatchInlineSnapshot(`
     "{
+      \\"output\\": {
+        \\"my_output\\": [
+          {
+            \\"value\\": \\"\${null_resource.resource.id}\\"
+          }
+        ]
+      },
       \\"resource\\": {
         \\"null_resource\\": {
           \\"resource\\": {
@@ -162,9 +177,11 @@ test("synthesizes variables", () => {
         }
       },
       \\"variable\\": {
-        \\"my_variable\\": {
-          \\"type\\": \\"string\\"
-        }
+        \\"my_variable\\": [
+          {
+            \\"type\\": \\"string\\"
+          }
+        ]
       }
     }"
   `);

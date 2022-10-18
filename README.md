@@ -28,12 +28,16 @@ class MyAwesomeModule extends TFModuleStack {
     super(scope, id);
 
     new ProviderRequirement(this, "null", "~> 2.0");
-    new Resource(this, "resource");
+    const resource = new Resource(this, "resource");
 
     new TFModuleVariable(this, "my_var", {
       type: "string",
       description: "A variable",
       default: "default",
+    });
+
+    new TFModuleOutput(this, "my_output", {
+      value: resource.id,
     });
   }
 }
@@ -47,6 +51,13 @@ This will synthesize a Terraform JSON file that looks like this:
 
 ```json
 {
+  "output": {
+    "my_output": [
+      {
+        "value": "${null_resource.resource.id}"
+      }
+    ]
+  },
   "resource": {
     "null_resource": {
       "resource": {}
