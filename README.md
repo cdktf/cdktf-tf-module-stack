@@ -19,6 +19,7 @@ import { App } from "cdktf";
 import {
   TFModuleStack,
   TFModuleVariable,
+  TFModuleOutput,
   ProviderRequirement,
 } from "cdktf-tf-module-stack";
 import { Resource } from "@cdktf/provider-null";
