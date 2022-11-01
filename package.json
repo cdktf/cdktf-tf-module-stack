@@ -1,5 +1,5 @@
 {
-  "name": "cdktf-tf-module-stack",
+  "name": "@cdktf/tf-module-stack",
   "description": "A drop-in replacement for cdktf.TerraformStack that let's you define Terraform modules as construct",
   "repository": {
     "type": "git",
@@ -125,8 +125,8 @@
     "outdir": "dist",
     "targets": {
       "python": {
-        "distName": "cdktf-tf-module-stack",
-        "module": "cdktf_tf_module_stack"
+        "distName": "@cdktf/tf-module-stack",
+        "module": "@cdktf/tf_module_stack"
       }
     },
     "tsc": {

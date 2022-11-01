@@ -3,10 +3,11 @@ const project = new CDKTFConstruct({
   author: "Daniel Schmidt",
   authorAddress: "danielmschmidt92@gmail.com",
   defaultReleaseBranch: "main",
-  name: "cdktf-tf-module-stack",
+  name: "@cdktf/tf-module-stack",
   repositoryUrl: "https://github.com/DanielMSchmidt/cdktf-tf-module-stack.git",
 
   deps: [],
+  minMajorVersion: 1,
   peerDeps: ["cdktf@>=0.13.0"],
   devDeps: [
     "@cdktf/provider-null@>=3.0.11",
