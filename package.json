@@ -125,8 +125,8 @@
     "outdir": "dist",
     "targets": {
       "python": {
-        "distName": "cdktf-cdktf-tf-module-stack",
-        "module": "cdktf_cdktf_tf_module_stack"
+        "distName": "cdktf-tf-module-stack",
+        "module": "cdktf_tf_module_stack"
       }
     },
     "tsc": {
