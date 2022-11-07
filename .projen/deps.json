@@ -11,10 +11,6 @@
       "type": "build"
     },
     {
-      "name": "@dschmidt/cdktf-construct-base",
-      "type": "build"
-    },
-    {
       "name": "@types/jest",
       "version": "^27",
       "type": "build"
@@ -36,12 +32,12 @@
     },
     {
       "name": "cdktf",
-      "version": "0.12.0",
+      "version": "0.13.0",
       "type": "build"
     },
     {
       "name": "constructs",
-      "version": "10.0.107",
+      "version": "10.0.25",
       "type": "build"
     },
     {
@@ -124,7 +120,6 @@
     },
     {
       "name": "ts-node",
-      "version": "10.9.1",
       "type": "build"
     },
     {
@@ -148,12 +143,12 @@
     },
     {
       "name": "cdktf",
-      "version": "^0.12.0",
+      "version": ">=0.13.0",
       "type": "peer"
     },
     {
       "name": "constructs",
-      "version": "^10.0.107",
+      "version": "^10.0.25",
       "type": "peer"
     }
   ],

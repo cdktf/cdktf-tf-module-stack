@@ -1,18 +1,21 @@
-import { CDKTFConstruct } from "@dschmidt/cdktf-construct-base";
-const project = new CDKTFConstruct({
+import { ConstructLibraryCdktf } from "projen/lib/cdktf";
+const project = new ConstructLibraryCdktf({
   author: "Daniel Schmidt",
   authorAddress: "danielmschmidt92@gmail.com",
   defaultReleaseBranch: "main",
-  name: "cdktf-tf-module-stack",
+  name: "@cdktf/tf-module-stack",
   repositoryUrl: "https://github.com/DanielMSchmidt/cdktf-tf-module-stack.git",
-
-  deps: [],
-  peerDeps: ["cdktf@>=0.13.0"],
-  devDeps: [
-    "@cdktf/provider-null@>=3.0.11",
-    "@cdktf/provider-random@>=3.0.11",
-    "@dschmidt/cdktf-construct-base",
-  ],
+  prettier: true,
+  projenrcTs: true,
+  githubOptions: {
+    mergify: true,
+  },
+  autoApproveUpgrades: true,
+  autoApproveOptions: {
+    label: "auto-approve",
+  },
+  minMajorVersion: 1,
+  cdktfVersion: "0.13.0",
   description:
     "A drop-in replacement for cdktf.TerraformStack that let's you define Terraform modules as construct" /* The description is just a string that helps people understand the purpose of the package. */,
   publishToPypi: {
@@ -23,4 +26,11 @@ const project = new CDKTFConstruct({
   // packageName: undefined,  /* The "name" in package.json. */
   // release: undefined,      /* Add release management to this project. */
 });
+project.addPeerDeps("cdktf@>=0.13.0", "constructs@^10.0.25");
+project.addDevDeps(
+  "@cdktf/provider-null@>=3.0.11",
+  "@cdktf/provider-random@>=3.0.11"
+);
+project.jest?.addIgnorePattern("dist");
+project.addKeywords("cdktf", "terraform");
 project.synth();

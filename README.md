@@ -6,7 +6,7 @@ A drop-in replacement for cdktf.TerraformStack that let's you define Terraform m
 
 ### Node.js
 
-Run `yarn add cdktf-tf-module-stack` (or `npm install --save cdktf-tf-module-stack`) to install the package.
+Run `yarn add @cdktf/tf-module-stack` (or `npm install --save @cdktf/tf-module-stack`) to install the package.
 
 ### Python
 
