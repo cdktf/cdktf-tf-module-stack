@@ -1,4 +1,6 @@
 import { ConstructLibraryCdktf } from "projen/lib/cdktf";
+import { NpmAccess } from "projen/lib/javascript";
+
 const project = new ConstructLibraryCdktf({
   author: "Daniel Schmidt",
   authorAddress: "danielmschmidt92@gmail.com",
@@ -10,6 +12,7 @@ const project = new ConstructLibraryCdktf({
   githubOptions: {
     mergify: true,
   },
+  npmAccess: NpmAccess.PUBLIC,
   autoApproveUpgrades: true,
   autoApproveOptions: {
     label: "auto-approve",
