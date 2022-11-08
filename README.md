@@ -14,6 +14,8 @@ Run `pip install cdktf-tf-module-stack` to install the package.
 
 ## Usage
 
+### Typescript
+
 ```ts
 import { App } from "cdktf";
 import {
@@ -46,6 +48,33 @@ class MyAwesomeModule extends TFModuleStack {
 const app = new App();
 new MyAwesomeModule(app, "my-awesome-module");
 app.synth();
+```
+
+### Python
+
+```python
+from constructs import Construct
+from cdktf import App, TerraformStack
+from imports.null.resource import Resource
+from cdktf_tf_module_stack import TFModuleStack, TFModuleVariable, TFModuleOutput, ProviderRequirement
+
+
+class MyAwesomeModule(TFModuleStack):
+    def __init__(self, scope: Construct, ns: str):
+        super().__init__(scope, ns)
+
+        ProviderRequirement(self, "null", provider_version_constraint="~> 2.0")
+
+        TFModuleVariable(self, "my_var", type="string", description="A variable", default="default")
+
+        resource = Resource(self, "resource")
+
+        TFModuleOutput(self, "my_output", value=resource.id)
+
+
+app = App()
+MyAwesomeModule(app, "my-awesome-module")
+app.synth()
 ```
 
 This will synthesize a Terraform JSON file that looks like this:

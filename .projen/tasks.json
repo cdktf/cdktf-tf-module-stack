@@ -100,12 +100,48 @@
         }
       ]
     },
-    "docgen": {
-      "name": "docgen",
-      "description": "Generate API.md from .jsii manifest",
+    "docgen-csharp": {
+      "name": "docgen-csharp",
+      "description": "Generate API.md from .jsii manifest for csharp",
       "steps": [
         {
-          "exec": "jsii-docgen -o API.md"
+          "exec": "jsii-docgen -o docs/csharp.md -l csharp"
+        }
+      ]
+    },
+    "docgen-go": {
+      "name": "docgen-go",
+      "description": "Generate API.md from .jsii manifest for go",
+      "steps": [
+        {
+          "exec": "jsii-docgen -o docs/go.md -l go"
+        }
+      ]
+    },
+    "docgen-java": {
+      "name": "docgen-java",
+      "description": "Generate API.md from .jsii manifest for java",
+      "steps": [
+        {
+          "exec": "jsii-docgen -o docs/java.md -l java"
+        }
+      ]
+    },
+    "docgen-python": {
+      "name": "docgen-python",
+      "description": "Generate API.md from .jsii manifest for python",
+      "steps": [
+        {
+          "exec": "jsii-docgen -o docs/python.md -l python"
+        }
+      ]
+    },
+    "docgen-typescript": {
+      "name": "docgen-typescript",
+      "description": "Generate API.md from .jsii manifest for typescript",
+      "steps": [
+        {
+          "exec": "jsii-docgen -o docs/typescript.md -l typescript"
         }
       ]
     },
@@ -210,7 +246,19 @@
       "description": "Runs after successful compilation",
       "steps": [
         {
-          "spawn": "docgen"
+          "spawn": "docgen-typescript"
+        },
+        {
+          "spawn": "docgen-python"
+        },
+        {
+          "spawn": "docgen-java"
+        },
+        {
+          "spawn": "docgen-csharp"
+        },
+        {
+          "spawn": "docgen-go"
         }
       ]
     },
