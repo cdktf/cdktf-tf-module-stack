@@ -52,4 +52,9 @@ junit.xml
 !/.eslintrc.json
 .jsii
 tsconfig.json
+!docs/typescript.md
+!docs/python.md
+!docs/java.md
+!docs/csharp.md
+!docs/go.md
 !/API.md
