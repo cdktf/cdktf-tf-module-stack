@@ -25,6 +25,22 @@ const project = new ConstructLibraryCdktf({
     distName: "cdktf-tf-module-stack",
     module: "cdktf_tf_module_stack",
   },
+  publishToNuget: {
+    dotNetNamespace: "HashiCorp.Cdktf.TfModuleStack",
+    packageId: "HashiCorp.Cdktf.TfModuleStack",
+  },
+  publishToMaven: {
+    javaPackage: "com.hashicorp.cdktf.tf_module_stack",
+    mavenGroupId: "com.hashicorp",
+    mavenArtifactId: "cdktf-tf-module-stack",
+    mavenEndpoint: "https://hashicorp.oss.sonatype.org",
+  },
+  publishToGo: {
+    gitUserEmail: "github-team-tf-cdk@hashicorp.com",
+    gitUserName: "CDK for Terraform Team",
+    moduleName: `github.com/cdktf/cdktf-tf-module-stack-go`,
+    packageName: "tfmodulestack",
+  },
   // devDeps: [],             /* Build dependencies for this module. */
   // packageName: undefined,  /* The "name" in package.json. */
   // release: undefined,      /* Add release management to this project. */
