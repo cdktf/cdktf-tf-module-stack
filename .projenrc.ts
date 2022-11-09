@@ -23,6 +23,10 @@ const project = new ConstructLibraryCdktf({
   cdktfVersion: "0.13.0",
   description:
     "A drop-in replacement for cdktf.TerraformStack that let's you define Terraform modules as construct" /* The description is just a string that helps people understand the purpose of the package. */,
+  workflowGitIdentity: {
+    name: "team-tf-cdk",
+    email: "github-team-tf-cdk@hashicorp.com",
+  },
   publishToPypi: {
     distName: "cdktf-tf-module-stack",
     module: "cdktf_tf_module_stack",
