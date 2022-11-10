@@ -2,15 +2,43 @@
 
 A drop-in replacement for cdktf.TerraformStack that let's you define Terraform modules as construct.
 
-## Setup
+## Available Packages
 
-### Node.js
+### NPM
 
-Run `yarn add @cdktf/tf-module-stack` (or `npm install --save @cdktf/tf-module-stack`) to install the package.
+The npm package is available at [https://www.npmjs.com/package/@cdktf/tf-module-stack](https://www.npmjs.com/package/@cdktf/tf-module-stack).
 
-### Python
+`npm install @cdktf/tf-module-stack`
 
-Run `pip install cdktf-tf-module-stack` to install the package.
+### PyPI
+
+The PyPI package is available at [https://pypi.org/project/cdktf-tf-module-stack](https://pypi.org/project/cdktf-tf-module-stack).
+
+`pipenv install cdktf-tf-module-stack`
+
+### Nuget
+
+The Nuget package is available at [https://www.nuget.org/packages/HashiCorp.Cdktf.TfModuleStack](https://www.nuget.org/packages/HashiCorp.Cdktf.TfModuleStack).
+
+`dotnet add package HashiCorp.Cdktf.TfModuleStack`
+
+### Maven
+
+The Maven package is available at [https://mvnrepository.com/artifact/com.hashicorp/cdktf-tf-module-stack](https://mvnrepository.com/artifact/com.hashicorp/cdktf-tf-module-stack).
+
+```
+<dependency>
+    <groupId>com.hashicorp</groupId>
+    <artifactId>cdktf-tf-module-stack</artifactId>
+    <version>[REPLACE WITH DESIRED VERSION]</version>
+</dependency>
+```
+
+### Go
+
+The go package is generated into the [`github.com/cdktf/cdktf-tf-module-stack-go`](https://github.com/cdktf/cdktf-tf-module-stack-go) package.
+
+`go get github.com/cdktf/cdktf-tf-module-stack-go/tfmodulestack`
 
 ## Usage
 
