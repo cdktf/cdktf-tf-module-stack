@@ -13,6 +13,19 @@ const project = new ConstructLibraryCdktf({
   projenrcTs: true,
   githubOptions: {
     mergify: true,
+    mergifyOptions: {
+      rules: [
+        {
+          name: "Automatically merge auto-approve PRs",
+          conditions: ["label=auto-approve", "author=team-tf-cdk "],
+          actions: {
+            merge: {
+              method: "rebase",
+            },
+          },
+        },
+      ],
+    },
   },
   npmAccess: NpmAccess.PUBLIC,
   autoApproveUpgrades: true,
