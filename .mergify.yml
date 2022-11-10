@@ -12,6 +12,13 @@ queue_rules:
       - status-success=package-dotnet
       - status-success=package-go
 pull_request_rules:
+  - name: Automatically merge auto-approve PRs
+    conditions:
+      - label=auto-approve
+      - "author=team-tf-cdk "
+    actions:
+      merge:
+        method: rebase
   - name: Automatic merge on approval and successful build
     actions:
       delete_head_branch: {}
