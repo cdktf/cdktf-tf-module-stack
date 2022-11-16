@@ -127,6 +127,8 @@ Adds this resource to the terraform JSON output.
 | **Name** | **Description** |
 | --- | --- |
 | <code><a href="#@cdktf/tf-module-stack.ProviderRequirement.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#@cdktf/tf-module-stack.ProviderRequirement.isTerraformElement">isTerraformElement</a></code> | *No description.* |
+| <code><a href="#@cdktf/tf-module-stack.ProviderRequirement.isTerraformProvider">isTerraformProvider</a></code> | *No description.* |
 
 ---
 
@@ -145,6 +147,34 @@ Checks if `x` is a construct.
 - *Type:* java.lang.Object
 
 Any object.
+
+---
+
+##### `isTerraformElement` <a name="isTerraformElement" id="@cdktf/tf-module-stack.ProviderRequirement.isTerraformElement"></a>
+
+```java
+import com.hashicorp.cdktf.tf_module_stack.ProviderRequirement;
+
+ProviderRequirement.isTerraformElement(java.lang.Object x)
+```
+
+###### `x`<sup>Required</sup> <a name="x" id="@cdktf/tf-module-stack.ProviderRequirement.isTerraformElement.parameter.x"></a>
+
+- *Type:* java.lang.Object
+
+---
+
+##### `isTerraformProvider` <a name="isTerraformProvider" id="@cdktf/tf-module-stack.ProviderRequirement.isTerraformProvider"></a>
+
+```java
+import com.hashicorp.cdktf.tf_module_stack.ProviderRequirement;
+
+ProviderRequirement.isTerraformProvider(java.lang.Object x)
+```
+
+###### `x`<sup>Required</sup> <a name="x" id="@cdktf/tf-module-stack.ProviderRequirement.isTerraformProvider.parameter.x"></a>
+
+- *Type:* java.lang.Object
 
 ---
 
@@ -652,6 +682,7 @@ public java.lang.Object toTerraform()
 | **Name** | **Description** |
 | --- | --- |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleOutput.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#@cdktf/tf-module-stack.TFModuleOutput.isTerraformElement">isTerraformElement</a></code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleOutput.isTerrafromOutput">isTerrafromOutput</a></code> | *No description.* |
 
 ---
@@ -671,6 +702,20 @@ Checks if `x` is a construct.
 - *Type:* java.lang.Object
 
 Any object.
+
+---
+
+##### `isTerraformElement` <a name="isTerraformElement" id="@cdktf/tf-module-stack.TFModuleOutput.isTerraformElement"></a>
+
+```java
+import com.hashicorp.cdktf.tf_module_stack.TFModuleOutput;
+
+TFModuleOutput.isTerraformElement(java.lang.Object x)
+```
+
+###### `x`<sup>Required</sup> <a name="x" id="@cdktf/tf-module-stack.TFModuleOutput.isTerraformElement.parameter.x"></a>
+
+- *Type:* java.lang.Object
 
 ---
 
@@ -1266,6 +1311,7 @@ public java.util.Map<java.lang.String, java.lang.Object> synthesizeAttributes()
 | **Name** | **Description** |
 | --- | --- |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleVariable.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#@cdktf/tf-module-stack.TFModuleVariable.isTerraformElement">isTerraformElement</a></code> | *No description.* |
 
 ---
 
@@ -1284,6 +1330,20 @@ Checks if `x` is a construct.
 - *Type:* java.lang.Object
 
 Any object.
+
+---
+
+##### `isTerraformElement` <a name="isTerraformElement" id="@cdktf/tf-module-stack.TFModuleVariable.isTerraformElement"></a>
+
+```java
+import com.hashicorp.cdktf.tf_module_stack.TFModuleVariable;
+
+TFModuleVariable.isTerraformElement(java.lang.Object x)
+```
+
+###### `x`<sup>Required</sup> <a name="x" id="@cdktf/tf-module-stack.TFModuleVariable.isTerraformElement.parameter.x"></a>
+
+- *Type:* java.lang.Object
 
 ---
 

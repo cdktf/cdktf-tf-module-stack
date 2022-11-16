@@ -127,6 +127,8 @@ Adds this resource to the terraform JSON output.
 | **Name** | **Description** |
 | --- | --- |
 | <code><a href="#@cdktf/tf-module-stack.ProviderRequirement.isConstruct">IsConstruct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#@cdktf/tf-module-stack.ProviderRequirement.isTerraformElement">IsTerraformElement</a></code> | *No description.* |
+| <code><a href="#@cdktf/tf-module-stack.ProviderRequirement.isTerraformProvider">IsTerraformProvider</a></code> | *No description.* |
 
 ---
 
@@ -145,6 +147,34 @@ Checks if `x` is a construct.
 - *Type:* interface{}
 
 Any object.
+
+---
+
+##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/tf-module-stack.ProviderRequirement.isTerraformElement"></a>
+
+```go
+import "github.com/cdktf/cdktf-tf-module-stack-go/tfmodulestack"
+
+tfmodulestack.ProviderRequirement_IsTerraformElement(x interface{}) *bool
+```
+
+###### `x`<sup>Required</sup> <a name="x" id="@cdktf/tf-module-stack.ProviderRequirement.isTerraformElement.parameter.x"></a>
+
+- *Type:* interface{}
+
+---
+
+##### `IsTerraformProvider` <a name="IsTerraformProvider" id="@cdktf/tf-module-stack.ProviderRequirement.isTerraformProvider"></a>
+
+```go
+import "github.com/cdktf/cdktf-tf-module-stack-go/tfmodulestack"
+
+tfmodulestack.ProviderRequirement_IsTerraformProvider(x interface{}) *bool
+```
+
+###### `x`<sup>Required</sup> <a name="x" id="@cdktf/tf-module-stack.ProviderRequirement.isTerraformProvider.parameter.x"></a>
+
+- *Type:* interface{}
 
 ---
 
@@ -576,6 +606,7 @@ func ToTerraform() interface{}
 | **Name** | **Description** |
 | --- | --- |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleOutput.isConstruct">IsConstruct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#@cdktf/tf-module-stack.TFModuleOutput.isTerraformElement">IsTerraformElement</a></code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleOutput.isTerrafromOutput">IsTerrafromOutput</a></code> | *No description.* |
 
 ---
@@ -595,6 +626,20 @@ Checks if `x` is a construct.
 - *Type:* interface{}
 
 Any object.
+
+---
+
+##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/tf-module-stack.TFModuleOutput.isTerraformElement"></a>
+
+```go
+import "github.com/cdktf/cdktf-tf-module-stack-go/tfmodulestack"
+
+tfmodulestack.TFModuleOutput_IsTerraformElement(x interface{}) *bool
+```
+
+###### `x`<sup>Required</sup> <a name="x" id="@cdktf/tf-module-stack.TFModuleOutput.isTerraformElement.parameter.x"></a>
+
+- *Type:* interface{}
 
 ---
 
@@ -1122,6 +1167,7 @@ func SynthesizeAttributes() *map[string]interface{}
 | **Name** | **Description** |
 | --- | --- |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleVariable.isConstruct">IsConstruct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#@cdktf/tf-module-stack.TFModuleVariable.isTerraformElement">IsTerraformElement</a></code> | *No description.* |
 
 ---
 
@@ -1140,6 +1186,20 @@ Checks if `x` is a construct.
 - *Type:* interface{}
 
 Any object.
+
+---
+
+##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/tf-module-stack.TFModuleVariable.isTerraformElement"></a>
+
+```go
+import "github.com/cdktf/cdktf-tf-module-stack-go/tfmodulestack"
+
+tfmodulestack.TFModuleVariable_IsTerraformElement(x interface{}) *bool
+```
+
+###### `x`<sup>Required</sup> <a name="x" id="@cdktf/tf-module-stack.TFModuleVariable.isTerraformElement.parameter.x"></a>
+
+- *Type:* interface{}
 
 ---
 

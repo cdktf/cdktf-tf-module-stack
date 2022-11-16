@@ -127,6 +127,8 @@ Adds this resource to the terraform JSON output.
 | **Name** | **Description** |
 | --- | --- |
 | <code><a href="#@cdktf/tf-module-stack.ProviderRequirement.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#@cdktf/tf-module-stack.ProviderRequirement.isTerraformElement">isTerraformElement</a></code> | *No description.* |
+| <code><a href="#@cdktf/tf-module-stack.ProviderRequirement.isTerraformProvider">isTerraformProvider</a></code> | *No description.* |
 
 ---
 
@@ -145,6 +147,34 @@ Checks if `x` is a construct.
 - *Type:* any
 
 Any object.
+
+---
+
+##### `isTerraformElement` <a name="isTerraformElement" id="@cdktf/tf-module-stack.ProviderRequirement.isTerraformElement"></a>
+
+```typescript
+import { ProviderRequirement } from '@cdktf/tf-module-stack'
+
+ProviderRequirement.isTerraformElement(x: any)
+```
+
+###### `x`<sup>Required</sup> <a name="x" id="@cdktf/tf-module-stack.ProviderRequirement.isTerraformElement.parameter.x"></a>
+
+- *Type:* any
+
+---
+
+##### `isTerraformProvider` <a name="isTerraformProvider" id="@cdktf/tf-module-stack.ProviderRequirement.isTerraformProvider"></a>
+
+```typescript
+import { ProviderRequirement } from '@cdktf/tf-module-stack'
+
+ProviderRequirement.isTerraformProvider(x: any)
+```
+
+###### `x`<sup>Required</sup> <a name="x" id="@cdktf/tf-module-stack.ProviderRequirement.isTerraformProvider.parameter.x"></a>
+
+- *Type:* any
 
 ---
 
@@ -576,6 +606,7 @@ public toTerraform(): any
 | **Name** | **Description** |
 | --- | --- |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleOutput.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#@cdktf/tf-module-stack.TFModuleOutput.isTerraformElement">isTerraformElement</a></code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleOutput.isTerrafromOutput">isTerrafromOutput</a></code> | *No description.* |
 
 ---
@@ -595,6 +626,20 @@ Checks if `x` is a construct.
 - *Type:* any
 
 Any object.
+
+---
+
+##### `isTerraformElement` <a name="isTerraformElement" id="@cdktf/tf-module-stack.TFModuleOutput.isTerraformElement"></a>
+
+```typescript
+import { TFModuleOutput } from '@cdktf/tf-module-stack'
+
+TFModuleOutput.isTerraformElement(x: any)
+```
+
+###### `x`<sup>Required</sup> <a name="x" id="@cdktf/tf-module-stack.TFModuleOutput.isTerraformElement.parameter.x"></a>
+
+- *Type:* any
 
 ---
 
@@ -1122,6 +1167,7 @@ public synthesizeAttributes(): {[ key: string ]: any}
 | **Name** | **Description** |
 | --- | --- |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleVariable.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#@cdktf/tf-module-stack.TFModuleVariable.isTerraformElement">isTerraformElement</a></code> | *No description.* |
 
 ---
 
@@ -1140,6 +1186,20 @@ Checks if `x` is a construct.
 - *Type:* any
 
 Any object.
+
+---
+
+##### `isTerraformElement` <a name="isTerraformElement" id="@cdktf/tf-module-stack.TFModuleVariable.isTerraformElement"></a>
+
+```typescript
+import { TFModuleVariable } from '@cdktf/tf-module-stack'
+
+TFModuleVariable.isTerraformElement(x: any)
+```
+
+###### `x`<sup>Required</sup> <a name="x" id="@cdktf/tf-module-stack.TFModuleVariable.isTerraformElement.parameter.x"></a>
+
+- *Type:* any
 
 ---
 
