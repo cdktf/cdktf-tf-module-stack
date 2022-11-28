@@ -137,6 +137,8 @@ Adds this resource to the terraform JSON output.
 | **Name** | **Description** |
 | --- | --- |
 | <code><a href="#@cdktf/tf-module-stack.ProviderRequirement.isConstruct">is_construct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#@cdktf/tf-module-stack.ProviderRequirement.isTerraformElement">is_terraform_element</a></code> | *No description.* |
+| <code><a href="#@cdktf/tf-module-stack.ProviderRequirement.isTerraformProvider">is_terraform_provider</a></code> | *No description.* |
 
 ---
 
@@ -157,6 +159,38 @@ Checks if `x` is a construct.
 - *Type:* typing.Any
 
 Any object.
+
+---
+
+##### `is_terraform_element` <a name="is_terraform_element" id="@cdktf/tf-module-stack.ProviderRequirement.isTerraformElement"></a>
+
+```python
+import cdktf_tf_module_stack
+
+cdktf_tf_module_stack.ProviderRequirement.is_terraform_element(
+  x: typing.Any
+)
+```
+
+###### `x`<sup>Required</sup> <a name="x" id="@cdktf/tf-module-stack.ProviderRequirement.isTerraformElement.parameter.x"></a>
+
+- *Type:* typing.Any
+
+---
+
+##### `is_terraform_provider` <a name="is_terraform_provider" id="@cdktf/tf-module-stack.ProviderRequirement.isTerraformProvider"></a>
+
+```python
+import cdktf_tf_module_stack
+
+cdktf_tf_module_stack.ProviderRequirement.is_terraform_provider(
+  x: typing.Any
+)
+```
+
+###### `x`<sup>Required</sup> <a name="x" id="@cdktf/tf-module-stack.ProviderRequirement.isTerraformProvider.parameter.x"></a>
+
+- *Type:* typing.Any
 
 ---
 
@@ -681,6 +715,7 @@ def to_terraform() -> typing.Any
 | **Name** | **Description** |
 | --- | --- |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleOutput.isConstruct">is_construct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#@cdktf/tf-module-stack.TFModuleOutput.isTerraformElement">is_terraform_element</a></code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleOutput.isTerrafromOutput">is_terrafrom_output</a></code> | *No description.* |
 
 ---
@@ -702,6 +737,22 @@ Checks if `x` is a construct.
 - *Type:* typing.Any
 
 Any object.
+
+---
+
+##### `is_terraform_element` <a name="is_terraform_element" id="@cdktf/tf-module-stack.TFModuleOutput.isTerraformElement"></a>
+
+```python
+import cdktf_tf_module_stack
+
+cdktf_tf_module_stack.TFModuleOutput.is_terraform_element(
+  x: typing.Any
+)
+```
+
+###### `x`<sup>Required</sup> <a name="x" id="@cdktf/tf-module-stack.TFModuleOutput.isTerraformElement.parameter.x"></a>
+
+- *Type:* typing.Any
 
 ---
 
@@ -1337,6 +1388,7 @@ def synthesize_attributes() -> typing.Mapping[typing.Any]
 | **Name** | **Description** |
 | --- | --- |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleVariable.isConstruct">is_construct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#@cdktf/tf-module-stack.TFModuleVariable.isTerraformElement">is_terraform_element</a></code> | *No description.* |
 
 ---
 
@@ -1357,6 +1409,22 @@ Checks if `x` is a construct.
 - *Type:* typing.Any
 
 Any object.
+
+---
+
+##### `is_terraform_element` <a name="is_terraform_element" id="@cdktf/tf-module-stack.TFModuleVariable.isTerraformElement"></a>
+
+```python
+import cdktf_tf_module_stack
+
+cdktf_tf_module_stack.TFModuleVariable.is_terraform_element(
+  x: typing.Any
+)
+```
+
+###### `x`<sup>Required</sup> <a name="x" id="@cdktf/tf-module-stack.TFModuleVariable.isTerraformElement.parameter.x"></a>
+
+- *Type:* typing.Any
 
 ---
 

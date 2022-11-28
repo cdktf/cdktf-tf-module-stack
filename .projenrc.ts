@@ -33,7 +33,7 @@ const project = new ConstructLibraryCdktf({
     label: "auto-approve",
   },
   minMajorVersion: 1,
-  cdktfVersion: "0.13.0",
+  cdktfVersion: ">=0.14.0",
   description:
     "A drop-in replacement for cdktf.TerraformStack that let's you define Terraform modules as construct" /* The description is just a string that helps people understand the purpose of the package. */,
   workflowGitIdentity: {
@@ -65,7 +65,7 @@ const project = new ConstructLibraryCdktf({
   // release: undefined,      /* Add release management to this project. */
   docgen: false,
 });
-project.addPeerDeps("cdktf@>=0.13.0", "constructs@^10.0.25");
+project.addPeerDeps("cdktf@>=0.14.0", "constructs@^10.0.25");
 project.addDevDeps(
   "@cdktf/provider-null@>=3.0.11",
   "@cdktf/provider-random@>=3.0.11"

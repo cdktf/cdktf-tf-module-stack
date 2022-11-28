@@ -127,6 +127,8 @@ Adds this resource to the terraform JSON output.
 | **Name** | **Description** |
 | --- | --- |
 | <code><a href="#@cdktf/tf-module-stack.ProviderRequirement.isConstruct">IsConstruct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#@cdktf/tf-module-stack.ProviderRequirement.isTerraformElement">IsTerraformElement</a></code> | *No description.* |
+| <code><a href="#@cdktf/tf-module-stack.ProviderRequirement.isTerraformProvider">IsTerraformProvider</a></code> | *No description.* |
 
 ---
 
@@ -145,6 +147,34 @@ Checks if `x` is a construct.
 - *Type:* object
 
 Any object.
+
+---
+
+##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/tf-module-stack.ProviderRequirement.isTerraformElement"></a>
+
+```csharp
+using HashiCorp.Cdktf.TfModuleStack;
+
+ProviderRequirement.IsTerraformElement(object X);
+```
+
+###### `X`<sup>Required</sup> <a name="X" id="@cdktf/tf-module-stack.ProviderRequirement.isTerraformElement.parameter.x"></a>
+
+- *Type:* object
+
+---
+
+##### `IsTerraformProvider` <a name="IsTerraformProvider" id="@cdktf/tf-module-stack.ProviderRequirement.isTerraformProvider"></a>
+
+```csharp
+using HashiCorp.Cdktf.TfModuleStack;
+
+ProviderRequirement.IsTerraformProvider(object X);
+```
+
+###### `X`<sup>Required</sup> <a name="X" id="@cdktf/tf-module-stack.ProviderRequirement.isTerraformProvider.parameter.x"></a>
+
+- *Type:* object
 
 ---
 
@@ -576,6 +606,7 @@ private object ToTerraform()
 | **Name** | **Description** |
 | --- | --- |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleOutput.isConstruct">IsConstruct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#@cdktf/tf-module-stack.TFModuleOutput.isTerraformElement">IsTerraformElement</a></code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleOutput.isTerrafromOutput">IsTerrafromOutput</a></code> | *No description.* |
 
 ---
@@ -595,6 +626,20 @@ Checks if `x` is a construct.
 - *Type:* object
 
 Any object.
+
+---
+
+##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/tf-module-stack.TFModuleOutput.isTerraformElement"></a>
+
+```csharp
+using HashiCorp.Cdktf.TfModuleStack;
+
+TFModuleOutput.IsTerraformElement(object X);
+```
+
+###### `X`<sup>Required</sup> <a name="X" id="@cdktf/tf-module-stack.TFModuleOutput.isTerraformElement.parameter.x"></a>
+
+- *Type:* object
 
 ---
 
@@ -1122,6 +1167,7 @@ private System.Collections.Generic.IDictionary<string, object> SynthesizeAttribu
 | **Name** | **Description** |
 | --- | --- |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleVariable.isConstruct">IsConstruct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#@cdktf/tf-module-stack.TFModuleVariable.isTerraformElement">IsTerraformElement</a></code> | *No description.* |
 
 ---
 
@@ -1140,6 +1186,20 @@ Checks if `x` is a construct.
 - *Type:* object
 
 Any object.
+
+---
+
+##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/tf-module-stack.TFModuleVariable.isTerraformElement"></a>
+
+```csharp
+using HashiCorp.Cdktf.TfModuleStack;
+
+TFModuleVariable.IsTerraformElement(object X);
+```
+
+###### `X`<sup>Required</sup> <a name="X" id="@cdktf/tf-module-stack.TFModuleVariable.isTerraformElement.parameter.x"></a>
+
+- *Type:* object
 
 ---
 
