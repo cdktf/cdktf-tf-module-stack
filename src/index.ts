@@ -1,6 +1,6 @@
 import {
   App,
-  AppOptions,
+  AppConfig,
   TerraformProvider,
   TerraformStack,
   TerraformVariable,
@@ -11,7 +11,7 @@ import {
 import { Construct } from "constructs";
 
 export class TFModuleApp extends App {
-  constructor(options?: AppOptions) {
+  constructor(options?: AppConfig) {
     // We don't want the provider validation to kick in
     super({ ...(options || {}), skipValidation: true });
   }

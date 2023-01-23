@@ -294,18 +294,18 @@ public string Alias { get; }
 ```csharp
 using HashiCorp.Cdktf.TfModuleStack;
 
-new TFModuleApp(AppOptions Options = null);
+new TFModuleApp(AppConfig Options = null);
 ```
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/tf-module-stack.TFModuleApp.Initializer.parameter.options">Options</a></code> | <code>HashiCorp.Cdktf.AppOptions</code> | *No description.* |
+| <code><a href="#@cdktf/tf-module-stack.TFModuleApp.Initializer.parameter.options">Options</a></code> | <code>HashiCorp.Cdktf.AppConfig</code> | *No description.* |
 
 ---
 
 ##### `Options`<sup>Optional</sup> <a name="Options" id="@cdktf/tf-module-stack.TFModuleApp.Initializer.parameter.options"></a>
 
-- *Type:* HashiCorp.Cdktf.AppOptions
+- *Type:* HashiCorp.Cdktf.AppConfig
 
 ---
 
@@ -607,7 +607,7 @@ private object ToTerraform()
 | --- | --- |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleOutput.isConstruct">IsConstruct</a></code> | Checks if `x` is a construct. |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleOutput.isTerraformElement">IsTerraformElement</a></code> | *No description.* |
-| <code><a href="#@cdktf/tf-module-stack.TFModuleOutput.isTerrafromOutput">IsTerrafromOutput</a></code> | *No description.* |
+| <code><a href="#@cdktf/tf-module-stack.TFModuleOutput.isTerraformOutput">IsTerraformOutput</a></code> | *No description.* |
 
 ---
 
@@ -643,15 +643,15 @@ TFModuleOutput.IsTerraformElement(object X);
 
 ---
 
-##### `IsTerrafromOutput` <a name="IsTerrafromOutput" id="@cdktf/tf-module-stack.TFModuleOutput.isTerrafromOutput"></a>
+##### `IsTerraformOutput` <a name="IsTerraformOutput" id="@cdktf/tf-module-stack.TFModuleOutput.isTerraformOutput"></a>
 
 ```csharp
 using HashiCorp.Cdktf.TfModuleStack;
 
-TFModuleOutput.IsTerrafromOutput(object X);
+TFModuleOutput.IsTerraformOutput(object X);
 ```
 
-###### `X`<sup>Required</sup> <a name="X" id="@cdktf/tf-module-stack.TFModuleOutput.isTerrafromOutput.parameter.x"></a>
+###### `X`<sup>Required</sup> <a name="X" id="@cdktf/tf-module-stack.TFModuleOutput.isTerraformOutput.parameter.x"></a>
 
 - *Type:* object
 

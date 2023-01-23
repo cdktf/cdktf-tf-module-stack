@@ -683,7 +683,7 @@ public java.lang.Object toTerraform()
 | --- | --- |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleOutput.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleOutput.isTerraformElement">isTerraformElement</a></code> | *No description.* |
-| <code><a href="#@cdktf/tf-module-stack.TFModuleOutput.isTerrafromOutput">isTerrafromOutput</a></code> | *No description.* |
+| <code><a href="#@cdktf/tf-module-stack.TFModuleOutput.isTerraformOutput">isTerraformOutput</a></code> | *No description.* |
 
 ---
 
@@ -719,15 +719,15 @@ TFModuleOutput.isTerraformElement(java.lang.Object x)
 
 ---
 
-##### `isTerrafromOutput` <a name="isTerrafromOutput" id="@cdktf/tf-module-stack.TFModuleOutput.isTerrafromOutput"></a>
+##### `isTerraformOutput` <a name="isTerraformOutput" id="@cdktf/tf-module-stack.TFModuleOutput.isTerraformOutput"></a>
 
 ```java
 import com.hashicorp.cdktf.tf_module_stack.TFModuleOutput;
 
-TFModuleOutput.isTerrafromOutput(java.lang.Object x)
+TFModuleOutput.isTerraformOutput(java.lang.Object x)
 ```
 
-###### `x`<sup>Required</sup> <a name="x" id="@cdktf/tf-module-stack.TFModuleOutput.isTerrafromOutput.parameter.x"></a>
+###### `x`<sup>Required</sup> <a name="x" id="@cdktf/tf-module-stack.TFModuleOutput.isTerraformOutput.parameter.x"></a>
 
 - *Type:* java.lang.Object
 
