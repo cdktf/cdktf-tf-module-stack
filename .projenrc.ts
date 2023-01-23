@@ -142,7 +142,9 @@ class JsiiDocgen {
 }
 
 new JsiiDocgen(project, {
-  languages: ["typescript", "python", "java", "csharp", "go"],
+  // We don't have docs for go because major changes lead to documentaiton changes
+  // This bloks the release process
+  languages: ["typescript", "python", "java", "csharp"],
 });
 
 project.jest?.addIgnorePattern("dist");

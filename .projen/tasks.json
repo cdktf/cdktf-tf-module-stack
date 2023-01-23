@@ -109,15 +109,6 @@
         }
       ]
     },
-    "docgen-go": {
-      "name": "docgen-go",
-      "description": "Generate API.md from .jsii manifest for go",
-      "steps": [
-        {
-          "exec": "jsii-docgen -o docs/go.md -l go"
-        }
-      ]
-    },
     "docgen-java": {
       "name": "docgen-java",
       "description": "Generate API.md from .jsii manifest for java",
@@ -256,9 +247,6 @@
         },
         {
           "spawn": "docgen-csharp"
-        },
-        {
-          "spawn": "docgen-go"
         }
       ]
     },
