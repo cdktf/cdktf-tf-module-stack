@@ -56,5 +56,4 @@ tsconfig.json
 !docs/python.md
 !docs/java.md
 !docs/csharp.md
-!docs/go.md
 !/API.md
