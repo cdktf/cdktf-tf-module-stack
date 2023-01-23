@@ -294,18 +294,18 @@ func Alias() *string
 ```go
 import "github.com/cdktf/cdktf-tf-module-stack-go/tfmodulestack"
 
-tfmodulestack.NewTFModuleApp(options AppOptions) TFModuleApp
+tfmodulestack.NewTFModuleApp(options AppConfig) TFModuleApp
 ```
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/tf-module-stack.TFModuleApp.Initializer.parameter.options">options</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.AppOptions</code> | *No description.* |
+| <code><a href="#@cdktf/tf-module-stack.TFModuleApp.Initializer.parameter.options">options</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.AppConfig</code> | *No description.* |
 
 ---
 
 ##### `options`<sup>Optional</sup> <a name="options" id="@cdktf/tf-module-stack.TFModuleApp.Initializer.parameter.options"></a>
 
-- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.AppOptions
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.AppConfig
 
 ---
 
@@ -607,7 +607,7 @@ func ToTerraform() interface{}
 | --- | --- |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleOutput.isConstruct">IsConstruct</a></code> | Checks if `x` is a construct. |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleOutput.isTerraformElement">IsTerraformElement</a></code> | *No description.* |
-| <code><a href="#@cdktf/tf-module-stack.TFModuleOutput.isTerrafromOutput">IsTerrafromOutput</a></code> | *No description.* |
+| <code><a href="#@cdktf/tf-module-stack.TFModuleOutput.isTerraformOutput">IsTerraformOutput</a></code> | *No description.* |
 
 ---
 
@@ -643,15 +643,15 @@ tfmodulestack.TFModuleOutput_IsTerraformElement(x interface{}) *bool
 
 ---
 
-##### `IsTerrafromOutput` <a name="IsTerrafromOutput" id="@cdktf/tf-module-stack.TFModuleOutput.isTerrafromOutput"></a>
+##### `IsTerraformOutput` <a name="IsTerraformOutput" id="@cdktf/tf-module-stack.TFModuleOutput.isTerraformOutput"></a>
 
 ```go
 import "github.com/cdktf/cdktf-tf-module-stack-go/tfmodulestack"
 
-tfmodulestack.TFModuleOutput_IsTerrafromOutput(x interface{}) *bool
+tfmodulestack.TFModuleOutput_IsTerraformOutput(x interface{}) *bool
 ```
 
-###### `x`<sup>Required</sup> <a name="x" id="@cdktf/tf-module-stack.TFModuleOutput.isTerrafromOutput.parameter.x"></a>
+###### `x`<sup>Required</sup> <a name="x" id="@cdktf/tf-module-stack.TFModuleOutput.isTerraformOutput.parameter.x"></a>
 
 - *Type:* interface{}
 
