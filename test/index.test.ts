@@ -1,3 +1,8 @@
+/**
+ * Copyright (c) HashiCorp, Inc.
+ * SPDX-License-Identifier: MPL-2.0
+ */
+
 import { NullProvider } from "@cdktf/provider-null/lib/provider";
 import { Resource } from "@cdktf/provider-null/lib/resource";
 import { RemoteBackend, Testing } from "cdktf";
