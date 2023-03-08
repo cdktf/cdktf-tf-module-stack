@@ -13,5 +13,6 @@ project {
     "**/node_modules/**",
     ".mergify.yml",
     "coverage/**",
+    "dist/**",
   ]
 }
