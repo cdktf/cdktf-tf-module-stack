@@ -11,5 +11,7 @@ project {
     # "vendors/**",
     # "**autogen**",
     "**/node_modules/**",
+    ".mergify.yml",
+    "coverage/**",
   ]
 }
