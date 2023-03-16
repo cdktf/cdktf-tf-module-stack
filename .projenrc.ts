@@ -3,19 +3,39 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-import { FileBase } from "projen";
+import { FileBase, IResolver, License } from "projen";
 import { JsiiProject } from "projen/lib/cdk";
 import { ConstructLibraryCdktf } from "projen/lib/cdktf";
 import { NpmAccess } from "projen/lib/javascript";
+import { TypeScriptProject } from "projen/lib/typescript";
+
+const SPDX = "MPL-2.0";
+
+class CustomizedLicense extends License {
+  constructor(project: TypeScriptProject) {
+    super(project, { spdx: SPDX });
+
+    project.addFields({ license: SPDX });
+  }
+
+  synthesizeContent(resolver: IResolver) {
+    return (
+      "Copyright (c) 2022 HashiCorp, Inc.\n\n" +
+      super.synthesizeContent(resolver)
+    );
+  }
+}
 
 const project = new ConstructLibraryCdktf({
-  author: "Daniel Schmidt",
-  authorAddress: "danielmschmidt92@gmail.com",
+  author: "HashiCorp",
+  authorAddress: "https://hashicorp.com",
+  authorOrganization: true,
   defaultReleaseBranch: "main",
   name: "@cdktf/tf-module-stack",
-  repositoryUrl: "https://github.com/DanielMSchmidt/cdktf-tf-module-stack.git",
+  repositoryUrl: "https://github.com/cdktf/cdktf-tf-module-stack.git",
   prettier: true,
   projenrcTs: true,
+  licensed: false,
   githubOptions: {
     mergify: true,
     mergifyOptions: {
@@ -75,6 +95,8 @@ project.addDevDeps(
   "@cdktf/provider-null@>=5.0.0",
   "@cdktf/provider-random@>=5.0.0"
 );
+
+new CustomizedLicense(project);
 
 interface JsiiDocgenOptions {
   /**
