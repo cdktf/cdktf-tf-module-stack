@@ -3,7 +3,7 @@
   "description": "A drop-in replacement for cdktf.TerraformStack that let's you define Terraform modules as construct",
   "repository": {
     "type": "git",
-    "url": "https://github.com/DanielMSchmidt/cdktf-tf-module-stack.git"
+    "url": "https://github.com/cdktf/cdktf-tf-module-stack.git"
   },
   "scripts": {
     "build": "npx projen build",
@@ -37,9 +37,9 @@
     "projen": "npx projen"
   },
   "author": {
-    "name": "Daniel Schmidt",
-    "email": "danielmschmidt92@gmail.com",
-    "organization": false
+    "name": "HashiCorp",
+    "url": "https://hashicorp.com",
+    "organization": true
   },
   "devDependencies": {
     "@cdktf/provider-null": ">=5.0.0",
@@ -80,7 +80,7 @@
     "terraform"
   ],
   "main": "lib/index.js",
-  "license": "Apache-2.0",
+  "license": "MPL-2.0",
   "publishConfig": {
     "access": "public"
   },
