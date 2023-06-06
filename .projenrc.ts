@@ -6,7 +6,7 @@
 import { FileBase, IResolver, License } from "projen";
 import { JsiiProject } from "projen/lib/cdk";
 import { ConstructLibraryCdktf } from "projen/lib/cdktf";
-import { NpmAccess } from "projen/lib/javascript";
+import { NpmAccess, UpgradeDependenciesSchedule } from "projen/lib/javascript";
 import { TypeScriptProject } from "projen/lib/typescript";
 
 const SPDX = "MPL-2.0";
@@ -61,6 +61,7 @@ const project = new ConstructLibraryCdktf({
   depsUpgradeOptions: {
     workflowOptions: {
       labels: ["auto-approve", "dependencies"],
+      schedule: UpgradeDependenciesSchedule.WEEKLY,
     },
   },
   minMajorVersion: 1,
