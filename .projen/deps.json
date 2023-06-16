@@ -2,12 +2,12 @@
   "dependencies": [
     {
       "name": "@cdktf/provider-null",
-      "version": ">=5.0.0",
+      "version": ">=7.0.0",
       "type": "build"
     },
     {
       "name": "@cdktf/provider-random",
-      "version": ">=5.0.0",
+      "version": ">=7.0.0",
       "type": "build"
     },
     {
@@ -32,12 +32,12 @@
     },
     {
       "name": "cdktf",
-      "version": "0.15.0",
+      "version": "0.17.0",
       "type": "build"
     },
     {
       "name": "constructs",
-      "version": "10.0.25",
+      "version": "10.0.12",
       "type": "build"
     },
     {
@@ -140,12 +140,12 @@
     },
     {
       "name": "cdktf",
-      "version": ">=0.15.0",
+      "version": ">=0.17.0",
       "type": "peer"
     },
     {
       "name": "constructs",
-      "version": "^10.0.25",
+      "version": "^10.0.12",
       "type": "peer"
     }
   ],
