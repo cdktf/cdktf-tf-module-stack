@@ -313,6 +313,7 @@ import cdktf_tf_module_stack
 cdktf_tf_module_stack.TFModuleApp(
   context: typing.Mapping[typing.Any] = None,
   outdir: str = None,
+  skip_backend_validation: bool = None,
   skip_validation: bool = None,
   stack_traces: bool = None
 )
@@ -322,7 +323,8 @@ cdktf_tf_module_stack.TFModuleApp(
 | --- | --- | --- |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleApp.Initializer.parameter.context">context</a></code> | <code>typing.Mapping[typing.Any]</code> | Additional context values for the application. |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleApp.Initializer.parameter.outdir">outdir</a></code> | <code>str</code> | The directory to output Terraform resources. |
-| <code><a href="#@cdktf/tf-module-stack.TFModuleApp.Initializer.parameter.skipValidation">skip_validation</a></code> | <code>bool</code> | Whether to skip the validation during synthesis of the app. |
+| <code><a href="#@cdktf/tf-module-stack.TFModuleApp.Initializer.parameter.skipBackendValidation">skip_backend_validation</a></code> | <code>bool</code> | Whether to skip backend validation during synthesis of the app. |
+| <code><a href="#@cdktf/tf-module-stack.TFModuleApp.Initializer.parameter.skipValidation">skip_validation</a></code> | <code>bool</code> | Whether to skip all validations during synthesis of the app. |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleApp.Initializer.parameter.stackTraces">stack_traces</a></code> | <code>bool</code> | *No description.* |
 
 ---
@@ -349,12 +351,21 @@ The directory to output Terraform resources.
 
 ---
 
+##### `skip_backend_validation`<sup>Optional</sup> <a name="skip_backend_validation" id="@cdktf/tf-module-stack.TFModuleApp.Initializer.parameter.skipBackendValidation"></a>
+
+- *Type:* bool
+- *Default:* false
+
+Whether to skip backend validation during synthesis of the app.
+
+---
+
 ##### `skip_validation`<sup>Optional</sup> <a name="skip_validation" id="@cdktf/tf-module-stack.TFModuleApp.Initializer.parameter.skipValidation"></a>
 
 - *Type:* bool
 - *Default:* false
 
-Whether to skip the validation during synthesis of the app.
+Whether to skip all validations during synthesis of the app.
 
 ---
 
@@ -489,7 +500,8 @@ cdktf_tf_module_stack.TFModuleApp.of(
 | <code><a href="#@cdktf/tf-module-stack.TFModuleApp.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleApp.property.manifest">manifest</a></code> | <code>cdktf.Manifest</code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleApp.property.outdir">outdir</a></code> | <code>str</code> | The output directory into which resources will be synthesized. |
-| <code><a href="#@cdktf/tf-module-stack.TFModuleApp.property.skipValidation">skip_validation</a></code> | <code>bool</code> | Whether to skip the validation during synthesis of the app. |
+| <code><a href="#@cdktf/tf-module-stack.TFModuleApp.property.skipBackendValidation">skip_backend_validation</a></code> | <code>bool</code> | Whether to skip backend validation during synthesis of the app. |
+| <code><a href="#@cdktf/tf-module-stack.TFModuleApp.property.skipValidation">skip_validation</a></code> | <code>bool</code> | Whether to skip all validations during synthesis of the app. |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleApp.property.targetStackId">target_stack_id</a></code> | <code>str</code> | The stack which will be synthesized. |
 
 ---
@@ -528,7 +540,19 @@ The output directory into which resources will be synthesized.
 
 ---
 
-##### `skip_validation`<sup>Optional</sup> <a name="skip_validation" id="@cdktf/tf-module-stack.TFModuleApp.property.skipValidation"></a>
+##### `skip_backend_validation`<sup>Required</sup> <a name="skip_backend_validation" id="@cdktf/tf-module-stack.TFModuleApp.property.skipBackendValidation"></a>
+
+```python
+skip_backend_validation: bool
+```
+
+- *Type:* bool
+
+Whether to skip backend validation during synthesis of the app.
+
+---
+
+##### `skip_validation`<sup>Required</sup> <a name="skip_validation" id="@cdktf/tf-module-stack.TFModuleApp.property.skipValidation"></a>
 
 ```python
 skip_validation: bool
@@ -536,7 +560,7 @@ skip_validation: bool
 
 - *Type:* bool
 
-Whether to skip the validation during synthesis of the app.
+Whether to skip all validations during synthesis of the app.
 
 ---
 
@@ -568,6 +592,7 @@ cdktf_tf_module_stack.TFModuleOutput(
   value: typing.Any,
   depends_on: typing.List[ITerraformDependable] = None,
   description: str = None,
+  precondition: Precondition = None,
   sensitive: bool = None,
   static_id: bool = None
 )
@@ -580,6 +605,7 @@ cdktf_tf_module_stack.TFModuleOutput(
 | <code><a href="#@cdktf/tf-module-stack.TFModuleOutput.Initializer.parameter.value">value</a></code> | <code>typing.Any</code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleOutput.Initializer.parameter.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleOutput.Initializer.parameter.description">description</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/tf-module-stack.TFModuleOutput.Initializer.parameter.precondition">precondition</a></code> | <code>cdktf.Precondition</code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleOutput.Initializer.parameter.sensitive">sensitive</a></code> | <code>bool</code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleOutput.Initializer.parameter.staticId">static_id</a></code> | <code>bool</code> | If set to true the synthesized Terraform Output will be named after the `id` passed to the constructor instead of the default (TerraformOutput.friendlyUniqueId). |
 
@@ -612,6 +638,12 @@ cdktf_tf_module_stack.TFModuleOutput(
 ##### `description`<sup>Optional</sup> <a name="description" id="@cdktf/tf-module-stack.TFModuleOutput.Initializer.parameter.description"></a>
 
 - *Type:* str
+
+---
+
+##### `precondition`<sup>Optional</sup> <a name="precondition" id="@cdktf/tf-module-stack.TFModuleOutput.Initializer.parameter.precondition"></a>
+
+- *Type:* cdktf.Precondition
 
 ---
 
@@ -784,6 +816,7 @@ cdktf_tf_module_stack.TFModuleOutput.is_terraform_output(
 | <code><a href="#@cdktf/tf-module-stack.TFModuleOutput.property.value">value</a></code> | <code>typing.Any</code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleOutput.property.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleOutput.property.description">description</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/tf-module-stack.TFModuleOutput.property.precondition">precondition</a></code> | <code>cdktf.Precondition</code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleOutput.property.sensitive">sensitive</a></code> | <code>bool</code> | *No description.* |
 
 ---
@@ -867,6 +900,16 @@ description: str
 ```
 
 - *Type:* str
+
+---
+
+##### `precondition`<sup>Optional</sup> <a name="precondition" id="@cdktf/tf-module-stack.TFModuleOutput.property.precondition"></a>
+
+```python
+precondition: Precondition
+```
+
+- *Type:* cdktf.Precondition
 
 ---
 
@@ -1005,13 +1048,13 @@ def ensure_backend_exists() -> TerraformBackend
 
 ```python
 def get_logical_id(
-  tf_element: typing.Union[TerraformElement, Node]
+  tf_element: typing.Union[Node, TerraformElement]
 ) -> str
 ```
 
 ###### `tf_element`<sup>Required</sup> <a name="tf_element" id="@cdktf/tf-module-stack.TFModuleStack.getLogicalId.parameter.tfElement"></a>
 
-- *Type:* typing.Union[cdktf.TerraformElement, constructs.Node]
+- *Type:* typing.Union[constructs.Node, cdktf.TerraformElement]
 
 ---
 
@@ -1260,7 +1303,7 @@ The type constructors allow you to specify complex types such as collections:
 - object({\<ATTR NAME\> = \<TYPE\>, ... })
 - tuple([\<TYPE\>, ...])
 
-The keyword any may be used to indicate that any type is acceptable. For more information on the meaning and behavior of these different types, as well as detailed information about automatic conversion of complex types, see {@link https://www.terraform.io/docs/configuration/types.html|Type Constraints}.
+The keyword any may be used to indicate that any type is acceptable. For more information on the meaning and behavior of these different types, as well as detailed information about automatic conversion of complex types, refer to {@link https://developer.hashicorp.com/terraform/language/expressions/type-constraints Type Constraints}.
 
 If both the type and default arguments are specified, the given default value must be convertible to the specified type.
 
@@ -1369,11 +1412,15 @@ def add_validation(
 
 - *Type:* typing.Any
 
+This is a boolean expression that should return true if the intended assumption or guarantee is fulfilled or false if it does not.
+
 ---
 
 ###### `error_message`<sup>Required</sup> <a name="error_message" id="@cdktf/tf-module-stack.TFModuleVariable.addValidation.parameter.errorMessage"></a>
 
 - *Type:* str
+
+This contains the text that Terraform will include as part of error messages when it detects an unmet condition.
 
 ---
 

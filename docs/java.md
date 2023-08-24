@@ -297,6 +297,7 @@ import com.hashicorp.cdktf.tf_module_stack.TFModuleApp;
 TFModuleApp.Builder.create()
 //  .context(java.util.Map<java.lang.String, java.lang.Object>)
 //  .outdir(java.lang.String)
+//  .skipBackendValidation(java.lang.Boolean)
 //  .skipValidation(java.lang.Boolean)
 //  .stackTraces(java.lang.Boolean)
     .build();
@@ -306,7 +307,8 @@ TFModuleApp.Builder.create()
 | --- | --- | --- |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleApp.Initializer.parameter.context">context</a></code> | <code>java.util.Map<java.lang.String, java.lang.Object></code> | Additional context values for the application. |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleApp.Initializer.parameter.outdir">outdir</a></code> | <code>java.lang.String</code> | The directory to output Terraform resources. |
-| <code><a href="#@cdktf/tf-module-stack.TFModuleApp.Initializer.parameter.skipValidation">skipValidation</a></code> | <code>java.lang.Boolean</code> | Whether to skip the validation during synthesis of the app. |
+| <code><a href="#@cdktf/tf-module-stack.TFModuleApp.Initializer.parameter.skipBackendValidation">skipBackendValidation</a></code> | <code>java.lang.Boolean</code> | Whether to skip backend validation during synthesis of the app. |
+| <code><a href="#@cdktf/tf-module-stack.TFModuleApp.Initializer.parameter.skipValidation">skipValidation</a></code> | <code>java.lang.Boolean</code> | Whether to skip all validations during synthesis of the app. |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleApp.Initializer.parameter.stackTraces">stackTraces</a></code> | <code>java.lang.Boolean</code> | *No description.* |
 
 ---
@@ -333,12 +335,21 @@ The directory to output Terraform resources.
 
 ---
 
+##### `skipBackendValidation`<sup>Optional</sup> <a name="skipBackendValidation" id="@cdktf/tf-module-stack.TFModuleApp.Initializer.parameter.skipBackendValidation"></a>
+
+- *Type:* java.lang.Boolean
+- *Default:* false
+
+Whether to skip backend validation during synthesis of the app.
+
+---
+
 ##### `skipValidation`<sup>Optional</sup> <a name="skipValidation" id="@cdktf/tf-module-stack.TFModuleApp.Initializer.parameter.skipValidation"></a>
 
 - *Type:* java.lang.Boolean
 - *Default:* false
 
-Whether to skip the validation during synthesis of the app.
+Whether to skip all validations during synthesis of the app.
 
 ---
 
@@ -463,7 +474,8 @@ TFModuleApp.of(IConstruct construct)
 | <code><a href="#@cdktf/tf-module-stack.TFModuleApp.property.node">node</a></code> | <code>software.constructs.Node</code> | The tree node. |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleApp.property.manifest">manifest</a></code> | <code>com.hashicorp.cdktf.Manifest</code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleApp.property.outdir">outdir</a></code> | <code>java.lang.String</code> | The output directory into which resources will be synthesized. |
-| <code><a href="#@cdktf/tf-module-stack.TFModuleApp.property.skipValidation">skipValidation</a></code> | <code>java.lang.Boolean</code> | Whether to skip the validation during synthesis of the app. |
+| <code><a href="#@cdktf/tf-module-stack.TFModuleApp.property.skipBackendValidation">skipBackendValidation</a></code> | <code>java.lang.Boolean</code> | Whether to skip backend validation during synthesis of the app. |
+| <code><a href="#@cdktf/tf-module-stack.TFModuleApp.property.skipValidation">skipValidation</a></code> | <code>java.lang.Boolean</code> | Whether to skip all validations during synthesis of the app. |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleApp.property.targetStackId">targetStackId</a></code> | <code>java.lang.String</code> | The stack which will be synthesized. |
 
 ---
@@ -502,7 +514,19 @@ The output directory into which resources will be synthesized.
 
 ---
 
-##### `skipValidation`<sup>Optional</sup> <a name="skipValidation" id="@cdktf/tf-module-stack.TFModuleApp.property.skipValidation"></a>
+##### `skipBackendValidation`<sup>Required</sup> <a name="skipBackendValidation" id="@cdktf/tf-module-stack.TFModuleApp.property.skipBackendValidation"></a>
+
+```java
+public java.lang.Boolean getSkipBackendValidation();
+```
+
+- *Type:* java.lang.Boolean
+
+Whether to skip backend validation during synthesis of the app.
+
+---
+
+##### `skipValidation`<sup>Required</sup> <a name="skipValidation" id="@cdktf/tf-module-stack.TFModuleApp.property.skipValidation"></a>
 
 ```java
 public java.lang.Boolean getSkipValidation();
@@ -510,7 +534,7 @@ public java.lang.Boolean getSkipValidation();
 
 - *Type:* java.lang.Boolean
 
-Whether to skip the validation during synthesis of the app.
+Whether to skip all validations during synthesis of the app.
 
 ---
 
@@ -540,6 +564,7 @@ TFModuleOutput.Builder.create(Construct scope, java.lang.String name)
     .value(java.lang.Object)
 //  .dependsOn(java.util.List<ITerraformDependable>)
 //  .description(java.lang.String)
+//  .precondition(Precondition)
 //  .sensitive(java.lang.Boolean)
 //  .staticId(java.lang.Boolean)
     .build();
@@ -552,6 +577,7 @@ TFModuleOutput.Builder.create(Construct scope, java.lang.String name)
 | <code><a href="#@cdktf/tf-module-stack.TFModuleOutput.Initializer.parameter.value">value</a></code> | <code>java.lang.Object</code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleOutput.Initializer.parameter.dependsOn">dependsOn</a></code> | <code>java.util.List<com.hashicorp.cdktf.ITerraformDependable></code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleOutput.Initializer.parameter.description">description</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/tf-module-stack.TFModuleOutput.Initializer.parameter.precondition">precondition</a></code> | <code>com.hashicorp.cdktf.Precondition</code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleOutput.Initializer.parameter.sensitive">sensitive</a></code> | <code>java.lang.Boolean</code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleOutput.Initializer.parameter.staticId">staticId</a></code> | <code>java.lang.Boolean</code> | If set to true the synthesized Terraform Output will be named after the `id` passed to the constructor instead of the default (TerraformOutput.friendlyUniqueId). |
 
@@ -584,6 +610,12 @@ TFModuleOutput.Builder.create(Construct scope, java.lang.String name)
 ##### `description`<sup>Optional</sup> <a name="description" id="@cdktf/tf-module-stack.TFModuleOutput.Initializer.parameter.description"></a>
 
 - *Type:* java.lang.String
+
+---
+
+##### `precondition`<sup>Optional</sup> <a name="precondition" id="@cdktf/tf-module-stack.TFModuleOutput.Initializer.parameter.precondition"></a>
+
+- *Type:* com.hashicorp.cdktf.Precondition
 
 ---
 
@@ -745,6 +777,7 @@ TFModuleOutput.isTerraformOutput(java.lang.Object x)
 | <code><a href="#@cdktf/tf-module-stack.TFModuleOutput.property.value">value</a></code> | <code>java.lang.Object</code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleOutput.property.dependsOn">dependsOn</a></code> | <code>java.util.List<com.hashicorp.cdktf.ITerraformDependable></code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleOutput.property.description">description</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/tf-module-stack.TFModuleOutput.property.precondition">precondition</a></code> | <code>com.hashicorp.cdktf.Precondition</code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleOutput.property.sensitive">sensitive</a></code> | <code>java.lang.Boolean</code> | *No description.* |
 
 ---
@@ -828,6 +861,16 @@ public java.lang.String getDescription();
 ```
 
 - *Type:* java.lang.String
+
+---
+
+##### `precondition`<sup>Optional</sup> <a name="precondition" id="@cdktf/tf-module-stack.TFModuleOutput.property.precondition"></a>
+
+```java
+public Precondition getPrecondition();
+```
+
+- *Type:* com.hashicorp.cdktf.Precondition
 
 ---
 
@@ -955,12 +998,12 @@ public TerraformBackend ensureBackendExists()
 ##### `getLogicalId` <a name="getLogicalId" id="@cdktf/tf-module-stack.TFModuleStack.getLogicalId"></a>
 
 ```java
-public java.lang.String getLogicalId(TerraformElement OR Node tfElement)
+public java.lang.String getLogicalId(Node OR TerraformElement tfElement)
 ```
 
 ###### `tfElement`<sup>Required</sup> <a name="tfElement" id="@cdktf/tf-module-stack.TFModuleStack.getLogicalId.parameter.tfElement"></a>
 
-- *Type:* com.hashicorp.cdktf.TerraformElement OR software.constructs.Node
+- *Type:* software.constructs.Node OR com.hashicorp.cdktf.TerraformElement
 
 ---
 
@@ -1197,7 +1240,7 @@ The type constructors allow you to specify complex types such as collections:
 - object({\<ATTR NAME\> = \<TYPE\>, ... })
 - tuple([\<TYPE\>, ...])
 
-The keyword any may be used to indicate that any type is acceptable. For more information on the meaning and behavior of these different types, as well as detailed information about automatic conversion of complex types, see {@link https://www.terraform.io/docs/configuration/types.html|Type Constraints}.
+The keyword any may be used to indicate that any type is acceptable. For more information on the meaning and behavior of these different types, as well as detailed information about automatic conversion of complex types, refer to {@link https://developer.hashicorp.com/terraform/language/expressions/type-constraints Type Constraints}.
 
 If both the type and default arguments are specified, the given default value must be convertible to the specified type.
 

@@ -424,7 +424,8 @@ TFModuleApp.of(construct: IConstruct)
 | <code><a href="#@cdktf/tf-module-stack.TFModuleApp.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleApp.property.manifest">manifest</a></code> | <code>cdktf.Manifest</code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleApp.property.outdir">outdir</a></code> | <code>string</code> | The output directory into which resources will be synthesized. |
-| <code><a href="#@cdktf/tf-module-stack.TFModuleApp.property.skipValidation">skipValidation</a></code> | <code>boolean</code> | Whether to skip the validation during synthesis of the app. |
+| <code><a href="#@cdktf/tf-module-stack.TFModuleApp.property.skipBackendValidation">skipBackendValidation</a></code> | <code>boolean</code> | Whether to skip backend validation during synthesis of the app. |
+| <code><a href="#@cdktf/tf-module-stack.TFModuleApp.property.skipValidation">skipValidation</a></code> | <code>boolean</code> | Whether to skip all validations during synthesis of the app. |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleApp.property.targetStackId">targetStackId</a></code> | <code>string</code> | The stack which will be synthesized. |
 
 ---
@@ -463,7 +464,19 @@ The output directory into which resources will be synthesized.
 
 ---
 
-##### `skipValidation`<sup>Optional</sup> <a name="skipValidation" id="@cdktf/tf-module-stack.TFModuleApp.property.skipValidation"></a>
+##### `skipBackendValidation`<sup>Required</sup> <a name="skipBackendValidation" id="@cdktf/tf-module-stack.TFModuleApp.property.skipBackendValidation"></a>
+
+```typescript
+public readonly skipBackendValidation: boolean;
+```
+
+- *Type:* boolean
+
+Whether to skip backend validation during synthesis of the app.
+
+---
+
+##### `skipValidation`<sup>Required</sup> <a name="skipValidation" id="@cdktf/tf-module-stack.TFModuleApp.property.skipValidation"></a>
 
 ```typescript
 public readonly skipValidation: boolean;
@@ -471,7 +484,7 @@ public readonly skipValidation: boolean;
 
 - *Type:* boolean
 
-Whether to skip the validation during synthesis of the app.
+Whether to skip all validations during synthesis of the app.
 
 ---
 
@@ -669,6 +682,7 @@ TFModuleOutput.isTerraformOutput(x: any)
 | <code><a href="#@cdktf/tf-module-stack.TFModuleOutput.property.value">value</a></code> | <code>any</code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleOutput.property.dependsOn">dependsOn</a></code> | <code>cdktf.ITerraformDependable[]</code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleOutput.property.description">description</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/tf-module-stack.TFModuleOutput.property.precondition">precondition</a></code> | <code>cdktf.Precondition</code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleOutput.property.sensitive">sensitive</a></code> | <code>boolean</code> | *No description.* |
 
 ---
@@ -752,6 +766,16 @@ public readonly description: string;
 ```
 
 - *Type:* string
+
+---
+
+##### `precondition`<sup>Optional</sup> <a name="precondition" id="@cdktf/tf-module-stack.TFModuleOutput.property.precondition"></a>
+
+```typescript
+public readonly precondition: Precondition;
+```
+
+- *Type:* cdktf.Precondition
 
 ---
 
@@ -879,12 +903,12 @@ public ensureBackendExists(): TerraformBackend
 ##### `getLogicalId` <a name="getLogicalId" id="@cdktf/tf-module-stack.TFModuleStack.getLogicalId"></a>
 
 ```typescript
-public getLogicalId(tfElement: TerraformElement | Node): string
+public getLogicalId(tfElement: Node | TerraformElement): string
 ```
 
 ###### `tfElement`<sup>Required</sup> <a name="tfElement" id="@cdktf/tf-module-stack.TFModuleStack.getLogicalId.parameter.tfElement"></a>
 
-- *Type:* cdktf.TerraformElement | constructs.Node
+- *Type:* constructs.Node | cdktf.TerraformElement
 
 ---
 
