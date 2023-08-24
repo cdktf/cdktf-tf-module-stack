@@ -3,28 +3,22 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-import { FileBase, IResolver, License } from "projen";
-import { JsiiProject } from "projen/lib/cdk";
 import { ConstructLibraryCdktf } from "projen/lib/cdktf";
 import { NpmAccess, UpgradeDependenciesSchedule } from "projen/lib/javascript";
-import { TypeScriptProject } from "projen/lib/typescript";
+import { AutoApprove } from "./projenrc/auto-approve";
+import { Automerge } from "./projenrc/automerge";
+import { JsiiDocgen } from "./projenrc/custom-docgen";
+import { CustomizedLicense } from "./projenrc/customized-license";
 
-const SPDX = "MPL-2.0";
-
-class CustomizedLicense extends License {
-  constructor(project: TypeScriptProject) {
-    super(project, { spdx: SPDX });
-
-    project.addFields({ license: SPDX });
-  }
-
-  synthesizeContent(resolver: IResolver) {
-    return (
-      "Copyright (c) 2022 HashiCorp, Inc.\n\n" +
-      super.synthesizeContent(resolver)
-    );
-  }
-}
+const githubActionPinnedVersions = {
+  "actions/checkout": "c85c95e3d7251135ab7dc9ce3241c5835cc595a9", // v3.5.3
+  "actions/download-artifact": "9bc31d5ccc31df68ecc42ccf4149144866c47d8a", // v3.0.2
+  "actions/setup-node": "64ed1c7eab4cce3362f8c340dee64e5eaeef8f7c", // v3.6.0
+  "actions/upload-artifact": "0b7f8abb1508181956e8e162db84b466c27e18ce", // v3.1.2
+  "amannn/action-semantic-pull-request":
+    "c3cd5d1ea3580753008872425915e343e351ab54", // v5.2.0
+  "peter-evans/create-pull-request": "284f54f989303d2699d373481a0cfa13ad5a6666", // v5.0.1
+};
 
 const project = new ConstructLibraryCdktf({
   author: "HashiCorp",
@@ -37,14 +31,10 @@ const project = new ConstructLibraryCdktf({
   projenrcTs: true,
   licensed: false,
   npmAccess: NpmAccess.PUBLIC,
-  autoApproveUpgrades: true,
-  autoApproveOptions: {
-    allowedUsernames: ["team-tf-cdk"],
-    label: "auto-approve",
-  },
+  mergify: false,
   depsUpgradeOptions: {
     workflowOptions: {
-      labels: ["auto-approve", "dependencies"],
+      labels: ["auto-approve", "automerge", "dependencies"],
       schedule: UpgradeDependenciesSchedule.WEEKLY,
     },
   },
@@ -76,88 +66,18 @@ const project = new ConstructLibraryCdktf({
     moduleName: `github.com/cdktf/cdktf-tf-module-stack-go`,
     packageName: "tfmodulestack",
   },
-  // devDeps: [],             /* Build dependencies for this module. */
-  // packageName: undefined,  /* The "name" in package.json. */
-  // release: undefined,      /* Add release management to this project. */
   docgen: false,
 });
+
+new CustomizedLicense(project);
+new AutoApprove(project);
+new Automerge(project);
+
 project.addPeerDeps("cdktf@>=0.15.0", "constructs@^10.0.25");
 project.addDevDeps(
   "@cdktf/provider-null@>=5.0.0",
   "@cdktf/provider-random@>=5.0.0"
 );
-
-new CustomizedLicense(project);
-
-interface JsiiDocgenOptions {
-  /**
-   * File path for generated docs.
-   * @default "API.md"
-   */
-  readonly filePath?: string;
-
-  readonly languages: ("typescript" | "python" | "java" | "csharp" | "go")[];
-  readonly documentationDirectory?: string;
-}
-
-class DocumentationEntryPoint extends FileBase {
-  constructor(node: JsiiProject, private readonly options: JsiiDocgenOptions) {
-    super(node, options.filePath ?? "API.md");
-  }
-  protected synthesizeContent(): string | undefined {
-    const documentationDir = this.options.documentationDirectory ?? "docs";
-    return `# API Documentation
-
-    You can find the documentation for the supported languages here:
-    ${this.options.languages.forEach(
-      (language) => `- [${language}](${documentationDir}/${language}`
-    )}
-    `;
-  }
-}
-
-class JsiiDocgen {
-  constructor(
-    node: JsiiProject,
-    options: JsiiDocgenOptions = {
-      languages: ["typescript"],
-    }
-  ) {
-    node.addDevDeps("jsii-docgen");
-
-    const filePath = options.filePath ?? "API.md";
-
-    if (options.languages.length === 0) {
-      throw new Error("No languages specified");
-    } else if (options.languages.length === 1) {
-      const docgen = node.addTask("docgen", {
-        description: "Generate API.md from .jsii manifest",
-        exec: `jsii-docgen -o ${filePath} -l ${options.languages[0]}`,
-      });
-
-      // spawn docgen after compilation (requires the .jsii manifest).
-      node.postCompileTask.spawn(docgen);
-      node.gitignore.include(`/${filePath}`);
-      node.annotateGenerated(`/${filePath}`);
-    } else {
-      const documentationDir = options.documentationDirectory ?? "docs";
-      options.languages.forEach((language) => {
-        const languageDocsPath = `${documentationDir}/${language}.md`;
-        const docgen = node.addTask(`docgen-${language}`, {
-          description: `Generate API.md from .jsii manifest for ${language}`,
-          exec: `jsii-docgen -o ${languageDocsPath} -l ${language}`,
-        });
-
-        // spawn docgen after compilation (requires the .jsii manifest).
-        node.postCompileTask.spawn(docgen);
-        node.gitignore.include(languageDocsPath);
-        node.annotateGenerated(languageDocsPath);
-      });
-
-      new DocumentationEntryPoint(node, options);
-    }
-  }
-}
 
 new JsiiDocgen(project, {
   // We don't have docs for go because major changes lead to documentaiton changes
@@ -176,5 +96,10 @@ project.buildWorkflow?.addPostBuildSteps(
   },
   { name: "Add headers using Copywrite tool", run: "copywrite headers" }
 );
+
+// Use pinned versions of github actions
+Object.entries(githubActionPinnedVersions).forEach(([action, sha]) => {
+  project.github?.actions.set(action, `${action}@${sha}`);
+});
 
 project.synth();
