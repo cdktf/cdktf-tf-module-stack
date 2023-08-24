@@ -424,7 +424,8 @@ TFModuleApp.Of(IConstruct Construct);
 | <code><a href="#@cdktf/tf-module-stack.TFModuleApp.property.node">Node</a></code> | <code>Constructs.Node</code> | The tree node. |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleApp.property.manifest">Manifest</a></code> | <code>HashiCorp.Cdktf.Manifest</code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleApp.property.outdir">Outdir</a></code> | <code>string</code> | The output directory into which resources will be synthesized. |
-| <code><a href="#@cdktf/tf-module-stack.TFModuleApp.property.skipValidation">SkipValidation</a></code> | <code>bool</code> | Whether to skip the validation during synthesis of the app. |
+| <code><a href="#@cdktf/tf-module-stack.TFModuleApp.property.skipBackendValidation">SkipBackendValidation</a></code> | <code>bool</code> | Whether to skip backend validation during synthesis of the app. |
+| <code><a href="#@cdktf/tf-module-stack.TFModuleApp.property.skipValidation">SkipValidation</a></code> | <code>bool</code> | Whether to skip all validations during synthesis of the app. |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleApp.property.targetStackId">TargetStackId</a></code> | <code>string</code> | The stack which will be synthesized. |
 
 ---
@@ -463,7 +464,19 @@ The output directory into which resources will be synthesized.
 
 ---
 
-##### `SkipValidation`<sup>Optional</sup> <a name="SkipValidation" id="@cdktf/tf-module-stack.TFModuleApp.property.skipValidation"></a>
+##### `SkipBackendValidation`<sup>Required</sup> <a name="SkipBackendValidation" id="@cdktf/tf-module-stack.TFModuleApp.property.skipBackendValidation"></a>
+
+```csharp
+public bool SkipBackendValidation { get; }
+```
+
+- *Type:* bool
+
+Whether to skip backend validation during synthesis of the app.
+
+---
+
+##### `SkipValidation`<sup>Required</sup> <a name="SkipValidation" id="@cdktf/tf-module-stack.TFModuleApp.property.skipValidation"></a>
 
 ```csharp
 public bool SkipValidation { get; }
@@ -471,7 +484,7 @@ public bool SkipValidation { get; }
 
 - *Type:* bool
 
-Whether to skip the validation during synthesis of the app.
+Whether to skip all validations during synthesis of the app.
 
 ---
 
@@ -669,6 +682,7 @@ TFModuleOutput.IsTerraformOutput(object X);
 | <code><a href="#@cdktf/tf-module-stack.TFModuleOutput.property.value">Value</a></code> | <code>object</code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleOutput.property.dependsOn">DependsOn</a></code> | <code>HashiCorp.Cdktf.ITerraformDependable[]</code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleOutput.property.description">Description</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/tf-module-stack.TFModuleOutput.property.precondition">Precondition</a></code> | <code>HashiCorp.Cdktf.Precondition</code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleOutput.property.sensitive">Sensitive</a></code> | <code>bool</code> | *No description.* |
 
 ---
@@ -752,6 +766,16 @@ public string Description { get; }
 ```
 
 - *Type:* string
+
+---
+
+##### `Precondition`<sup>Optional</sup> <a name="Precondition" id="@cdktf/tf-module-stack.TFModuleOutput.property.precondition"></a>
+
+```csharp
+public Precondition Precondition { get; }
+```
+
+- *Type:* HashiCorp.Cdktf.Precondition
 
 ---
 

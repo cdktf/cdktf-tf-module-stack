@@ -73,10 +73,10 @@ new CustomizedLicense(project);
 new AutoApprove(project);
 new Automerge(project);
 
-project.addPeerDeps("cdktf@>=0.17.0");
+project.addPeerDeps("cdktf@^0.17.0", "constructs@^10.0.25");
 project.addDevDeps(
-  "@cdktf/provider-null@>=7.0.0",
-  "@cdktf/provider-random@>=7.0.0"
+  "@cdktf/provider-null@^7.0.0",
+  "@cdktf/provider-random@^8.0.0"
 );
 
 new JsiiDocgen(project, {
