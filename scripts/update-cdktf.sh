@@ -15,5 +15,5 @@ fi
 echo "Updating to cdktf version $CDKTF_VERSION"
 yarn
 sed -i "s/cdktfVersion: \".*\",/cdktfVersion: \"$CDKTF_VERSION\",/" "$PROJECT_ROOT/.projenrc.ts"
-sed -i "s/\"cdktf@.*\"/\"cdktf@>=$CDKTF_VERSION\"/" "$PROJECT_ROOT/.projenrc.ts"
+sed -i "s/\"cdktf@.*\",/\"cdktf@>=$CDKTF_VERSION\",/" "$PROJECT_ROOT/.projenrc.ts"
 CI=0 npx projen
