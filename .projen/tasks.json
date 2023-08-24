@@ -105,7 +105,7 @@
       "description": "Generate API.md from .jsii manifest for csharp",
       "steps": [
         {
-          "exec": "jsii-docgen -o docs/csharp.md -l csharp"
+          "exec": "jsii-docgen -r0 -o docs/csharp.md -l csharp"
         }
       ]
     },
@@ -114,7 +114,7 @@
       "description": "Generate API.md from .jsii manifest for java",
       "steps": [
         {
-          "exec": "jsii-docgen -o docs/java.md -l java"
+          "exec": "jsii-docgen -r0 -o docs/java.md -l java"
         }
       ]
     },
@@ -123,7 +123,7 @@
       "description": "Generate API.md from .jsii manifest for python",
       "steps": [
         {
-          "exec": "jsii-docgen -o docs/python.md -l python"
+          "exec": "jsii-docgen -r0 -o docs/python.md -l python"
         }
       ]
     },
@@ -132,7 +132,7 @@
       "description": "Generate API.md from .jsii manifest for typescript",
       "steps": [
         {
-          "exec": "jsii-docgen -o docs/typescript.md -l typescript"
+          "exec": "jsii-docgen -r0 -o docs/typescript.md -l typescript"
         }
       ]
     },
@@ -350,13 +350,13 @@
           "exec": "yarn upgrade npm-check-updates"
         },
         {
-          "exec": "npm-check-updates --upgrade --target=minor --filter=@cdktf/provider-null,@cdktf/provider-random,@types/jest,@types/node,@typescript-eslint/eslint-plugin,@typescript-eslint/parser,eslint-config-prettier,eslint-import-resolver-node,eslint-import-resolver-typescript,eslint-plugin-import,eslint-plugin-prettier,eslint,jest-junit,jest,jsii-diff,jsii-docgen,jsii-pacmak,npm-check-updates,prettier,projen,standard-version,ts-jest,ts-node,typescript,cdktf,constructs"
+          "exec": "npm-check-updates --upgrade --target=minor --filter=@cdktf/provider-null,@cdktf/provider-random,@types/jest,@types/node,@typescript-eslint/eslint-plugin,@typescript-eslint/parser,eslint-config-prettier,eslint-import-resolver-node,eslint-import-resolver-typescript,eslint-plugin-import,eslint-plugin-prettier,eslint,jest,jest-junit,jsii-diff,jsii-docgen,jsii-pacmak,jsii-rosetta,jsii,npm-check-updates,prettier,projen,standard-version,ts-jest,ts-node,typescript,cdktf,constructs"
         },
         {
           "exec": "yarn install --check-files"
         },
         {
-          "exec": "yarn upgrade @cdktf/provider-null @cdktf/provider-random @types/jest @types/node @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-config-prettier eslint-import-resolver-node eslint-import-resolver-typescript eslint-plugin-import eslint-plugin-prettier eslint jest-junit jest jsii-diff jsii-docgen jsii-pacmak npm-check-updates prettier projen standard-version ts-jest ts-node typescript cdktf constructs"
+          "exec": "yarn upgrade @cdktf/provider-null @cdktf/provider-random @types/jest @types/node @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-config-prettier eslint-import-resolver-node eslint-import-resolver-typescript eslint-plugin-import eslint-plugin-prettier eslint jest jest-junit jsii-diff jsii-docgen jsii-pacmak jsii-rosetta jsii npm-check-updates prettier projen standard-version ts-jest ts-node typescript cdktf constructs"
         },
         {
           "exec": "npx projen"

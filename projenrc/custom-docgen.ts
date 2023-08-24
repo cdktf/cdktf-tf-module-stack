@@ -40,7 +40,7 @@ export class JsiiDocgen {
       languages: ["typescript"],
     }
   ) {
-    node.addDevDeps("jsii-docgen");
+    node.addDevDeps("jsii-docgen@^9.0.0");
 
     const filePath = options.filePath ?? "API.md";
 
@@ -49,7 +49,7 @@ export class JsiiDocgen {
     } else if (options.languages.length === 1) {
       const docgen = node.addTask("docgen", {
         description: "Generate API.md from .jsii manifest",
-        exec: `jsii-docgen -o ${filePath} -l ${options.languages[0]}`,
+        exec: `jsii-docgen -r0 -o ${filePath} -l ${options.languages[0]}`,
       });
 
       // spawn docgen after compilation (requires the .jsii manifest).
@@ -62,7 +62,7 @@ export class JsiiDocgen {
         const languageDocsPath = `${documentationDir}/${language}.md`;
         const docgen = node.addTask(`docgen-${language}`, {
           description: `Generate API.md from .jsii manifest for ${language}`,
-          exec: `jsii-docgen -o ${languageDocsPath} -l ${language}`,
+          exec: `jsii-docgen -r0 -o ${languageDocsPath} -l ${language}`,
         });
 
         // spawn docgen after compilation (requires the .jsii manifest).
