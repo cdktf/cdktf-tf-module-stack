@@ -67,6 +67,7 @@ const project = new ConstructLibraryCdktf({
     packageName: "tfmodulestack",
   },
   docgen: false,
+  jsiiVersion: "^5.1.0",
 });
 
 new CustomizedLicense(project);
