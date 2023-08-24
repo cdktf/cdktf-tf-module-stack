@@ -77,10 +77,10 @@ new AutoApprove(project);
 new Automerge(project);
 new UpgradeCDKTF(project);
 
-project.addPeerDeps("cdktf@>=0.18.0");
+project.addPeerDeps("cdktf@>=0.18.0", "constructs@^10.0.25");
 project.addDevDeps(
-  "@cdktf/provider-null@^7.0.0",
-  "@cdktf/provider-random@^8.0.0"
+  "@cdktf/provider-null@>=8.0.0",
+  "@cdktf/provider-random@>=9.0.0"
 );
 
 new JsiiDocgen(project, {

@@ -295,15 +295,15 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@cdktf/provider-null@^7.0.0":
-  version "7.0.0"
-  resolved "https://registry.yarnpkg.com/@cdktf/provider-null/-/provider-null-7.0.0.tgz#5e5edfd622d5a9122563ad54a0996858df274ad5"
-  integrity sha512-uofD/gN3yXdXo/7xCo6O9HBmKlY/LV6nvVKRTuSuhBjlNIyAKP0v/FpZ7iAJb8VWJlC1yAPUU2QXW7VpejdXCA==
-
-"@cdktf/provider-random@^8.0.0":
+"@cdktf/provider-null@>=8.0.0":
   version "8.0.0"
-  resolved "https://registry.yarnpkg.com/@cdktf/provider-random/-/provider-random-8.0.0.tgz#bea5193ee331932780eac3fd2d70226c80ee3c33"
-  integrity sha512-acVp0V/twKHwkWSGh05xxMkFEDx/tm6i46s/7ciuJrJfiJmWMcCb0BG8/csiLaK/E/hsCeoFQL0wHj5ncZF/wQ==
+  resolved "https://registry.yarnpkg.com/@cdktf/provider-null/-/provider-null-8.0.0.tgz#8bbcd0c4030ba3fc8edfc557700c302b3082b76d"
+  integrity sha512-ikSMynn+boAZRd3o8erY1L2RhtlAXupMq9VyPBNAPYrXxLeGlBNLcb6H8gpheKtInjysVEhj3InBQ8vNsY30bA==
+
+"@cdktf/provider-random@>=9.0.0":
+  version "9.0.0"
+  resolved "https://registry.yarnpkg.com/@cdktf/provider-random/-/provider-random-9.0.0.tgz#dc16ca235865345aec0aec91aa25e6fcd0b606bd"
+  integrity sha512-c3d29Io2RFYj8DQlp5+ChGkvCXp96QK4c7jMpQgqrRpmkyL+9DAyJd5c0eCV1Kxem2CoYBE+tMM3jiWLCz12Lg==
 
 "@colors/colors@1.5.0":
   version "1.5.0"
@@ -1881,10 +1881,10 @@ console-control-strings@^1.1.0:
   resolved "https://registry.yarnpkg.com/console-control-strings/-/console-control-strings-1.1.0.tgz#3d7cf4464db6446ea644bf4b39507f9851008e8e"
   integrity sha512-ty/fTekppD2fIwRvnZAVdeOiGd1c7YXEixbgJTNzqcxJWKQnjJ/V1bNEEE6hygpM3WjwHFUVK6HTjWSzV4a8sQ==
 
-constructs@10.0.12:
-  version "10.0.12"
-  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.0.12.tgz#64f314d87f7cdf6da127c9eb0bf6a3d990989c4a"
-  integrity sha512-wVQcQgwwK7b//7yI54/3hundmXAw7RBpuy5f6yIBFNceJr8feTK6Cs2I2f3+gp3/ikszzTouLup9AzxioEEXPQ==
+constructs@10.0.25:
+  version "10.0.25"
+  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.0.25.tgz#c2f03fb4da134105fdf5382f4c1557b89d90aeeb"
+  integrity sha512-QxY4A7caIW1tI5ztbdZHKU/nWXiqluujmEVj5xCVhFhoBgOqU4ja3z3zXY4DUn2nf+PLxCjulf+viQ/h9RXB8A==
 
 conventional-changelog-angular@^5.0.12:
   version "5.0.13"
