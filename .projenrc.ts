@@ -70,6 +70,7 @@ const project = new ConstructLibraryCdktf({
   },
   docgen: false,
   jsiiVersion: "^5.1.0",
+  pullRequestTemplate: false,
 });
 
 new CustomizedLicense(project);
