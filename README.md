@@ -1,6 +1,6 @@
 # cdktf-tf-module-stack
 
-A drop-in replacement for cdktf.TerraformStack that let's you define Terraform modules as construct.
+A drop-in replacement for cdktf.TerraformStack that lets you define Terraform modules as constructs.
 
 ## Available Packages
 
@@ -9,6 +9,8 @@ A drop-in replacement for cdktf.TerraformStack that let's you define Terraform m
 The npm package is available at [https://www.npmjs.com/package/@cdktf/tf-module-stack](https://www.npmjs.com/package/@cdktf/tf-module-stack).
 
 `npm install @cdktf/tf-module-stack`
+
+NOTE: Originally, this package was named `cdktf-tf-module-stack`, and the legacy versions (<= 0.2.0) can be found on npm [here](https://www.npmjs.com/package/cdktf-tf-module-stack).
 
 ### PyPI
 
