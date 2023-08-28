@@ -40,7 +40,7 @@ export class JsiiDocgen {
       languages: ["typescript"],
     }
   ) {
-    node.addDevDeps("jsii-docgen@^9.0.0");
+    node.addDevDeps("jsii-docgen");
 
     const filePath = options.filePath ?? "API.md";
 
