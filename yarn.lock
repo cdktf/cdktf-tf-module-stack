@@ -1662,10 +1662,10 @@ case@^1.6.3:
   resolved "https://registry.yarnpkg.com/case/-/case-1.6.3.tgz#0a4386e3e9825351ca2e6216c60467ff5f1ea1c9"
   integrity sha512-mzDSXIPaFwVDvZAHqZ9VlbyF4yyXRuX6IvB06WvPYkqJVO24kX1PPhv9bfpKNFZyxYFmmgo03HUiD8iklmJYRQ==
 
-cdktf@0.18.0:
-  version "0.18.0"
-  resolved "https://registry.yarnpkg.com/cdktf/-/cdktf-0.18.0.tgz#b79eb924afff7af38877bb4ffdfe3bdf954131b0"
-  integrity sha512-iTWy2g0mCE2YW2hPxdWEzMwCVgyzDyheHWJTS4OcLZsR+lXETFX0lonoc5XGnX8CHBL4AbFY+EEqCUs5v7A4bQ==
+cdktf@0.19.0:
+  version "0.19.0"
+  resolved "https://registry.yarnpkg.com/cdktf/-/cdktf-0.19.0.tgz#097a3241b95e77eeab8ae1f7a714bf45dc6ca55b"
+  integrity sha512-5tcNhvrvsE9WawC5cPwV7B9ATQ5lWNjyCJN7EnMofxTtkBEdnnGx0esC+vpNO4Fs0LhmV37qCUlm+K6anZaPYw==
   dependencies:
     archiver "5.3.1"
     json-stable-stringify "^1.0.2"
