@@ -1018,6 +1018,7 @@ TFModuleStack.of(construct: IConstruct)
 | --- | --- | --- |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleStack.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleStack.property.dependencies">dependencies</a></code> | <code>cdktf.TerraformStack[]</code> | *No description.* |
+| <code><a href="#@cdktf/tf-module-stack.TFModuleStack.property.moveTargets">moveTargets</a></code> | <code>cdktf.TerraformResourceTargets</code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleStack.property.synthesizer">synthesizer</a></code> | <code>cdktf.IStackSynthesizer</code> | *No description.* |
 
 ---
@@ -1041,6 +1042,16 @@ public readonly dependencies: TerraformStack[];
 ```
 
 - *Type:* cdktf.TerraformStack[]
+
+---
+
+##### `moveTargets`<sup>Required</sup> <a name="moveTargets" id="@cdktf/tf-module-stack.TFModuleStack.property.moveTargets"></a>
+
+```typescript
+public readonly moveTargets: TerraformResourceTargets;
+```
+
+- *Type:* cdktf.TerraformResourceTargets
 
 ---
 

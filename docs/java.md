@@ -1113,6 +1113,7 @@ TFModuleStack.of(IConstruct construct)
 | --- | --- | --- |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleStack.property.node">node</a></code> | <code>software.constructs.Node</code> | The tree node. |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleStack.property.dependencies">dependencies</a></code> | <code>java.util.List<com.hashicorp.cdktf.TerraformStack></code> | *No description.* |
+| <code><a href="#@cdktf/tf-module-stack.TFModuleStack.property.moveTargets">moveTargets</a></code> | <code>com.hashicorp.cdktf.TerraformResourceTargets</code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleStack.property.synthesizer">synthesizer</a></code> | <code>com.hashicorp.cdktf.IStackSynthesizer</code> | *No description.* |
 
 ---
@@ -1136,6 +1137,16 @@ public java.util.List<TerraformStack> getDependencies();
 ```
 
 - *Type:* java.util.List<com.hashicorp.cdktf.TerraformStack>
+
+---
+
+##### `moveTargets`<sup>Required</sup> <a name="moveTargets" id="@cdktf/tf-module-stack.TFModuleStack.property.moveTargets"></a>
+
+```java
+public TerraformResourceTargets getMoveTargets();
+```
+
+- *Type:* com.hashicorp.cdktf.TerraformResourceTargets
 
 ---
 

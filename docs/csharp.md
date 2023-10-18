@@ -1018,6 +1018,7 @@ TFModuleStack.Of(IConstruct Construct);
 | --- | --- | --- |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleStack.property.node">Node</a></code> | <code>Constructs.Node</code> | The tree node. |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleStack.property.dependencies">Dependencies</a></code> | <code>HashiCorp.Cdktf.TerraformStack[]</code> | *No description.* |
+| <code><a href="#@cdktf/tf-module-stack.TFModuleStack.property.moveTargets">MoveTargets</a></code> | <code>HashiCorp.Cdktf.TerraformResourceTargets</code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleStack.property.synthesizer">Synthesizer</a></code> | <code>HashiCorp.Cdktf.IStackSynthesizer</code> | *No description.* |
 
 ---
@@ -1041,6 +1042,16 @@ public TerraformStack[] Dependencies { get; }
 ```
 
 - *Type:* HashiCorp.Cdktf.TerraformStack[]
+
+---
+
+##### `MoveTargets`<sup>Required</sup> <a name="MoveTargets" id="@cdktf/tf-module-stack.TFModuleStack.property.moveTargets"></a>
+
+```csharp
+public TerraformResourceTargets MoveTargets { get; }
+```
+
+- *Type:* HashiCorp.Cdktf.TerraformResourceTargets
 
 ---
 

@@ -1174,6 +1174,7 @@ cdktf_tf_module_stack.TFModuleStack.of(
 | --- | --- | --- |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleStack.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleStack.property.dependencies">dependencies</a></code> | <code>typing.List[cdktf.TerraformStack]</code> | *No description.* |
+| <code><a href="#@cdktf/tf-module-stack.TFModuleStack.property.moveTargets">move_targets</a></code> | <code>cdktf.TerraformResourceTargets</code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleStack.property.synthesizer">synthesizer</a></code> | <code>cdktf.IStackSynthesizer</code> | *No description.* |
 
 ---
@@ -1197,6 +1198,16 @@ dependencies: typing.List[TerraformStack]
 ```
 
 - *Type:* typing.List[cdktf.TerraformStack]
+
+---
+
+##### `move_targets`<sup>Required</sup> <a name="move_targets" id="@cdktf/tf-module-stack.TFModuleStack.property.moveTargets"></a>
+
+```python
+move_targets: TerraformResourceTargets
+```
+
+- *Type:* cdktf.TerraformResourceTargets
 
 ---
 

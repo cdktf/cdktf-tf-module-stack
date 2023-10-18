@@ -295,15 +295,15 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@cdktf/provider-null@>=8.0.0":
-  version "8.0.0"
-  resolved "https://registry.yarnpkg.com/@cdktf/provider-null/-/provider-null-8.0.0.tgz#8bbcd0c4030ba3fc8edfc557700c302b3082b76d"
-  integrity sha512-ikSMynn+boAZRd3o8erY1L2RhtlAXupMq9VyPBNAPYrXxLeGlBNLcb6H8gpheKtInjysVEhj3InBQ8vNsY30bA==
-
-"@cdktf/provider-random@>=9.0.0":
+"@cdktf/provider-null@>=9.0.0":
   version "9.0.0"
-  resolved "https://registry.yarnpkg.com/@cdktf/provider-random/-/provider-random-9.0.0.tgz#dc16ca235865345aec0aec91aa25e6fcd0b606bd"
-  integrity sha512-c3d29Io2RFYj8DQlp5+ChGkvCXp96QK4c7jMpQgqrRpmkyL+9DAyJd5c0eCV1Kxem2CoYBE+tMM3jiWLCz12Lg==
+  resolved "https://registry.yarnpkg.com/@cdktf/provider-null/-/provider-null-9.0.0.tgz#ee33adc837076ce9f9a54252c846a6344c5abedb"
+  integrity sha512-5osel2UvwtB2RaOHECFvane43E4RbhOLzhrRUGJjoPCpb2E7LT8vrq4r9nA098BQvxGHPWtE+YR5OsvWUH5ouA==
+
+"@cdktf/provider-random@>=10.0.0":
+  version "10.0.0"
+  resolved "https://registry.yarnpkg.com/@cdktf/provider-random/-/provider-random-10.0.0.tgz#8eb614ff2159a07b7d2664a5d77bcbcf40da5043"
+  integrity sha512-MTOq2+zvmNEbT0v1vpUfGHXxeL1Up7i8IkxjHuVeGPXpXJ+42WzASxTcaO6597IYwTnvpyv6gbTsPQMFHMex2A==
 
 "@colors/colors@1.5.0":
   version "1.5.0"
@@ -1662,10 +1662,10 @@ case@^1.6.3:
   resolved "https://registry.yarnpkg.com/case/-/case-1.6.3.tgz#0a4386e3e9825351ca2e6216c60467ff5f1ea1c9"
   integrity sha512-mzDSXIPaFwVDvZAHqZ9VlbyF4yyXRuX6IvB06WvPYkqJVO24kX1PPhv9bfpKNFZyxYFmmgo03HUiD8iklmJYRQ==
 
-cdktf@0.18.0:
-  version "0.18.0"
-  resolved "https://registry.yarnpkg.com/cdktf/-/cdktf-0.18.0.tgz#b79eb924afff7af38877bb4ffdfe3bdf954131b0"
-  integrity sha512-iTWy2g0mCE2YW2hPxdWEzMwCVgyzDyheHWJTS4OcLZsR+lXETFX0lonoc5XGnX8CHBL4AbFY+EEqCUs5v7A4bQ==
+cdktf@0.19.0:
+  version "0.19.0"
+  resolved "https://registry.yarnpkg.com/cdktf/-/cdktf-0.19.0.tgz#097a3241b95e77eeab8ae1f7a714bf45dc6ca55b"
+  integrity sha512-5tcNhvrvsE9WawC5cPwV7B9ATQ5lWNjyCJN7EnMofxTtkBEdnnGx0esC+vpNO4Fs0LhmV37qCUlm+K6anZaPYw==
   dependencies:
     archiver "5.3.1"
     json-stable-stringify "^1.0.2"
