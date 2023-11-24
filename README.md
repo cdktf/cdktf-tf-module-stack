@@ -1,6 +1,23 @@
 # cdktf-tf-module-stack
 
+![Status: Tech Preview](https://img.shields.io/badge/status-experimental-EAAA32) [![Releases](https://img.shields.io/github/release/cdktf/cdktf-tf-module-stack.svg)](https://github.com/cdktf/cdktf-tf-module-stack/releases)
+[![LICENSE](https://img.shields.io/github/license/cdktf/cdktf-tf-module-stack.svg)](https://github.com/cdktf/cdktf-tf-module-stack/blob/main/LICENSE)
+[![build](https://github.com/cdktf/cdktf-tf-module-stack/actions/workflows/build.yml/badge.svg)](https://github.com/cdktf/cdktf-tf-module-stack/actions/workflows/build.yml)
+
 A drop-in replacement for cdktf.TerraformStack that lets you define Terraform modules as constructs.
+
+_cdktf-tf-module-stack_ is in technical preview, which means it's a community supported project. It still requires extensive testing and polishing to mature into a HashiCorp officially supported project. Please [file issues](https://github.com/cdktf/cdktf-tf-module-stack/issues/new/choose) generously and detail your experience while using the library. We welcome your feedback.
+
+By using the software in this repository, you acknowledge that: 
+* _cdktf-tf-module-stack_ is still in development, may change, and has not been released as a commercial product by HashiCorp and is not currently supported in any way by HashiCorp.
+* _cdktf-tf-module-stack_ is provided on an "as-is" basis, and may include bugs, errors, or other issues.
+* _cdktf-tf-module-stack_ is NOT INTENDED FOR PRODUCTION USE, use of the Software may result in unexpected results, loss of data, or other unexpected results, and HashiCorp disclaims any and all liability resulting from use of _cdktf-tf-module-stack_.
+* HashiCorp reserves all rights to make all decisions about the features, functionality and commercial release (or non-release) of _cdktf-tf-module-stack_, at any time and without any obligation or liability whatsoever.
+
+## Compatibility
+
+- `cdktf` >= 0.19.0
+- `constructs` >= 10.0.25
 
 ## Available Packages
 
