@@ -27,17 +27,17 @@ test("synthesizes a specific provider", () => {
   const stack = new MyStack(app, "MyStack");
   expect(Testing.synth(stack)).toMatchInlineSnapshot(`
     "{
-      \\"resource\\": {
-        \\"null_resource\\": {
-          \\"resource\\": {
+      "resource": {
+        "null_resource": {
+          "resource": {
           }
         }
       },
-      \\"terraform\\": {
-        \\"required_providers\\": {
-          \\"null\\": {
-            \\"source\\": \\"null\\",
-            \\"version\\": \\"3.2.1\\"
+      "terraform": {
+        "required_providers": {
+          "null": {
+            "source": "null",
+            "version": "3.2.2"
           }
         }
       }
@@ -58,16 +58,16 @@ test("synthesizes an abstract provider", () => {
   const stack = new MyStack(app, "MyStack");
   expect(Testing.synth(stack)).toMatchInlineSnapshot(`
     "{
-      \\"resource\\": {
-        \\"null_resource\\": {
-          \\"resource\\": {
+      "resource": {
+        "null_resource": {
+          "resource": {
           }
         }
       },
-      \\"terraform\\": {
-        \\"required_providers\\": {
-          \\"null\\": {
-            \\"version\\": \\">= 2.0.0\\"
+      "terraform": {
+        "required_providers": {
+          "null": {
+            "version": ">= 2.0.0"
           }
         }
       }
@@ -88,17 +88,17 @@ test("synthesizes a provider with a specific source", () => {
   const stack = new MyStack(app, "MyStack");
   expect(Testing.synth(stack)).toMatchInlineSnapshot(`
     "{
-      \\"resource\\": {
-        \\"null_resource\\": {
-          \\"resource\\": {
+      "resource": {
+        "null_resource": {
+          "resource": {
           }
         }
       },
-      \\"terraform\\": {
-        \\"required_providers\\": {
-          \\"null\\": {
-            \\"source\\": \\"hashicorp/null\\",
-            \\"version\\": \\">= 2.0.0\\"
+      "terraform": {
+        "required_providers": {
+          "null": {
+            "source": "hashicorp/null",
+            "version": ">= 2.0.0"
           }
         }
       }
@@ -123,17 +123,17 @@ test("synthesizes no backend", () => {
   const stack = new MyStack(app, "MyStack");
   expect(Testing.synth(stack)).toMatchInlineSnapshot(`
     "{
-      \\"resource\\": {
-        \\"null_resource\\": {
-          \\"resource\\": {
+      "resource": {
+        "null_resource": {
+          "resource": {
           }
         }
       },
-      \\"terraform\\": {
-        \\"required_providers\\": {
-          \\"null\\": {
-            \\"source\\": \\"null\\",
-            \\"version\\": \\"3.2.1\\"
+      "terraform": {
+        "required_providers": {
+          "null": {
+            "source": "null",
+            "version": "3.2.2"
           }
         }
       }
@@ -161,31 +161,31 @@ test("synthesizes variables and outputs", () => {
   const stack = new MyStack(app, "MyStack");
   expect(Testing.synth(stack)).toMatchInlineSnapshot(`
     "{
-      \\"output\\": {
-        \\"my_output\\": [
+      "output": {
+        "my_output": [
           {
-            \\"value\\": \\"\${null_resource.resource.id}\\"
+            "value": "\${null_resource.resource.id}"
           }
         ]
       },
-      \\"resource\\": {
-        \\"null_resource\\": {
-          \\"resource\\": {
+      "resource": {
+        "null_resource": {
+          "resource": {
           }
         }
       },
-      \\"terraform\\": {
-        \\"required_providers\\": {
-          \\"null\\": {
-            \\"source\\": \\"null\\",
-            \\"version\\": \\"3.2.1\\"
+      "terraform": {
+        "required_providers": {
+          "null": {
+            "source": "null",
+            "version": "3.2.2"
           }
         }
       },
-      \\"variable\\": {
-        \\"my_variable\\": [
+      "variable": {
+        "my_variable": [
           {
-            \\"type\\": \\"string\\"
+            "type": "string"
           }
         ]
       }
