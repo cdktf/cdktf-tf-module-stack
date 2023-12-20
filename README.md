@@ -8,7 +8,8 @@ A drop-in replacement for cdktf.TerraformStack that lets you define Terraform mo
 
 _cdktf-tf-module-stack_ is in technical preview, which means it's a community supported project. It still requires extensive testing and polishing to mature into a HashiCorp officially supported project. Please [file issues](https://github.com/cdktf/cdktf-tf-module-stack/issues/new/choose) generously and detail your experience while using the library. We welcome your feedback.
 
-By using the software in this repository, you acknowledge that: 
+By using the software in this repository, you acknowledge that:
+
 * _cdktf-tf-module-stack_ is still in development, may change, and has not been released as a commercial product by HashiCorp and is not currently supported in any way by HashiCorp.
 * _cdktf-tf-module-stack_ is provided on an "as-is" basis, and may include bugs, errors, or other issues.
 * _cdktf-tf-module-stack_ is NOT INTENDED FOR PRODUCTION USE, use of the Software may result in unexpected results, loss of data, or other unexpected results, and HashiCorp disclaims any and all liability resulting from use of _cdktf-tf-module-stack_.
@@ -16,8 +17,8 @@ By using the software in this repository, you acknowledge that:
 
 ## Compatibility
 
-- `cdktf` >= 0.19.0
-- `constructs` >= 10.0.25
+* `cdktf` >= 0.19.0
+* `constructs` >= 10.0.25
 
 ## Available Packages
 
@@ -70,8 +71,8 @@ import {
   TFModuleVariable,
   TFModuleOutput,
   ProviderRequirement,
-} from "cdktf-tf-module-stack";
-import { Resource } from "@cdktf/provider-null";
+} from "@cdktf/tf-module-stack";
+import { Resource } from '@cdktf/provider-null/lib/resource';
 
 class MyAwesomeModule extends TFModuleStack {
   constructor(scope: Construct, id: string) {
