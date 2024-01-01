@@ -59,11 +59,11 @@
     "jest-junit": "^15",
     "jsii": "~5.2.0",
     "jsii-diff": "^1.93.0",
-    "jsii-docgen": "^10.3.2",
+    "jsii-docgen": "^10.3.3",
     "jsii-pacmak": "^1.93.0",
     "jsii-rosetta": "~5.2.0",
     "prettier": "^2.8.8",
-    "projen": "^0.78.2",
+    "projen": "^0.78.5",
     "standard-version": "^9",
     "ts-jest": "^29",
     "ts-node": "10.9.2",
@@ -119,11 +119,13 @@
         }
       ]
     ],
-    "preset": "ts-jest",
-    "globals": {
-      "ts-jest": {
-        "tsconfig": "tsconfig.dev.json"
-      }
+    "transform": {
+      "^.+\\.[t]sx?$": [
+        "ts-jest",
+        {
+          "tsconfig": "tsconfig.dev.json"
+        }
+      ]
     }
   },
   "types": "lib/index.d.ts",
