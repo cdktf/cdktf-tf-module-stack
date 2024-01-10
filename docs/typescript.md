@@ -53,6 +53,7 @@ new ProviderRequirement(scope: Construct, providerName: string, providerVersionC
 | <code><a href="#@cdktf/tf-module-stack.ProviderRequirement.addOverride">addOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.ProviderRequirement.overrideLogicalId">overrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/tf-module-stack.ProviderRequirement.resetOverrideLogicalId">resetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/tf-module-stack.ProviderRequirement.toHclTerraform">toHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.ProviderRequirement.toMetadata">toMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.ProviderRequirement.toTerraform">toTerraform</a></code> | Adds this resource to the terraform JSON output. |
 
@@ -107,6 +108,12 @@ public resetOverrideLogicalId(): void
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `toHclTerraform` <a name="toHclTerraform" id="@cdktf/tf-module-stack.ProviderRequirement.toHclTerraform"></a>
+
+```typescript
+public toHclTerraform(): any
+```
 
 ##### `toMetadata` <a name="toMetadata" id="@cdktf/tf-module-stack.ProviderRequirement.toMetadata"></a>
 
@@ -422,6 +429,7 @@ TFModuleApp.of(construct: IConstruct)
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleApp.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
+| <code><a href="#@cdktf/tf-module-stack.TFModuleApp.property.hclOutput">hclOutput</a></code> | <code>boolean</code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleApp.property.manifest">manifest</a></code> | <code>cdktf.Manifest</code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleApp.property.outdir">outdir</a></code> | <code>string</code> | The output directory into which resources will be synthesized. |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleApp.property.skipBackendValidation">skipBackendValidation</a></code> | <code>boolean</code> | Whether to skip backend validation during synthesis of the app. |
@@ -439,6 +447,16 @@ public readonly node: Node;
 - *Type:* constructs.Node
 
 The tree node.
+
+---
+
+##### `hclOutput`<sup>Required</sup> <a name="hclOutput" id="@cdktf/tf-module-stack.TFModuleApp.property.hclOutput"></a>
+
+```typescript
+public readonly hclOutput: boolean;
+```
+
+- *Type:* boolean
 
 ---
 
@@ -547,6 +565,7 @@ new TFModuleOutput(scope: Construct, name: string, config: TerraformOutputConfig
 | <code><a href="#@cdktf/tf-module-stack.TFModuleOutput.addOverride">addOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleOutput.overrideLogicalId">overrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleOutput.resetOverrideLogicalId">resetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/tf-module-stack.TFModuleOutput.toHclTerraform">toHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleOutput.toMetadata">toMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleOutput.toTerraform">toTerraform</a></code> | *No description.* |
 
@@ -601,6 +620,12 @@ public resetOverrideLogicalId(): void
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `toHclTerraform` <a name="toHclTerraform" id="@cdktf/tf-module-stack.TFModuleOutput.toHclTerraform"></a>
+
+```typescript
+public toHclTerraform(): any
+```
 
 ##### `toMetadata` <a name="toMetadata" id="@cdktf/tf-module-stack.TFModuleOutput.toMetadata"></a>
 
@@ -830,10 +855,12 @@ new TFModuleStack(scope: Construct, id: string)
 | <code><a href="#@cdktf/tf-module-stack.TFModuleStack.dependsOn">dependsOn</a></code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleStack.ensureBackendExists">ensureBackendExists</a></code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleStack.getLogicalId">getLogicalId</a></code> | *No description.* |
+| <code><a href="#@cdktf/tf-module-stack.TFModuleStack.hasResourceMove">hasResourceMove</a></code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleStack.prepareStack">prepareStack</a></code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleStack.registerIncomingCrossStackReference">registerIncomingCrossStackReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleStack.registerOutgoingCrossStackReference">registerOutgoingCrossStackReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleStack.runAllValidations">runAllValidations</a></code> | Run all validations on the stack. |
+| <code><a href="#@cdktf/tf-module-stack.TFModuleStack.toHclTerraform">toHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleStack.toTerraform">toTerraform</a></code> | *No description.* |
 
 ---
@@ -912,6 +939,12 @@ public getLogicalId(tfElement: Node | TerraformElement): string
 
 ---
 
+##### `hasResourceMove` <a name="hasResourceMove" id="@cdktf/tf-module-stack.TFModuleStack.hasResourceMove"></a>
+
+```typescript
+public hasResourceMove(): boolean
+```
+
 ##### `prepareStack` <a name="prepareStack" id="@cdktf/tf-module-stack.TFModuleStack.prepareStack"></a>
 
 ```typescript
@@ -949,6 +982,12 @@ public runAllValidations(): void
 ```
 
 Run all validations on the stack.
+
+##### `toHclTerraform` <a name="toHclTerraform" id="@cdktf/tf-module-stack.TFModuleStack.toHclTerraform"></a>
+
+```typescript
+public toHclTerraform(): {[ key: string ]: any}
+```
 
 ##### `toTerraform` <a name="toTerraform" id="@cdktf/tf-module-stack.TFModuleStack.toTerraform"></a>
 
@@ -1110,10 +1149,12 @@ new TFModuleVariable(scope: Construct, name: string, config: TerraformVariableCo
 | <code><a href="#@cdktf/tf-module-stack.TFModuleVariable.addOverride">addOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleVariable.overrideLogicalId">overrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleVariable.resetOverrideLogicalId">resetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/tf-module-stack.TFModuleVariable.toHclTerraform">toHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleVariable.toMetadata">toMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleVariable.toTerraform">toTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleVariable.addValidation">addValidation</a></code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleVariable.synthesizeAttributes">synthesizeAttributes</a></code> | *No description.* |
+| <code><a href="#@cdktf/tf-module-stack.TFModuleVariable.synthesizeHclAttributes">synthesizeHclAttributes</a></code> | *No description.* |
 
 ---
 
@@ -1167,6 +1208,12 @@ public resetOverrideLogicalId(): void
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
 
+##### `toHclTerraform` <a name="toHclTerraform" id="@cdktf/tf-module-stack.TFModuleVariable.toHclTerraform"></a>
+
+```typescript
+public toHclTerraform(): any
+```
+
 ##### `toMetadata` <a name="toMetadata" id="@cdktf/tf-module-stack.TFModuleVariable.toMetadata"></a>
 
 ```typescript
@@ -1195,6 +1242,12 @@ public addValidation(validation: TerraformVariableValidationConfig): void
 
 ```typescript
 public synthesizeAttributes(): {[ key: string ]: any}
+```
+
+##### `synthesizeHclAttributes` <a name="synthesizeHclAttributes" id="@cdktf/tf-module-stack.TFModuleVariable.synthesizeHclAttributes"></a>
+
+```typescript
+public synthesizeHclAttributes(): {[ key: string ]: any}
 ```
 
 #### Static Functions <a name="Static Functions" id="Static Functions"></a>

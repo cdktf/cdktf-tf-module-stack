@@ -53,6 +53,7 @@ new ProviderRequirement(Construct Scope, string ProviderName, string ProviderVer
 | <code><a href="#@cdktf/tf-module-stack.ProviderRequirement.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.ProviderRequirement.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/tf-module-stack.ProviderRequirement.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/tf-module-stack.ProviderRequirement.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.ProviderRequirement.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.ProviderRequirement.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 
@@ -107,6 +108,12 @@ private void ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/tf-module-stack.ProviderRequirement.toHclTerraform"></a>
+
+```csharp
+private object ToHclTerraform()
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/tf-module-stack.ProviderRequirement.toMetadata"></a>
 
@@ -422,6 +429,7 @@ TFModuleApp.Of(IConstruct Construct);
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleApp.property.node">Node</a></code> | <code>Constructs.Node</code> | The tree node. |
+| <code><a href="#@cdktf/tf-module-stack.TFModuleApp.property.hclOutput">HclOutput</a></code> | <code>bool</code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleApp.property.manifest">Manifest</a></code> | <code>HashiCorp.Cdktf.Manifest</code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleApp.property.outdir">Outdir</a></code> | <code>string</code> | The output directory into which resources will be synthesized. |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleApp.property.skipBackendValidation">SkipBackendValidation</a></code> | <code>bool</code> | Whether to skip backend validation during synthesis of the app. |
@@ -439,6 +447,16 @@ public Node Node { get; }
 - *Type:* Constructs.Node
 
 The tree node.
+
+---
+
+##### `HclOutput`<sup>Required</sup> <a name="HclOutput" id="@cdktf/tf-module-stack.TFModuleApp.property.hclOutput"></a>
+
+```csharp
+public bool HclOutput { get; }
+```
+
+- *Type:* bool
 
 ---
 
@@ -547,6 +565,7 @@ new TFModuleOutput(Construct Scope, string Name, TerraformOutputConfig Config);
 | <code><a href="#@cdktf/tf-module-stack.TFModuleOutput.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleOutput.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleOutput.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/tf-module-stack.TFModuleOutput.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleOutput.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleOutput.toTerraform">ToTerraform</a></code> | *No description.* |
 
@@ -601,6 +620,12 @@ private void ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/tf-module-stack.TFModuleOutput.toHclTerraform"></a>
+
+```csharp
+private object ToHclTerraform()
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/tf-module-stack.TFModuleOutput.toMetadata"></a>
 
@@ -830,10 +855,12 @@ new TFModuleStack(Construct Scope, string Id);
 | <code><a href="#@cdktf/tf-module-stack.TFModuleStack.dependsOn">DependsOn</a></code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleStack.ensureBackendExists">EnsureBackendExists</a></code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleStack.getLogicalId">GetLogicalId</a></code> | *No description.* |
+| <code><a href="#@cdktf/tf-module-stack.TFModuleStack.hasResourceMove">HasResourceMove</a></code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleStack.prepareStack">PrepareStack</a></code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleStack.registerIncomingCrossStackReference">RegisterIncomingCrossStackReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleStack.registerOutgoingCrossStackReference">RegisterOutgoingCrossStackReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleStack.runAllValidations">RunAllValidations</a></code> | Run all validations on the stack. |
+| <code><a href="#@cdktf/tf-module-stack.TFModuleStack.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleStack.toTerraform">ToTerraform</a></code> | *No description.* |
 
 ---
@@ -912,6 +939,12 @@ private string GetLogicalId(object TfElement)
 
 ---
 
+##### `HasResourceMove` <a name="HasResourceMove" id="@cdktf/tf-module-stack.TFModuleStack.hasResourceMove"></a>
+
+```csharp
+private bool HasResourceMove()
+```
+
 ##### `PrepareStack` <a name="PrepareStack" id="@cdktf/tf-module-stack.TFModuleStack.prepareStack"></a>
 
 ```csharp
@@ -949,6 +982,12 @@ private void RunAllValidations()
 ```
 
 Run all validations on the stack.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/tf-module-stack.TFModuleStack.toHclTerraform"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, object> ToHclTerraform()
+```
 
 ##### `ToTerraform` <a name="ToTerraform" id="@cdktf/tf-module-stack.TFModuleStack.toTerraform"></a>
 
@@ -1110,10 +1149,12 @@ new TFModuleVariable(Construct Scope, string Name, TerraformVariableConfig Confi
 | <code><a href="#@cdktf/tf-module-stack.TFModuleVariable.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleVariable.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleVariable.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/tf-module-stack.TFModuleVariable.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleVariable.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleVariable.toTerraform">ToTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleVariable.addValidation">AddValidation</a></code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleVariable.synthesizeAttributes">SynthesizeAttributes</a></code> | *No description.* |
+| <code><a href="#@cdktf/tf-module-stack.TFModuleVariable.synthesizeHclAttributes">SynthesizeHclAttributes</a></code> | *No description.* |
 
 ---
 
@@ -1167,6 +1208,12 @@ private void ResetOverrideLogicalId()
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
 
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/tf-module-stack.TFModuleVariable.toHclTerraform"></a>
+
+```csharp
+private object ToHclTerraform()
+```
+
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/tf-module-stack.TFModuleVariable.toMetadata"></a>
 
 ```csharp
@@ -1195,6 +1242,12 @@ private void AddValidation(TerraformVariableValidationConfig Validation)
 
 ```csharp
 private System.Collections.Generic.IDictionary<string, object> SynthesizeAttributes()
+```
+
+##### `SynthesizeHclAttributes` <a name="SynthesizeHclAttributes" id="@cdktf/tf-module-stack.TFModuleVariable.synthesizeHclAttributes"></a>
+
+```csharp
+private System.Collections.Generic.IDictionary<string, object> SynthesizeHclAttributes()
 ```
 
 #### Static Functions <a name="Static Functions" id="Static Functions"></a>
