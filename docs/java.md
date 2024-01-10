@@ -53,6 +53,7 @@ new ProviderRequirement(Construct scope, java.lang.String providerName);,new Pro
 | <code><a href="#@cdktf/tf-module-stack.ProviderRequirement.addOverride">addOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.ProviderRequirement.overrideLogicalId">overrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/tf-module-stack.ProviderRequirement.resetOverrideLogicalId">resetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/tf-module-stack.ProviderRequirement.toHclTerraform">toHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.ProviderRequirement.toMetadata">toMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.ProviderRequirement.toTerraform">toTerraform</a></code> | Adds this resource to the terraform JSON output. |
 
@@ -107,6 +108,12 @@ public void resetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `toHclTerraform` <a name="toHclTerraform" id="@cdktf/tf-module-stack.ProviderRequirement.toHclTerraform"></a>
+
+```java
+public java.lang.Object toHclTerraform()
+```
 
 ##### `toMetadata` <a name="toMetadata" id="@cdktf/tf-module-stack.ProviderRequirement.toMetadata"></a>
 
@@ -296,6 +303,7 @@ import com.hashicorp.cdktf.tf_module_stack.TFModuleApp;
 
 TFModuleApp.Builder.create()
 //  .context(java.util.Map<java.lang.String, java.lang.Object>)
+//  .hclOutput(java.lang.Boolean)
 //  .outdir(java.lang.String)
 //  .skipBackendValidation(java.lang.Boolean)
 //  .skipValidation(java.lang.Boolean)
@@ -306,6 +314,7 @@ TFModuleApp.Builder.create()
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleApp.Initializer.parameter.context">context</a></code> | <code>java.util.Map<java.lang.String, java.lang.Object></code> | Additional context values for the application. |
+| <code><a href="#@cdktf/tf-module-stack.TFModuleApp.Initializer.parameter.hclOutput">hclOutput</a></code> | <code>java.lang.Boolean</code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleApp.Initializer.parameter.outdir">outdir</a></code> | <code>java.lang.String</code> | The directory to output Terraform resources. |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleApp.Initializer.parameter.skipBackendValidation">skipBackendValidation</a></code> | <code>java.lang.Boolean</code> | Whether to skip backend validation during synthesis of the app. |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleApp.Initializer.parameter.skipValidation">skipValidation</a></code> | <code>java.lang.Boolean</code> | Whether to skip all validations during synthesis of the app. |
@@ -323,6 +332,12 @@ Additional context values for the application.
 Context set by the CLI or the `context` key in `cdktf.json` has precedence.
 
 Context can be read from any construct using `node.getContext(key)`.
+
+---
+
+##### `hclOutput`<sup>Optional</sup> <a name="hclOutput" id="@cdktf/tf-module-stack.TFModuleApp.Initializer.parameter.hclOutput"></a>
+
+- *Type:* java.lang.Boolean
 
 ---
 
@@ -472,6 +487,7 @@ TFModuleApp.of(IConstruct construct)
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleApp.property.node">node</a></code> | <code>software.constructs.Node</code> | The tree node. |
+| <code><a href="#@cdktf/tf-module-stack.TFModuleApp.property.hclOutput">hclOutput</a></code> | <code>java.lang.Boolean</code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleApp.property.manifest">manifest</a></code> | <code>com.hashicorp.cdktf.Manifest</code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleApp.property.outdir">outdir</a></code> | <code>java.lang.String</code> | The output directory into which resources will be synthesized. |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleApp.property.skipBackendValidation">skipBackendValidation</a></code> | <code>java.lang.Boolean</code> | Whether to skip backend validation during synthesis of the app. |
@@ -489,6 +505,16 @@ public Node getNode();
 - *Type:* software.constructs.Node
 
 The tree node.
+
+---
+
+##### `hclOutput`<sup>Required</sup> <a name="hclOutput" id="@cdktf/tf-module-stack.TFModuleApp.property.hclOutput"></a>
+
+```java
+public java.lang.Boolean getHclOutput();
+```
+
+- *Type:* java.lang.Boolean
 
 ---
 
@@ -642,6 +668,7 @@ If set to true the synthesized Terraform Output will be named after the `id` pas
 | <code><a href="#@cdktf/tf-module-stack.TFModuleOutput.addOverride">addOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleOutput.overrideLogicalId">overrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleOutput.resetOverrideLogicalId">resetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/tf-module-stack.TFModuleOutput.toHclTerraform">toHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleOutput.toMetadata">toMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleOutput.toTerraform">toTerraform</a></code> | *No description.* |
 
@@ -696,6 +723,12 @@ public void resetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `toHclTerraform` <a name="toHclTerraform" id="@cdktf/tf-module-stack.TFModuleOutput.toHclTerraform"></a>
+
+```java
+public java.lang.Object toHclTerraform()
+```
 
 ##### `toMetadata` <a name="toMetadata" id="@cdktf/tf-module-stack.TFModuleOutput.toMetadata"></a>
 
@@ -925,10 +958,12 @@ new TFModuleStack(Construct scope, java.lang.String id);
 | <code><a href="#@cdktf/tf-module-stack.TFModuleStack.dependsOn">dependsOn</a></code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleStack.ensureBackendExists">ensureBackendExists</a></code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleStack.getLogicalId">getLogicalId</a></code> | *No description.* |
+| <code><a href="#@cdktf/tf-module-stack.TFModuleStack.hasResourceMove">hasResourceMove</a></code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleStack.prepareStack">prepareStack</a></code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleStack.registerIncomingCrossStackReference">registerIncomingCrossStackReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleStack.registerOutgoingCrossStackReference">registerOutgoingCrossStackReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleStack.runAllValidations">runAllValidations</a></code> | Run all validations on the stack. |
+| <code><a href="#@cdktf/tf-module-stack.TFModuleStack.toHclTerraform">toHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleStack.toTerraform">toTerraform</a></code> | *No description.* |
 
 ---
@@ -1007,6 +1042,12 @@ public java.lang.String getLogicalId(Node OR TerraformElement tfElement)
 
 ---
 
+##### `hasResourceMove` <a name="hasResourceMove" id="@cdktf/tf-module-stack.TFModuleStack.hasResourceMove"></a>
+
+```java
+public java.lang.Boolean hasResourceMove()
+```
+
 ##### `prepareStack` <a name="prepareStack" id="@cdktf/tf-module-stack.TFModuleStack.prepareStack"></a>
 
 ```java
@@ -1044,6 +1085,12 @@ public void runAllValidations()
 ```
 
 Run all validations on the stack.
+
+##### `toHclTerraform` <a name="toHclTerraform" id="@cdktf/tf-module-stack.TFModuleStack.toHclTerraform"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.Object> toHclTerraform()
+```
 
 ##### `toTerraform` <a name="toTerraform" id="@cdktf/tf-module-stack.TFModuleStack.toTerraform"></a>
 
@@ -1273,10 +1320,12 @@ Specify arbitrary custom validation rules for a particular variable using a vali
 | <code><a href="#@cdktf/tf-module-stack.TFModuleVariable.addOverride">addOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleVariable.overrideLogicalId">overrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleVariable.resetOverrideLogicalId">resetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/tf-module-stack.TFModuleVariable.toHclTerraform">toHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleVariable.toMetadata">toMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleVariable.toTerraform">toTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleVariable.addValidation">addValidation</a></code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleVariable.synthesizeAttributes">synthesizeAttributes</a></code> | *No description.* |
+| <code><a href="#@cdktf/tf-module-stack.TFModuleVariable.synthesizeHclAttributes">synthesizeHclAttributes</a></code> | *No description.* |
 
 ---
 
@@ -1330,6 +1379,12 @@ public void resetOverrideLogicalId()
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
 
+##### `toHclTerraform` <a name="toHclTerraform" id="@cdktf/tf-module-stack.TFModuleVariable.toHclTerraform"></a>
+
+```java
+public java.lang.Object toHclTerraform()
+```
+
 ##### `toMetadata` <a name="toMetadata" id="@cdktf/tf-module-stack.TFModuleVariable.toMetadata"></a>
 
 ```java
@@ -1358,6 +1413,12 @@ public void addValidation(TerraformVariableValidationConfig validation)
 
 ```java
 public java.util.Map<java.lang.String, java.lang.Object> synthesizeAttributes()
+```
+
+##### `synthesizeHclAttributes` <a name="synthesizeHclAttributes" id="@cdktf/tf-module-stack.TFModuleVariable.synthesizeHclAttributes"></a>
+
+```java
+public java.util.Map<java.lang.String, java.lang.Object> synthesizeHclAttributes()
 ```
 
 #### Static Functions <a name="Static Functions" id="Static Functions"></a>

@@ -58,6 +58,7 @@ cdktf_tf_module_stack.ProviderRequirement(
 | <code><a href="#@cdktf/tf-module-stack.ProviderRequirement.addOverride">add_override</a></code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.ProviderRequirement.overrideLogicalId">override_logical_id</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/tf-module-stack.ProviderRequirement.resetOverrideLogicalId">reset_override_logical_id</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/tf-module-stack.ProviderRequirement.toHclTerraform">to_hcl_terraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.ProviderRequirement.toMetadata">to_metadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.ProviderRequirement.toTerraform">to_terraform</a></code> | Adds this resource to the terraform JSON output. |
 
@@ -117,6 +118,12 @@ def reset_override_logical_id() -> None
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `to_hcl_terraform` <a name="to_hcl_terraform" id="@cdktf/tf-module-stack.ProviderRequirement.toHclTerraform"></a>
+
+```python
+def to_hcl_terraform() -> typing.Any
+```
 
 ##### `to_metadata` <a name="to_metadata" id="@cdktf/tf-module-stack.ProviderRequirement.toMetadata"></a>
 
@@ -312,6 +319,7 @@ import cdktf_tf_module_stack
 
 cdktf_tf_module_stack.TFModuleApp(
   context: typing.Mapping[typing.Any] = None,
+  hcl_output: bool = None,
   outdir: str = None,
   skip_backend_validation: bool = None,
   skip_validation: bool = None,
@@ -322,6 +330,7 @@ cdktf_tf_module_stack.TFModuleApp(
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleApp.Initializer.parameter.context">context</a></code> | <code>typing.Mapping[typing.Any]</code> | Additional context values for the application. |
+| <code><a href="#@cdktf/tf-module-stack.TFModuleApp.Initializer.parameter.hclOutput">hcl_output</a></code> | <code>bool</code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleApp.Initializer.parameter.outdir">outdir</a></code> | <code>str</code> | The directory to output Terraform resources. |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleApp.Initializer.parameter.skipBackendValidation">skip_backend_validation</a></code> | <code>bool</code> | Whether to skip backend validation during synthesis of the app. |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleApp.Initializer.parameter.skipValidation">skip_validation</a></code> | <code>bool</code> | Whether to skip all validations during synthesis of the app. |
@@ -339,6 +348,12 @@ Additional context values for the application.
 Context set by the CLI or the `context` key in `cdktf.json` has precedence.
 
 Context can be read from any construct using `node.getContext(key)`.
+
+---
+
+##### `hcl_output`<sup>Optional</sup> <a name="hcl_output" id="@cdktf/tf-module-stack.TFModuleApp.Initializer.parameter.hclOutput"></a>
+
+- *Type:* bool
 
 ---
 
@@ -498,6 +513,7 @@ cdktf_tf_module_stack.TFModuleApp.of(
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleApp.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
+| <code><a href="#@cdktf/tf-module-stack.TFModuleApp.property.hclOutput">hcl_output</a></code> | <code>bool</code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleApp.property.manifest">manifest</a></code> | <code>cdktf.Manifest</code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleApp.property.outdir">outdir</a></code> | <code>str</code> | The output directory into which resources will be synthesized. |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleApp.property.skipBackendValidation">skip_backend_validation</a></code> | <code>bool</code> | Whether to skip backend validation during synthesis of the app. |
@@ -515,6 +531,16 @@ node: Node
 - *Type:* constructs.Node
 
 The tree node.
+
+---
+
+##### `hcl_output`<sup>Required</sup> <a name="hcl_output" id="@cdktf/tf-module-stack.TFModuleApp.property.hclOutput"></a>
+
+```python
+hcl_output: bool
+```
+
+- *Type:* bool
 
 ---
 
@@ -670,6 +696,7 @@ If set to true the synthesized Terraform Output will be named after the `id` pas
 | <code><a href="#@cdktf/tf-module-stack.TFModuleOutput.addOverride">add_override</a></code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleOutput.overrideLogicalId">override_logical_id</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleOutput.resetOverrideLogicalId">reset_override_logical_id</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/tf-module-stack.TFModuleOutput.toHclTerraform">to_hcl_terraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleOutput.toMetadata">to_metadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleOutput.toTerraform">to_terraform</a></code> | *No description.* |
 
@@ -729,6 +756,12 @@ def reset_override_logical_id() -> None
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `to_hcl_terraform` <a name="to_hcl_terraform" id="@cdktf/tf-module-stack.TFModuleOutput.toHclTerraform"></a>
+
+```python
+def to_hcl_terraform() -> typing.Any
+```
 
 ##### `to_metadata` <a name="to_metadata" id="@cdktf/tf-module-stack.TFModuleOutput.toMetadata"></a>
 
@@ -967,10 +1000,12 @@ cdktf_tf_module_stack.TFModuleStack(
 | <code><a href="#@cdktf/tf-module-stack.TFModuleStack.dependsOn">depends_on</a></code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleStack.ensureBackendExists">ensure_backend_exists</a></code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleStack.getLogicalId">get_logical_id</a></code> | *No description.* |
+| <code><a href="#@cdktf/tf-module-stack.TFModuleStack.hasResourceMove">has_resource_move</a></code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleStack.prepareStack">prepare_stack</a></code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleStack.registerIncomingCrossStackReference">register_incoming_cross_stack_reference</a></code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleStack.registerOutgoingCrossStackReference">register_outgoing_cross_stack_reference</a></code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleStack.runAllValidations">run_all_validations</a></code> | Run all validations on the stack. |
+| <code><a href="#@cdktf/tf-module-stack.TFModuleStack.toHclTerraform">to_hcl_terraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleStack.toTerraform">to_terraform</a></code> | *No description.* |
 
 ---
@@ -1058,6 +1093,12 @@ def get_logical_id(
 
 ---
 
+##### `has_resource_move` <a name="has_resource_move" id="@cdktf/tf-module-stack.TFModuleStack.hasResourceMove"></a>
+
+```python
+def has_resource_move() -> bool
+```
+
 ##### `prepare_stack` <a name="prepare_stack" id="@cdktf/tf-module-stack.TFModuleStack.prepareStack"></a>
 
 ```python
@@ -1099,6 +1140,12 @@ def run_all_validations() -> None
 ```
 
 Run all validations on the stack.
+
+##### `to_hcl_terraform` <a name="to_hcl_terraform" id="@cdktf/tf-module-stack.TFModuleStack.toHclTerraform"></a>
+
+```python
+def to_hcl_terraform() -> typing.Mapping[typing.Any]
+```
 
 ##### `to_terraform` <a name="to_terraform" id="@cdktf/tf-module-stack.TFModuleStack.toTerraform"></a>
 
@@ -1336,10 +1383,12 @@ Specify arbitrary custom validation rules for a particular variable using a vali
 | <code><a href="#@cdktf/tf-module-stack.TFModuleVariable.addOverride">add_override</a></code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleVariable.overrideLogicalId">override_logical_id</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleVariable.resetOverrideLogicalId">reset_override_logical_id</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/tf-module-stack.TFModuleVariable.toHclTerraform">to_hcl_terraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleVariable.toMetadata">to_metadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleVariable.toTerraform">to_terraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleVariable.addValidation">add_validation</a></code> | *No description.* |
 | <code><a href="#@cdktf/tf-module-stack.TFModuleVariable.synthesizeAttributes">synthesize_attributes</a></code> | *No description.* |
+| <code><a href="#@cdktf/tf-module-stack.TFModuleVariable.synthesizeHclAttributes">synthesize_hcl_attributes</a></code> | *No description.* |
 
 ---
 
@@ -1398,6 +1447,12 @@ def reset_override_logical_id() -> None
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
 
+##### `to_hcl_terraform` <a name="to_hcl_terraform" id="@cdktf/tf-module-stack.TFModuleVariable.toHclTerraform"></a>
+
+```python
+def to_hcl_terraform() -> typing.Any
+```
+
 ##### `to_metadata` <a name="to_metadata" id="@cdktf/tf-module-stack.TFModuleVariable.toMetadata"></a>
 
 ```python
@@ -1439,6 +1494,12 @@ This contains the text that Terraform will include as part of error messages whe
 
 ```python
 def synthesize_attributes() -> typing.Mapping[typing.Any]
+```
+
+##### `synthesize_hcl_attributes` <a name="synthesize_hcl_attributes" id="@cdktf/tf-module-stack.TFModuleVariable.synthesizeHclAttributes"></a>
+
+```python
+def synthesize_hcl_attributes() -> typing.Mapping[typing.Any]
 ```
 
 #### Static Functions <a name="Static Functions" id="Static Functions"></a>
