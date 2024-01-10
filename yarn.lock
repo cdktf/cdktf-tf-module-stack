@@ -302,15 +302,15 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@cdktf/provider-null@>=9.0.0":
-  version "9.0.1"
-  resolved "https://registry.yarnpkg.com/@cdktf/provider-null/-/provider-null-9.0.1.tgz#fd54f09fdbfd6994fb253ed672526a6a8e7909f0"
-  integrity sha512-unmz1i944Y0gIavZTYl54jZBXQh95i21SStCRqRfiFyrsc88aw665HJt1G69uQXK3VtPuwjFSSVsG9UMRmZh6A==
-
-"@cdktf/provider-random@>=10.0.0":
+"@cdktf/provider-null@>=10.0.0":
   version "10.0.0"
-  resolved "https://registry.yarnpkg.com/@cdktf/provider-random/-/provider-random-10.0.0.tgz#8eb614ff2159a07b7d2664a5d77bcbcf40da5043"
-  integrity sha512-MTOq2+zvmNEbT0v1vpUfGHXxeL1Up7i8IkxjHuVeGPXpXJ+42WzASxTcaO6597IYwTnvpyv6gbTsPQMFHMex2A==
+  resolved "https://registry.yarnpkg.com/@cdktf/provider-null/-/provider-null-10.0.0.tgz#ad045643fbbfbc5cc8566a2bdf37279e5d8ca4f2"
+  integrity sha512-r/2z3N4Z1ADjh4hu3BOyKRcXr0OE1f/b5kh+IdC2BF2dhHVaXGHw2Cvogd+R73PjgBNBv/pZa+wOY16tlgNpaQ==
+
+"@cdktf/provider-random@>=11.0.0":
+  version "11.0.0"
+  resolved "https://registry.yarnpkg.com/@cdktf/provider-random/-/provider-random-11.0.0.tgz#a6ef70560c45593abace52dd22691bf39da2a338"
+  integrity sha512-08mXxGFxhVpakxDIGwmHfbDB0yScXMV90Sdlg6+sa1GGXIxSARpEq/vqlTs/aqiBeVH358cQEr6OqvgEbgI82g==
 
 "@cspotcode/source-map-support@^0.8.0":
   version "0.8.1"

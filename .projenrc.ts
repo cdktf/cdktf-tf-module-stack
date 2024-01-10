@@ -81,8 +81,8 @@ new UpgradeCDKTF(project);
 
 project.addPeerDeps("cdktf@>=0.20.0", "constructs@^10.0.25");
 project.addDevDeps(
-  "@cdktf/provider-null@>=9.0.0",
-  "@cdktf/provider-random@>=10.0.0"
+  "@cdktf/provider-null@>=10.0.0",
+  "@cdktf/provider-random@>=11.0.0"
 );
 
 new JsiiDocgen(project, {

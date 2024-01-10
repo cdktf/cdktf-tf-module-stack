@@ -42,8 +42,8 @@
     "organization": true
   },
   "devDependencies": {
-    "@cdktf/provider-null": ">=9.0.0",
-    "@cdktf/provider-random": ">=10.0.0",
+    "@cdktf/provider-null": ">=10.0.0",
+    "@cdktf/provider-random": ">=11.0.0",
     "@types/jest": "^29",
     "@types/node": "^18",
     "@typescript-eslint/eslint-plugin": "^6",
