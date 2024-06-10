@@ -7,12 +7,12 @@ import { NullProvider } from "@cdktf/provider-null/lib/provider";
 import { Resource } from "@cdktf/provider-null/lib/resource";
 import { RemoteBackend, Testing } from "cdktf";
 import { Construct } from "constructs";
-import { TFModuleStack } from "../src";
 import {
+  TFModuleStack,
   TFModuleVariable,
   ProviderRequirement,
   TFModuleOutput,
-} from "../src/index";
+} from "../src";
 
 test("synthesizes a specific provider", () => {
   const app = Testing.app();
