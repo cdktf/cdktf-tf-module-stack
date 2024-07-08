@@ -71,8 +71,8 @@ const project = new ConstructLibraryCdktf({
     packageName: "tfmodulestack",
   },
   docgen: false,
-  jsiiVersion: "~5.2.0",
-  typescriptVersion: "~5.2.0", // should always be the same major/minor as JSII
+  jsiiVersion: "~5.4.0",
+  typescriptVersion: "~5.4.0", // should always be the same major/minor as JSII
 });
 
 new CustomizedLicense(project);
