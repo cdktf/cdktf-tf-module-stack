@@ -128,5 +128,7 @@ releaseWorkflow?.addOverride("on.push", {
     ".github/**/*.md",
   ],
 });
+// always publish a new GitHub release, even when publishing to a particular package manager fails
+releaseWorkflow?.addOverride("jobs.release_github.needs", "release");
 
 project.synth();
