@@ -15,7 +15,11 @@ const githubActionPinnedVersions = {
   "actions/checkout": "692973e3d937129bcbf40652eb9f2f61becf3332", // v4.1.7
   "actions/download-artifact": "fa0a91b85d4f404e444e00e005971372dc801d16", // v4.1.8
   "actions/github-script": "60a0d83039c74a4aee543508d2ffcb1c3799cdea", // v7.0.1
+  "actions/setup-dotnet": "6bd8b7f7774af54e05809fcc5431931b3eb1ddee", // v4.0.1
+  "actions/setup-go": "0a12ed9d6a96ab950c8f026ed9f722fe0da7ef32", // v5.0.2
+  "actions/setup-java": "99b8673ff64fbf99d8d325f52d9a5bdedb8483e9", // v4.2.1
   "actions/setup-node": "1e60f620b9541d16bece96c5465dc8ee9832be0b", // v4.0.3
+  "actions/setup-python": "39cd14951b08e74b54015e9e001cdefcf80e669f", // v5.1.1
   "actions/upload-artifact": "89ef406dd8d7e03cfd12d9e0a4a378f454709029", // v4.3.5
   "amannn/action-semantic-pull-request":
     "0723387faaf9b38adef4775cd42cfd5155ed6017", // v5.5.3
