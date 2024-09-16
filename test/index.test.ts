@@ -37,7 +37,7 @@ test("synthesizes a specific provider", () => {
         "required_providers": {
           "null": {
             "source": "null",
-            "version": "3.2.2"
+            "version": "3.2.3"
           }
         }
       }
@@ -133,7 +133,7 @@ test("synthesizes no backend", () => {
         "required_providers": {
           "null": {
             "source": "null",
-            "version": "3.2.2"
+            "version": "3.2.3"
           }
         }
       }
@@ -178,7 +178,7 @@ test("synthesizes variables and outputs", () => {
         "required_providers": {
           "null": {
             "source": "null",
-            "version": "3.2.2"
+            "version": "3.2.3"
           }
         }
       },
