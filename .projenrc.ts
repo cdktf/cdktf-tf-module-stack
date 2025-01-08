@@ -29,7 +29,7 @@ const githubActionPinnedVersions = {
 };
 
 /** JSII and TSII should always use the same major/minor version range */
-const typescriptVersion = "~5.4.0";
+const typescriptVersion = "~5.5.0";
 const project = new ConstructLibraryCdktf({
   author: "HashiCorp",
   authorAddress: "https://hashicorp.com",
