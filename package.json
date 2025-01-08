@@ -46,6 +46,7 @@
     "@cdktf/provider-random": ">=11.0.0",
     "@types/jest": "^29",
     "@types/node": "ts5.4",
+    "@types/semver": "^7.5.8",
     "@typescript-eslint/eslint-plugin": "^8",
     "@typescript-eslint/parser": "^8",
     "cdktf": "0.20.0",
@@ -65,6 +66,7 @@
     "jsii-rosetta": "~5.4.0",
     "prettier": "^2.8.8",
     "projen": "^0.91.5",
+    "semver": "^7.6.3",
     "ts-jest": "^29",
     "ts-node": "10.9.2",
     "typescript": "~5.4.0"

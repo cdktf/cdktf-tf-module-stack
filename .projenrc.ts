@@ -10,6 +10,7 @@ import { Automerge } from "./projenrc/automerge";
 import { JsiiDocgen } from "./projenrc/custom-docgen";
 import { CustomizedLicense } from "./projenrc/customized-license";
 import { UpgradeCDKTF } from "./projenrc/upgrade-cdktf";
+import { UpgradeJSIIAndTypeScript } from "./projenrc/upgrade-jsii-typescript";
 
 const githubActionPinnedVersions = {
   "actions/checkout": "692973e3d937129bcbf40652eb9f2f61becf3332", // v4.1.7
@@ -27,6 +28,8 @@ const githubActionPinnedVersions = {
   "peter-evans/create-pull-request": "c5a7806660adbe173f04e3e038b0ccdcd758773c", // v6.1.0
 };
 
+/** JSII and TSII should always use the same major/minor version range */
+const typescriptVersion = "~5.4.0";
 const project = new ConstructLibraryCdktf({
   author: "HashiCorp",
   authorAddress: "https://hashicorp.com",
@@ -75,24 +78,27 @@ const project = new ConstructLibraryCdktf({
     packageName: "tfmodulestack",
   },
   docgen: false,
-  jsiiVersion: "~5.4.0",
-  typescriptVersion: "~5.4.0", // should always be the same major/minor as JSII
+  typescriptVersion,
+  jsiiVersion: typescriptVersion,
 });
 
 new CustomizedLicense(project);
 new AutoApprove(project);
 new Automerge(project);
 new UpgradeCDKTF(project);
+new UpgradeJSIIAndTypeScript(project, typescriptVersion);
 
 project.addPeerDeps("cdktf@>=0.20.0", "constructs@^10.0.25");
 project.addDevDeps(
+  "semver",
+  "@types/semver",
   "@cdktf/provider-null@>=10.0.0",
   "@cdktf/provider-random@>=11.0.0"
 );
 
 new JsiiDocgen(project, {
-  // We don't have docs for go because major changes lead to documentaiton changes
-  // This bloks the release process
+  // We don't have docs for go because major changes lead to documentation changes
+  // This blocks the release process
   languages: ["typescript", "python", "java", "csharp"],
 });
 
