@@ -28,7 +28,7 @@ const githubActionPinnedVersions = {
   "peter-evans/create-pull-request": "67ccf781d68cd99b580ae25a5c18a1cc84ffff1f", // v7.0.6
 };
 
-const constructsVersion = "10.0.25";
+const constructsVersion = "10.3.0";
 /** JSII and TS should always use the same major/minor version range */
 const typescriptVersion = "~5.5.0";
 const project = new ConstructLibraryCdktf({

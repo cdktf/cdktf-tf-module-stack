@@ -139,7 +139,7 @@ Adds this resource to the terraform JSON output.
 
 ---
 
-##### ~~`isConstruct`~~ <a name="isConstruct" id="@cdktf/tf-module-stack.ProviderRequirement.isConstruct"></a>
+##### `isConstruct` <a name="isConstruct" id="@cdktf/tf-module-stack.ProviderRequirement.isConstruct"></a>
 
 ```typescript
 import { ProviderRequirement } from '@cdktf/tf-module-stack'
@@ -148,6 +148,20 @@ ProviderRequirement.isConstruct(x: any)
 ```
 
 Checks if `x` is a construct.
+
+Use this method instead of `instanceof` to properly detect `Construct`
+instances, even when the construct library is symlinked.
+
+Explanation: in JavaScript, multiple copies of the `constructs` library on
+disk are seen as independent, completely different libraries. As a
+consequence, the class `Construct` in each copy of the `constructs` library
+is seen as a different class, and an instance of one class will not test as
+`instanceof` the other class. `npm install` will not create installations
+like this, but users may manually symlink construct libraries together or
+use a monorepo tool: in those cases, multiple copies of the `constructs`
+library can be accidentally installed, and `instanceof` will behave
+unpredictably. It is safest to avoid using `instanceof`, and using
+this type-testing method instead.
 
 ###### `x`<sup>Required</sup> <a name="x" id="@cdktf/tf-module-stack.ProviderRequirement.isConstruct.parameter.x"></a>
 
@@ -378,7 +392,7 @@ Synthesizes all resources to the output directory.
 
 ---
 
-##### ~~`isConstruct`~~ <a name="isConstruct" id="@cdktf/tf-module-stack.TFModuleApp.isConstruct"></a>
+##### `isConstruct` <a name="isConstruct" id="@cdktf/tf-module-stack.TFModuleApp.isConstruct"></a>
 
 ```typescript
 import { TFModuleApp } from '@cdktf/tf-module-stack'
@@ -387,6 +401,20 @@ TFModuleApp.isConstruct(x: any)
 ```
 
 Checks if `x` is a construct.
+
+Use this method instead of `instanceof` to properly detect `Construct`
+instances, even when the construct library is symlinked.
+
+Explanation: in JavaScript, multiple copies of the `constructs` library on
+disk are seen as independent, completely different libraries. As a
+consequence, the class `Construct` in each copy of the `constructs` library
+is seen as a different class, and an instance of one class will not test as
+`instanceof` the other class. `npm install` will not create installations
+like this, but users may manually symlink construct libraries together or
+use a monorepo tool: in those cases, multiple copies of the `constructs`
+library can be accidentally installed, and `instanceof` will behave
+unpredictably. It is safest to avoid using `instanceof`, and using
+this type-testing method instead.
 
 ###### `x`<sup>Required</sup> <a name="x" id="@cdktf/tf-module-stack.TFModuleApp.isConstruct.parameter.x"></a>
 
@@ -649,7 +677,7 @@ public toTerraform(): any
 
 ---
 
-##### ~~`isConstruct`~~ <a name="isConstruct" id="@cdktf/tf-module-stack.TFModuleOutput.isConstruct"></a>
+##### `isConstruct` <a name="isConstruct" id="@cdktf/tf-module-stack.TFModuleOutput.isConstruct"></a>
 
 ```typescript
 import { TFModuleOutput } from '@cdktf/tf-module-stack'
@@ -658,6 +686,20 @@ TFModuleOutput.isConstruct(x: any)
 ```
 
 Checks if `x` is a construct.
+
+Use this method instead of `instanceof` to properly detect `Construct`
+instances, even when the construct library is symlinked.
+
+Explanation: in JavaScript, multiple copies of the `constructs` library on
+disk are seen as independent, completely different libraries. As a
+consequence, the class `Construct` in each copy of the `constructs` library
+is seen as a different class, and an instance of one class will not test as
+`instanceof` the other class. `npm install` will not create installations
+like this, but users may manually symlink construct libraries together or
+use a monorepo tool: in those cases, multiple copies of the `constructs`
+library can be accidentally installed, and `instanceof` will behave
+unpredictably. It is safest to avoid using `instanceof`, and using
+this type-testing method instead.
 
 ###### `x`<sup>Required</sup> <a name="x" id="@cdktf/tf-module-stack.TFModuleOutput.isConstruct.parameter.x"></a>
 
@@ -1005,7 +1047,7 @@ public toTerraform(): any
 
 ---
 
-##### ~~`isConstruct`~~ <a name="isConstruct" id="@cdktf/tf-module-stack.TFModuleStack.isConstruct"></a>
+##### `isConstruct` <a name="isConstruct" id="@cdktf/tf-module-stack.TFModuleStack.isConstruct"></a>
 
 ```typescript
 import { TFModuleStack } from '@cdktf/tf-module-stack'
@@ -1014,6 +1056,20 @@ TFModuleStack.isConstruct(x: any)
 ```
 
 Checks if `x` is a construct.
+
+Use this method instead of `instanceof` to properly detect `Construct`
+instances, even when the construct library is symlinked.
+
+Explanation: in JavaScript, multiple copies of the `constructs` library on
+disk are seen as independent, completely different libraries. As a
+consequence, the class `Construct` in each copy of the `constructs` library
+is seen as a different class, and an instance of one class will not test as
+`instanceof` the other class. `npm install` will not create installations
+like this, but users may manually symlink construct libraries together or
+use a monorepo tool: in those cases, multiple copies of the `constructs`
+library can be accidentally installed, and `instanceof` will behave
+unpredictably. It is safest to avoid using `instanceof`, and using
+this type-testing method instead.
 
 ###### `x`<sup>Required</sup> <a name="x" id="@cdktf/tf-module-stack.TFModuleStack.isConstruct.parameter.x"></a>
 
@@ -1259,7 +1315,7 @@ public synthesizeHclAttributes(): {[ key: string ]: any}
 
 ---
 
-##### ~~`isConstruct`~~ <a name="isConstruct" id="@cdktf/tf-module-stack.TFModuleVariable.isConstruct"></a>
+##### `isConstruct` <a name="isConstruct" id="@cdktf/tf-module-stack.TFModuleVariable.isConstruct"></a>
 
 ```typescript
 import { TFModuleVariable } from '@cdktf/tf-module-stack'
@@ -1268,6 +1324,20 @@ TFModuleVariable.isConstruct(x: any)
 ```
 
 Checks if `x` is a construct.
+
+Use this method instead of `instanceof` to properly detect `Construct`
+instances, even when the construct library is symlinked.
+
+Explanation: in JavaScript, multiple copies of the `constructs` library on
+disk are seen as independent, completely different libraries. As a
+consequence, the class `Construct` in each copy of the `constructs` library
+is seen as a different class, and an instance of one class will not test as
+`instanceof` the other class. `npm install` will not create installations
+like this, but users may manually symlink construct libraries together or
+use a monorepo tool: in those cases, multiple copies of the `constructs`
+library can be accidentally installed, and `instanceof` will behave
+unpredictably. It is safest to avoid using `instanceof`, and using
+this type-testing method instead.
 
 ###### `x`<sup>Required</sup> <a name="x" id="@cdktf/tf-module-stack.TFModuleVariable.isConstruct.parameter.x"></a>
 
