@@ -28,7 +28,8 @@ const githubActionPinnedVersions = {
   "peter-evans/create-pull-request": "67ccf781d68cd99b580ae25a5c18a1cc84ffff1f", // v7.0.6
 };
 
-/** JSII and TSII should always use the same major/minor version range */
+const constructsVersion = "10.0.25";
+/** JSII and TS should always use the same major/minor version range */
 const typescriptVersion = "~5.5.0";
 const project = new ConstructLibraryCdktf({
   author: "HashiCorp",
@@ -88,7 +89,7 @@ new Automerge(project);
 new UpgradeCDKTF(project);
 new UpgradeJSIIAndTypeScript(project, typescriptVersion);
 
-project.addPeerDeps("cdktf@>=0.20.0", "constructs@^10.0.25");
+project.addPeerDeps("cdktf@>=0.20.0", `constructs@^${constructsVersion}`);
 project.addDevDeps(
   "semver",
   "@types/semver",
