@@ -46,7 +46,7 @@
     "@cdktf/provider-random": ">=11.0.0",
     "@types/jest": "^29",
     "@types/node": "ts5.5",
-    "@types/semver": "^7.5.8",
+    "@types/semver": "^7.7.0",
     "@typescript-eslint/eslint-plugin": "^8",
     "@typescript-eslint/parser": "^8",
     "cdktf": "0.20.0",
