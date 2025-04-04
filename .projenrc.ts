@@ -91,8 +91,6 @@ new UpgradeJSIIAndTypeScript(project, typescriptVersion);
 
 project.addPeerDeps("cdktf@>=0.20.0", `constructs@^${constructsVersion}`);
 project.addDevDeps(
-  "semver",
-  "@types/semver",
   "@cdktf/provider-null@>=10.0.0",
   "@cdktf/provider-random@>=11.0.0"
 );
