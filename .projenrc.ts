@@ -28,7 +28,7 @@ const githubActionPinnedVersions = {
   "peter-evans/create-pull-request": "271a8d0340265f705b14b6d32b9829c1cb33d45e", // v7.0.8
 };
 
-const constructsVersion = "10.3.0";
+const constructsVersion = "10.4.2";
 /** JSII and TS should always use the same major/minor version range */
 const typescriptVersion = "~5.7.0";
 const project = new ConstructLibraryCdktf({
@@ -51,7 +51,7 @@ const project = new ConstructLibraryCdktf({
     },
   },
   minMajorVersion: 1,
-  cdktfVersion: "0.20.0",
+  cdktfVersion: "0.21.0",
   description:
     "A drop-in replacement for cdktf.TerraformStack that lets you define Terraform modules as constructs" /* The description is just a string that helps people understand the purpose of the package. */,
   workflowGitIdentity: {
@@ -89,10 +89,10 @@ new Automerge(project);
 new UpgradeCDKTF(project);
 new UpgradeJSIIAndTypeScript(project, typescriptVersion);
 
-project.addPeerDeps("cdktf@>=0.20.0", `constructs@^${constructsVersion}`);
+project.addPeerDeps("cdktf@>=0.21.0", `constructs@^${constructsVersion}`);
 project.addDevDeps(
-  "@cdktf/provider-null@>=10.0.0",
-  "@cdktf/provider-random@>=11.0.0"
+  "@cdktf/provider-null@>=11.0.0",
+  "@cdktf/provider-random@>=12.0.0"
 );
 
 new JsiiDocgen(project, {
