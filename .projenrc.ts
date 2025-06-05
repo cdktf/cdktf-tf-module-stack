@@ -91,8 +91,8 @@ new UpgradeJSIIAndTypeScript(project, typescriptVersion);
 
 project.addPeerDeps("cdktf@>=0.21.0", `constructs@^${constructsVersion}`);
 project.addDevDeps(
-  "@cdktf/provider-null@>=10.0.0",
-  "@cdktf/provider-random@>=11.0.0"
+  "@cdktf/provider-null@>=11.0.0",
+  "@cdktf/provider-random@>=12.0.0"
 );
 
 new JsiiDocgen(project, {
