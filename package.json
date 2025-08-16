@@ -45,7 +45,7 @@
     "@cdktf/provider-null": ">=11.0.0",
     "@cdktf/provider-random": ">=12.0.0",
     "@types/jest": "^29",
-    "@types/node": "ts5.7",
+    "@types/node": "ts5.8",
     "@typescript-eslint/eslint-plugin": "^8",
     "@typescript-eslint/parser": "^8",
     "cdktf": "0.21.0",
@@ -58,16 +58,16 @@
     "eslint-plugin-prettier": "^4.2.5",
     "jest": "^29",
     "jest-junit": "^16",
-    "jsii": "~5.7.0",
+    "jsii": "~5.8.0",
     "jsii-diff": "^1.113.0",
     "jsii-docgen": "^10.8.0",
     "jsii-pacmak": "^1.113.0",
-    "jsii-rosetta": "~5.7.0",
+    "jsii-rosetta": "~5.8.0",
     "prettier": "^2.8.8",
     "projen": "^0.95.2",
     "ts-jest": "^29.4.1",
     "ts-node": "10.9.2",
-    "typescript": "~5.7.0"
+    "typescript": "~5.8.0"
   },
   "peerDependencies": {
     "cdktf": ">=0.21.0",

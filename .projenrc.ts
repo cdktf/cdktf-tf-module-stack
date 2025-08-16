@@ -30,7 +30,7 @@ const githubActionPinnedVersions = {
 
 const constructsVersion = "10.4.2";
 /** JSII and TS should always use the same major/minor version range */
-const typescriptVersion = "~5.7.0";
+const typescriptVersion = "~5.8.0";
 const project = new ConstructLibraryCdktf({
   author: "HashiCorp",
   authorAddress: "https://hashicorp.com",
