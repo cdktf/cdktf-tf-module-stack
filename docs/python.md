@@ -1134,13 +1134,13 @@ def ensure_backend_exists() -> TerraformBackend
 
 ```python
 def get_logical_id(
-  tf_element: typing.Union[Node, TerraformElement]
+  tf_element: Node | TerraformElement
 ) -> str
 ```
 
 ###### `tf_element`<sup>Required</sup> <a name="tf_element" id="@cdktf/tf-module-stack.TFModuleStack.getLogicalId.parameter.tfElement"></a>
 
-- *Type:* typing.Union[constructs.Node, cdktf.TerraformElement]
+- *Type:* constructs.Node | cdktf.TerraformElement
 
 ---
 

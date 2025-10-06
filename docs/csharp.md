@@ -972,12 +972,12 @@ private TerraformBackend EnsureBackendExists()
 ##### `GetLogicalId` <a name="GetLogicalId" id="@cdktf/tf-module-stack.TFModuleStack.getLogicalId"></a>
 
 ```csharp
-private string GetLogicalId(object TfElement)
+private string GetLogicalId(Node|TerraformElement TfElement)
 ```
 
 ###### `TfElement`<sup>Required</sup> <a name="TfElement" id="@cdktf/tf-module-stack.TFModuleStack.getLogicalId.parameter.tfElement"></a>
 
-- *Type:* object
+- *Type:* Constructs.Node|HashiCorp.Cdktf.TerraformElement
 
 ---
 
