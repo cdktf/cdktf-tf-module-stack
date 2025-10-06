@@ -1084,12 +1084,12 @@ public TerraformBackend ensureBackendExists()
 ##### `getLogicalId` <a name="getLogicalId" id="@cdktf/tf-module-stack.TFModuleStack.getLogicalId"></a>
 
 ```java
-public java.lang.String getLogicalId(Node OR TerraformElement tfElement)
+public java.lang.String getLogicalId(Node|TerraformElement tfElement)
 ```
 
 ###### `tfElement`<sup>Required</sup> <a name="tfElement" id="@cdktf/tf-module-stack.TFModuleStack.getLogicalId.parameter.tfElement"></a>
 
-- *Type:* software.constructs.Node OR com.hashicorp.cdktf.TerraformElement
+- *Type:* software.constructs.Node|com.hashicorp.cdktf.TerraformElement
 
 ---
 
